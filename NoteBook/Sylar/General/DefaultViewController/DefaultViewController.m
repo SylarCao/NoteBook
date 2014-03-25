@@ -8,6 +8,7 @@
 /////////////////////////////////////////////////////////////////////
 #import "DefaultViewController.h"
 #import "CommomColor.h"
+#import "PasswordViewController.h"
 /////////////////////////////////////////////////////////////////////
 @interface DefaultViewController ()
 
@@ -41,19 +42,35 @@
 - (void) SetInitialValued
 {
     [self.view setBackgroundColor:[CommomColor GetBkgColor]];
-
-    
-//    UILabel* label = [[UILabel alloc] init];
-//    [label setFrame:CGRectMake(100, 100, 100, 100)];
-//    [label setBackgroundColor:[UIColor redColor]];
-//    NSString* ss = NSLocalizedString(@"demo", "");
-//    [label setText:ss];
-//    [self.view addSubview:label];
 }
 
 - (void) SetInitialValue
 {
     NSLog(@"do override me");
 }
+
+- (void) BtnBack
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void) ShowPasswordView
+{
+    PasswordViewController* pp = [[PasswordViewController alloc] initWithNibName:nil bundle:nil];
+    [self presentViewController:pp animated:YES completion:nil];
+}
+
+- (UIButton*) GetButtonWithTitle:(NSString*)_pTitle
+{
+    UIButton* rt = [UIButton buttonWithType:UIButtonTypeCustom];
+    [rt setTitle:_pTitle forState:UIControlStateNormal];
+    [rt.layer setBorderColor:[UIColor blueColor].CGColor];
+    [rt.layer setBorderWidth:2];
+    [rt.layer setCornerRadius:10];
+    [rt setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [rt setTitleColor:[UIColor lightTextColor] forState:UIControlStateHighlighted];
+    return rt;
+}
+
 
 @end

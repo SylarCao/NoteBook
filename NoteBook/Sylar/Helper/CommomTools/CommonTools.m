@@ -17,4 +17,47 @@
     return rt;
 }
 
++ (NSString *) GetStringFromDate:(NSDate *)_date
+{
+    NSDateFormatter *ff = [[NSDateFormatter alloc] init];
+    [ff setDateFormat:@"yyyy-MM-dd HH:mm"];
+    NSString *rt = [self GetStringFromDate:_date WithFormate:ff];
+    return rt;
+}
+
++ (NSString *) GetStringFromDate:(NSDate *)_date WithFormate:(NSDateFormatter *)_formatter
+{
+    NSString *rt = [_formatter stringFromDate:_date];
+    return rt;
+}
+
++ (void) AutoLayoutVerticleView:(UIView*)_parentView WithSubviews:(NSArray*)_subViews TopEdge:(float)_topEdge BottomEdge:(float)_bottomEdge NeedCenter:(BOOL)_center
+{
+    int subview_count = _subViews.count;
+    if (subview_count > 0)
+    {
+        float total_subview_height = _topEdge+_bottomEdge;
+        for (UIView* each_view in _subViews)
+        {
+            total_subview_height += each_view.frame.size.height;
+        }
+        float gap = (_parentView.frame.size.height - total_subview_height)/(subview_count+1);
+        float pos_y = _topEdge + gap;
+        for (int i=0; i<subview_count; i++)
+        {
+            UIView* the_view = [_subViews objectAtIndex:i];
+            CGRect the_frame = the_view.frame;
+            the_frame.origin.y = pos_y;
+            pos_y = pos_y + gap + the_frame.size.height;
+            
+            if (_center)
+            {
+                the_frame.origin.x = (_parentView.frame.size.width - the_frame.size.width)/2;
+            }
+            [the_view setFrame:the_frame];
+        }
+    }
+}
+
+
 @end

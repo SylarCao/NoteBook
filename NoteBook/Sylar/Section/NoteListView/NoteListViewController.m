@@ -11,12 +11,15 @@
 #import "UICollectionView+Draggable.h"
 #import "DraggableCollectionViewFlowLayout.h"
 #import "NoteListViewCell.h"
+#import "PasswordViewController.h"
 
 // test
 //#import "OpenUDID.h"
 //#import "AVODefines.h"
 //#import "CommonTools.h"
 #import "ItemModel.h"
+/////////////////////////////////////////////////////////////////////
+extern NSString* c_note_list_view_cell_id;
 /////////////////////////////////////////////////////////////////////
 @interface NoteListViewController ()
 <UICollectionViewDataSource_Draggable, UICollectionViewDelegate>
@@ -59,7 +62,17 @@
 
 - (void) SetNaviBar
 {
+    UIBarButtonItem* left_item = [[UIBarButtonItem alloc] initWithTitle:@"left" style:UIBarButtonItemStylePlain target:nil action:nil];
+    left_item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"11"] style:UIBarButtonItemStylePlain target:self action:@selector(Btntest)];
+    [left_item setBackgroundImage:[UIImage imageNamed:@"11.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [left_item setBackgroundImage:[UIImage imageNamed:@"14"] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
     
+    [self.navigationItem setLeftBarButtonItem:left_item];
+}
+
+- (void) Btntest
+{
+    [self ShowPasswordView];
 }
 
 - (void) SetCollectionView
@@ -76,7 +89,7 @@
     [m_collection_view setDataSource:self];
     [self.view addSubview:m_collection_view];
     
-    [m_collection_view registerClass:[NoteListViewCell class] forCellWithReuseIdentifier:@"id12345"];
+    [m_collection_view registerClass:[NoteListViewCell class] forCellWithReuseIdentifier:c_note_list_view_cell_id.copy];
 }
 
 
@@ -89,7 +102,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NoteListViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"id12345" forIndexPath:indexPath];
+    NoteListViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:c_note_list_view_cell_id.copy forIndexPath:indexPath];
     [cell SetTest];
     
     return cell;
@@ -121,6 +134,9 @@
 }
 
 
+
+
+// test
 
 
 - (void) test

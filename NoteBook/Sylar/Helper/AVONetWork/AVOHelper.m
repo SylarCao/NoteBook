@@ -38,6 +38,8 @@
     if (self)
     {
         m_udid = [OpenUDID value];
+        NSString* path = NSHomeDirectory();
+        NSLog(@"path = %@", path);
     }
     return self;
 }
@@ -64,22 +66,31 @@
 - (void) UploadBecomeActivesIfNeed
 {
     [self AddOneBecomeActiveTime0];
-    long time0 = [CommonTools GetTime0];
-    NSString* slast_upload_time = [[NSUserDefaults standardUserDefaults] objectForKey:kAVOHelperBecomeActiveUploadTime0];
-    if (slast_upload_time)
+    NSDate* last_upload_time = [[NSUserDefaults standardUserDefaults] objectForKey:kAVOHelperBecomeActiveUploadTime0];
+    if (last_upload_time)
     {
-        long last_upload_time = [slast_upload_time integerValue];
-        if (time0-last_upload_time > kAVOBecomeActiveInterval)
+        if (abs([last_upload_time timeIntervalSinceDate:[NSDate date]]) > kAVOBecomeActiveInterval)
         {
             [self UploadBecomeActives];
         }
     }
-    else
-    {
-        NSString* stime0 = [NSString stringWithFormat:@"%ld", time0];
-        [[NSUserDefaults standardUserDefaults] setObject:stime0 forKey:kAVOHelperBecomeActiveUploadTime0];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
+    
+    
+    
+//    if (slast_upload_time)
+//    {
+//        long last_upload_time = [slast_upload_time integerValue];
+//        if (time0-last_upload_time > kAVOBecomeActiveInterval)
+//        {
+//            [self UploadBecomeActives];
+//        }
+//    }
+//    else
+//    {
+//        NSString* stime0 = [NSString stringWithFormat:@"%ld", time0];
+//        [[NSUserDefaults standardUserDefaults] setObject:stime0 forKey:kAVOHelperBecomeActiveUploadTime0];
+//        [[NSUserDefaults standardUserDefaults] synchronize];
+//    }
 }
 
 - (void) UploadBecomeActives
@@ -91,8 +102,7 @@
     [obj saveEventually:^(BOOL succeeded, NSError *error) {
         if (succeeded)
         {
-            NSString* time0 = [NSString stringWithFormat:@"%ld", (long)[CommonTools GetTime0]];
-            [[NSUserDefaults standardUserDefaults] setObject:time0 forKey:kAVOHelperBecomeActiveUploadTime0];
+            [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:kAVOHelperBecomeActiveUploadTime0];
             [actives removeAllObjects];
             [[NSUserDefaults standardUserDefaults] synchronize];
         }
@@ -101,19 +111,20 @@
 
 - (void) AddOneBecomeActiveTime0
 {
-    long time0 = [CommonTools GetTime0];
-    NSString* stime0 = [NSString stringWithFormat:@"%ld", time0];
-    NSMutableArray* arr = [[NSUserDefaults standardUserDefaults] objectForKey:kAVOHelperBecomeActiveTimes];
-    if (!arr)
+    NSDate *now = [NSDate date];
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *arr = [user objectForKey:kAVOHelperBecomeActiveTimes];
+    if (arr)
     {
-        arr = [[NSMutableArray alloc] initWithObjects:stime0, nil];
-        [[NSUserDefaults standardUserDefaults] setObject:arr forKey:kAVOHelperBecomeActiveTimes];
-        [[NSUserDefaults standardUserDefaults] setObject:stime0 forKey:kAVOHelperBecomeActiveUploadTime0];
+        [arr addObject:[CommonTools GetStringFromDate:now]];
     }
     else
     {
-        [arr addObject:stime0];
+        arr = [[NSMutableArray alloc] initWithObjects:[CommonTools GetStringFromDate:now], nil];
+        [user setObject:arr forKey:kAVOHelperBecomeActiveTimes];
+        [user setObject:now forKey:kAVOHelperBecomeActiveUploadTime0];
     }
+    
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NoteBook/Sylar/Section/NoteListView/NoteListViewController.m"
-            timestampString = "416475377.896263"
+            timestampString = "417423637.775083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "-test"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NoteBook/Sylar/Helper/AVONetWork/AVOHelper.m"
-            timestampString = "416299622.180757"
+            timestampString = "417425594.817691"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "-RegisterIfNot"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NoteBook/Sylar/Helper/AVONetWork/AVOHelper.m"
-            timestampString = "416299622.180757"
+            timestampString = "417425594.817691"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "-RegisterWithUdid"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NoteBook/AppDelegate.m"
-            timestampString = "416297862.72709"
+            timestampString = "417423739.511639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "-applicationDidBecomeActive:"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NoteBook/Sylar/Helper/AVONetWork/AVOHelper.m"
-            timestampString = "416299622.180757"
+            timestampString = "417425594.817691"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "-UploadBecomeActives"
             landmarkType = "5">
          </BreakpointContent>
@@ -105,30 +105,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NoteBook/Sylar/Helper/AVONetWork/AVOHelper.m"
-            timestampString = "416299622.180757"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "-UploadBecomeActivesIfNeed"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "NoteBook/Sylar/Section/NoteListView/NoteListViewController.m"
-            timestampString = "416475377.896263"
+            timestampString = "417423225.23604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "@implementation NoteListViewController"
-            landmarkType = "3">
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "-Btntest"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -154,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NoteBook/Sylar/Section/NoteListView/NoteListViewController.m"
-            timestampString = "416475377.896263"
+            timestampString = "417423637.775083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "-test"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,12 +154,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NoteBook/Sylar/Section/NoteListView/NoteListViewController.m"
-            timestampString = "416475377.896263"
+            timestampString = "417423637.775083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "-test"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoteBook/AppDelegate.m"
+            timestampString = "417423716.552087"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-applicationWillEnterForeground:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NoteBook/AppDelegate.m"
+            timestampString = "417423726.163372"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-applicationDidBecomeActive:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

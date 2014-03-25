@@ -12,4 +12,5 @@
 
 @property (nonatomic, strong, readonly) NSString* titleOnNoteList;
 
+
 @end

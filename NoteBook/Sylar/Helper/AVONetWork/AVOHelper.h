@@ -24,9 +24,9 @@
 
 /*
  
- last_login_time    :     123
+ last_login_time    :     object of NSDate
  
- become_active_time :     {1,2,3...}
+ become_active_time :     array of NSString (@{"string1", "string2", ...})
  
  
  

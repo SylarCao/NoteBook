@@ -12,4 +12,10 @@
 
 - (void) SetInitialValue;
 
+- (void) BtnBack;
+
+- (void) ShowPasswordView;
+
+- (UIButton*) GetButtonWithTitle:(NSString*)_pTitle;
+
 @end
