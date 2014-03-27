@@ -36,11 +36,15 @@ const NSString* c_note_list_view_cell_id = @"c_note_list_view_cell_id";
 
 - (void) SetInitialValue
 {
+    [self setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"note_cell_bkg"]]];
     m_title = [[UILabel alloc] init];
     m_title.frame = self.contentView.bounds;
-    m_title.backgroundColor = [UIColor greenColor];
     m_title.text = @"text";
     m_title.textAlignment = NSTextAlignmentCenter;
+    m_title.numberOfLines = 0;
+    m_title.font = [UIFont systemFontOfSize:16];
+    m_title.shadowColor = [UIColor whiteColor];
+    m_title.shadowOffset = CGSizeMake(1, 1);
     [self.contentView addSubview:m_title];
 }
 

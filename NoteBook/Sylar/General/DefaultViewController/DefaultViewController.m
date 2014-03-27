@@ -24,6 +24,11 @@
         // Custom initialization
         
         [self SetInitialValued];
+        
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            [self Once];
+        });
     }
     return self;
 }
@@ -38,6 +43,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) Once
+{
+    NSString *path = NSHomeDirectory();
+    NSLog(@"home = %@", path);
 }
 
 - (void) SetInitialValued

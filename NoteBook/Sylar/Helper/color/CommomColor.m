@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) UIColor *p_bkg_color;
 @property (nonatomic, strong) UIColor *p_border_color;
+@property (nonatomic, strong) UIColor *p_button_border_color;
 
 @end
 /////////////////////////////////////////////////////////////////////
@@ -48,6 +49,7 @@
         // default
         self.p_bkg_color = [UIColor lightGrayColor];
         self.p_border_color = [UIColor blackColor];
+        self.p_button_border_color = [UIColor blueColor];
     }
 }
 
@@ -59,6 +61,11 @@
 + (UIColor *) GetBorderColor
 {
     return [CommomColor Share].p_border_color;
+}
+
++ (UIColor *) GetButtonBorderColor
+{
+    return [CommomColor Share].p_button_border_color;
 }
 
 

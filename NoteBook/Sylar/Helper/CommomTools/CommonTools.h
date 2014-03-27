@@ -27,4 +27,12 @@
 
 + (int) GetNaviStatusBarHeight;
 
+/* resize image
+ * _width _height  为2个对应的比例 范围(0,1)
+ * stretchableImageWithLeftCapWidth:IMAGE_WIDTH*_width topCapHeight:IMAGE_HEIGHT*_height */
++ (UIImage *) GetResizeImageWithName:(NSString *)_imgName;
++ (UIImage *) GetResizeImageWithName:(NSString *)_imgName Width:(float)_width Height:(float)_height;
+
++ (UIImage *)imageWithColor:(UIColor *)color;
+
 @end

@@ -38,8 +38,6 @@
     if (self)
     {
         m_udid = [OpenUDID value];
-        NSString* path = NSHomeDirectory();
-        NSLog(@"path = %@", path);
     }
     return self;
 }
@@ -74,23 +72,6 @@
             [self UploadBecomeActives];
         }
     }
-    
-    
-    
-//    if (slast_upload_time)
-//    {
-//        long last_upload_time = [slast_upload_time integerValue];
-//        if (time0-last_upload_time > kAVOBecomeActiveInterval)
-//        {
-//            [self UploadBecomeActives];
-//        }
-//    }
-//    else
-//    {
-//        NSString* stime0 = [NSString stringWithFormat:@"%ld", time0];
-//        [[NSUserDefaults standardUserDefaults] setObject:stime0 forKey:kAVOHelperBecomeActiveUploadTime0];
-//        [[NSUserDefaults standardUserDefaults] synchronize];
-//    }
 }
 
 - (void) UploadBecomeActives

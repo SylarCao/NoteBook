@@ -19,4 +19,8 @@
 
 - (void) MoveItemAtIndex:(int)_fromIndex To:(int)_toIndex;
 
+- (void) AddItem:(ItemModel *)_item;
+
+- (void) Synchronize;
+
 @end

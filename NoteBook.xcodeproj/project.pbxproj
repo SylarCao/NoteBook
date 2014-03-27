@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B690055618E3D5F900870905 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = B690055518E3D5F900870905 /* Config.m */; };
+		B690055A18E4043D00870905 /* StateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B690055918E4043D00870905 /* StateButton.m */; };
+		B690055C18E408DD00870905 /* btn_bkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B690055B18E408DD00870905 /* btn_bkg@2x.png */; };
+		B690056018E41ACC00870905 /* note_cell_bkg.png in Resources */ = {isa = PBXBuildFile; fileRef = B690055E18E41ACC00870905 /* note_cell_bkg.png */; };
+		B690056118E41ACC00870905 /* note_cell_bkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B690055F18E41ACC00870905 /* note_cell_bkg@2x.png */; };
 		B6AC8DD218CFF636009D88B9 /* LSCollectionViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AC8DC818CFF636009D88B9 /* LSCollectionViewHelper.m */; };
 		B6AC8DD318CFF636009D88B9 /* LSCollectionViewLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AC8DCA18CFF636009D88B9 /* LSCollectionViewLayoutHelper.m */; };
 		B6AC8DD418CFF636009D88B9 /* DraggableCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AC8DCD18CFF636009D88B9 /* DraggableCollectionViewFlowLayout.m */; };
@@ -80,7 +84,6 @@
 		B6EEC3D518E2BDCE00D883CE /* btn_bkg_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = B6EEC3D118E2BDCE00D883CE /* btn_bkg_highlighted.png */; };
 		B6EEC3D618E2BDCE00D883CE /* btn_bkg_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6EEC3D218E2BDCE00D883CE /* btn_bkg_highlighted@2x.png */; };
 		B6EEC3D718E2BDCE00D883CE /* btn_bkg.png in Resources */ = {isa = PBXBuildFile; fileRef = B6EEC3D318E2BDCE00D883CE /* btn_bkg.png */; };
-		B6EEC3D818E2BDCE00D883CE /* btn_kbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6EEC3D418E2BDCE00D883CE /* btn_kbg@2x.png */; };
 		B6F97C7418D026DE00BA9A92 /* AVOHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F97C7318D026DE00BA9A92 /* AVOHelper.m */; };
 		B6F97C7818D02A0B00BA9A92 /* CommonTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F97C7718D02A0B00BA9A92 /* CommonTools.m */; };
 		B6F97C7B18D03D7D00BA9A92 /* NoteListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F97C7A18D03D7D00BA9A92 /* NoteListViewCell.m */; };
@@ -90,6 +93,11 @@
 /* Begin PBXFileReference section */
 		B690055418E3D5F900870905 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		B690055518E3D5F900870905 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		B690055818E4043D00870905 /* StateButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateButton.h; sourceTree = "<group>"; };
+		B690055918E4043D00870905 /* StateButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateButton.m; sourceTree = "<group>"; };
+		B690055B18E408DD00870905 /* btn_bkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_bkg@2x.png"; sourceTree = "<group>"; };
+		B690055E18E41ACC00870905 /* note_cell_bkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note_cell_bkg.png; sourceTree = "<group>"; };
+		B690055F18E41ACC00870905 /* note_cell_bkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "note_cell_bkg@2x.png"; sourceTree = "<group>"; };
 		B6AC8DC718CFF636009D88B9 /* LSCollectionViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCollectionViewHelper.h; sourceTree = "<group>"; };
 		B6AC8DC818CFF636009D88B9 /* LSCollectionViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCollectionViewHelper.m; sourceTree = "<group>"; };
 		B6AC8DC918CFF636009D88B9 /* LSCollectionViewLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCollectionViewLayoutHelper.h; sourceTree = "<group>"; };
@@ -195,7 +203,6 @@
 		B6EEC3D118E2BDCE00D883CE /* btn_bkg_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_bkg_highlighted.png; sourceTree = "<group>"; };
 		B6EEC3D218E2BDCE00D883CE /* btn_bkg_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_bkg_highlighted@2x.png"; sourceTree = "<group>"; };
 		B6EEC3D318E2BDCE00D883CE /* btn_bkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_bkg.png; sourceTree = "<group>"; };
-		B6EEC3D418E2BDCE00D883CE /* btn_kbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_kbg@2x.png"; sourceTree = "<group>"; };
 		B6F97C7218D026DE00BA9A92 /* AVOHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVOHelper.h; sourceTree = "<group>"; };
 		B6F97C7318D026DE00BA9A92 /* AVOHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVOHelper.m; sourceTree = "<group>"; };
 		B6F97C7618D02A0B00BA9A92 /* CommonTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTools.h; sourceTree = "<group>"; };
@@ -224,6 +231,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B690055718E4042400870905 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B690055818E4043D00870905 /* StateButton.h */,
+				B690055918E4043D00870905 /* StateButton.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B690055D18E41ACC00870905 /* note */ = {
+			isa = PBXGroup;
+			children = (
+				B690055E18E41ACC00870905 /* note_cell_bkg.png */,
+				B690055F18E41ACC00870905 /* note_cell_bkg@2x.png */,
+			);
+			path = note;
+			sourceTree = "<group>";
+		};
 		B6AC8DC518CFF636009D88B9 /* DraggableCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,7 +341,7 @@
 				B6EEC3D118E2BDCE00D883CE /* btn_bkg_highlighted.png */,
 				B6EEC3D218E2BDCE00D883CE /* btn_bkg_highlighted@2x.png */,
 				B6EEC3D318E2BDCE00D883CE /* btn_bkg.png */,
-				B6EEC3D418E2BDCE00D883CE /* btn_kbg@2x.png */,
+				B690055B18E408DD00870905 /* btn_bkg@2x.png */,
 				B6EEC3C918E2820C00D883CE /* navi_back_highlighted.png */,
 				B6EEC3CA18E2820C00D883CE /* navi_back_highlighted@2x.png */,
 				B6EEC3CB18E2820C00D883CE /* navi_back.png */,
@@ -438,6 +463,7 @@
 		B6CB6D3018CEFB7000033F15 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B690055718E4042400870905 /* UI */,
 				B6F97C7518D029FC00BA9A92 /* CommomTools */,
 				B6F97C7118D026A600BA9A92 /* AVONetWork */,
 				B6CB6D3F18CF073300033F15 /* color */,
@@ -509,6 +535,7 @@
 		B6D043FC18D2F35500424389 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B690055D18E41ACC00870905 /* note */,
 				B6B4131218E1602D0051F54B /* password */,
 				B6B4130918E15C100051F54B /* navigation */,
 				B6D043FD18D2F36C00424389 /* a */,
@@ -636,17 +663,20 @@
 			files = (
 				B6D0443A18D2F36C00424389 /* 8.png in Resources */,
 				B6D0442C18D2F36C00424389 /* 14.png in Resources */,
+				B690055C18E408DD00870905 /* btn_bkg@2x.png in Resources */,
 				B6D0442218D2F36C00424389 /* a28m3.jpg in Resources */,
 				B6D0442018D2F36C00424389 /* a28m1.jpg in Resources */,
 				B6D0442618D2F36C00424389 /* a45.jpg in Resources */,
 				B6EEC3D718E2BDCE00D883CE /* btn_bkg.png in Resources */,
 				B6B4131818E160520051F54B /* password.png in Resources */,
 				B6D0441E18D2F36C00424389 /* a1.jpg in Resources */,
+				B690056118E41ACC00870905 /* note_cell_bkg@2x.png in Resources */,
 				B6D0442418D2F36C00424389 /* a28m5.jpg in Resources */,
 				B6D0442818D2F36C00424389 /* 10.png in Resources */,
 				B6D0442118D2F36C00424389 /* a28m2.jpg in Resources */,
 				B6D0443B18D2F36C00424389 /* 9.png in Resources */,
 				B6D0442318D2F36C00424389 /* a28m4.jpg in Resources */,
+				B690056018E41ACC00870905 /* note_cell_bkg.png in Resources */,
 				B6EEC3CD18E2820C00D883CE /* navi_back_highlighted.png in Resources */,
 				B6D0442518D2F36C00424389 /* a28m6.jpg in Resources */,
 				B6B4131618E1602D0051F54B /* password_highlighted.png in Resources */,
@@ -670,7 +700,6 @@
 				B6EEC3CE18E2820C00D883CE /* navi_back_highlighted@2x.png in Resources */,
 				B6D0442918D2F36C00424389 /* 11.png in Resources */,
 				B6EEC3D618E2BDCE00D883CE /* btn_bkg_highlighted@2x.png in Resources */,
-				B6EEC3D818E2BDCE00D883CE /* btn_kbg@2x.png in Resources */,
 				B6D0442D18D2F36C00424389 /* 15.png in Resources */,
 				B6EEC3D518E2BDCE00D883CE /* btn_bkg_highlighted.png in Resources */,
 				B6AC8E0018CFF9AD009D88B9 /* Localizable.strings in Resources */,
@@ -705,6 +734,7 @@
 				B6F97C7418D026DE00BA9A92 /* AVOHelper.m in Sources */,
 				B6EEC3C818E2798300D883CE /* NoteListDetailedViewController.m in Sources */,
 				B6F97C7B18D03D7D00BA9A92 /* NoteListViewCell.m in Sources */,
+				B690055A18E4043D00870905 /* StateButton.m in Sources */,
 				B6B4132518E16A020051F54B /* AESCrypt.m in Sources */,
 				B6AC8DD318CFF636009D88B9 /* LSCollectionViewLayoutHelper.m in Sources */,
 				B6AC8DD418CFF636009D88B9 /* DraggableCollectionViewFlowLayout.m in Sources */,

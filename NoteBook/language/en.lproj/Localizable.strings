@@ -10,6 +10,6 @@
 "InputPassword" = "Please input the password";
 "NoteListTitle" = "Note";
 "Cancel" = "Cancel";
-
-
-
+"Save" = "Save";
+"NewNoteTitle" = "untitled note";   // 新建文件夹
+"AddNewOne" = "New";    // 新建

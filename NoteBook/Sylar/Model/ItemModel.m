@@ -7,6 +7,10 @@
 //
 //////////////////////////////////////////////////////////////////
 #import "ItemModel.h"
+#import "CommonTools.h"
+//////////////////////////////////////////////////////////////////
+# define kItemModelDicTitleKey   @"title"
+# define kItemModelDicContentKey @"content"
 //////////////////////////////////////////////////////////////////
 @interface ItemModel()
 {
@@ -21,19 +25,29 @@
     self = [super init];
     if (self)
     {
-        
+        _title = LocalizedString(@"NewNoteTitle");
     }
     return self;
 }
 
-- (void) setTitle:(NSString *)title
+- (NSDictionary *) ToDictionary
 {
-    if (!_titleOnNoteList)
-    {
-        _titleOnNoteList = title.copy;
-    }
-    _title = title;
+    NSDictionary *rt = [[NSDictionary alloc] initWithObjectsAndKeys:
+                        _title,    kItemModelDicTitleKey,
+                        _content,  kItemModelDicContentKey,
+                        nil];
+    return rt;
 }
+
+
++ (ItemModel *) GetFromDictionary:(NSDictionary *)_dic
+{
+    ItemModel *rt = [[ItemModel alloc] init];
+    rt.title = [_dic objectForKey:kItemModelDicTitleKey];
+    rt.content = [_dic objectForKey:kItemModelDicContentKey];
+    return rt;
+}
+
 
 
 @end

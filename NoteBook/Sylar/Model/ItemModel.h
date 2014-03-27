@@ -10,9 +10,12 @@
 
 @interface ItemModel : NSObject
 
-@property (nonatomic, strong) NSString  *titleOnNoteList;
 @property (nonatomic, strong) NSString  *title;
 @property (nonatomic, strong) NSString  *content;
+
+- (NSDictionary *) ToDictionary;
+
++ (ItemModel *) GetFromDictionary:(NSDictionary *)_dic;
 
 
 @end

@@ -64,5 +64,33 @@
     return 64;
 }
 
++ (UIImage *) GetResizeImageWithName:(NSString *)_imgName
+{
+    UIImage *rt = [self GetResizeImageWithName:_imgName Width:0.5 Height:0.5];
+    return rt;
+}
+
++ (UIImage *) GetResizeImageWithName:(NSString *)_imgName Width:(float)_width Height:(float)_height
+{
+    UIImage *img = [UIImage imageNamed:_imgName];
+    UIImage *rt = [img stretchableImageWithLeftCapWidth:img.size.width*_width topCapHeight:img.size.height*_height];
+    return rt;
+}
+
++ (UIImage *)imageWithColor:(UIColor *)color
+{
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 
 @end

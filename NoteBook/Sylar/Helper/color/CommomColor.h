@@ -12,6 +12,11 @@
 
 + (UIColor *) GetBkgColor;
 
-+ (UIColor *) GetBorderColor;
+//+ (UIColor *) GetBorderColor;
+//
+//+ (UIColor *) GetButtonBorderColor;
+
+
+
 
 @end

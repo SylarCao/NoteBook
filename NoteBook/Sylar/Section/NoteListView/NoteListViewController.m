@@ -27,7 +27,7 @@
 <UICollectionViewDataSource_Draggable, UICollectionViewDelegate>
 {
     UICollectionView* m_collection_view;
-    int m_cell_number;
+//    int m_cell_number;
 }
 @end
 /////////////////////////////////////////////////////////////////////
@@ -49,6 +49,12 @@
 	// Do any additional setup after loading the view.
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [m_collection_view reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -57,7 +63,7 @@
 
 - (void) SetInitialValue
 {
-    m_cell_number = [[DataModel Share] GetItemCount];
+//    m_cell_number = [[DataModel Share] GetItemCount];
     [self SetNaviBar];
     [self SetCollectionView];
 }
@@ -91,19 +97,19 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return m_cell_number+1;
+    return [[DataModel Share] GetItemCount]+1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NoteListViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:[NoteListViewCell GetCellId] forIndexPath:indexPath];
-    if (indexPath.row == m_cell_number)
+    if (indexPath.row == [[DataModel Share] GetItemCount])
     {
-        [cell SetWithTitle:@"add"];
+        [cell SetWithTitle:LocalizedString(@"AddNewOne")];
     }
     else
     {
-        NSString *title = [[DataModel Share] GetItemAtIndex:indexPath.row].titleOnNoteList;
+        NSString *title = [[DataModel Share] GetItemAtIndex:indexPath.row].title;
         [cell SetWithTitle:title];
     }
     
@@ -113,11 +119,14 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ItemModel *item = [[DataModel Share] GetItemAtIndex:indexPath.row];
+    if (item == nil)
+    {
+        item = [[ItemModel alloc] init];
+        [[DataModel Share] AddItem:item];
+    }
     NoteListDetailedViewController* nn = [NoteListDetailedViewController CreateWithData:item];
     [self.navigationController pushViewController:nn animated:YES];
 }
-
-
 
 - (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
@@ -127,16 +136,17 @@
 
 - (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == m_cell_number)
+    if (indexPath.row == [[DataModel Share] GetItemCount])
         return NO;
     return YES;
 }
 
 - (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
-    if (indexPath.row == m_cell_number)
+    int cell_number = [[DataModel Share] GetItemCount];
+    if (indexPath.row == cell_number)
         return NO;
-    if (toIndexPath.row == m_cell_number)
+    if (toIndexPath.row == cell_number)
         return NO;
     return YES;
 }
@@ -149,15 +159,15 @@
 
 - (void) test
 {
-    ItemModel* ii = [[ItemModel alloc] init];
-//    int a = ii.bb;
-//    NSLog(@"a = %d", a);
-    NSLog(@"");
-//    ii.titleOnNoteList = @"ddd";
-    
-    NSString* ss = ii.titleOnNoteList;
-    NSLog(@"ss = %@", ss);
-    NSLog(@"");
+//    ItemModel* ii = [[ItemModel alloc] init];
+////    int a = ii.bb;
+////    NSLog(@"a = %d", a);
+//    NSLog(@"");
+////    ii.titleOnNoteList = @"ddd";
+//    
+//    NSString* ss = ii.titleOnNoteList;
+//    NSLog(@"ss = %@", ss);
+//    NSLog(@"");
     
 //    NSString* udid = [OpenUDID value];
 //    

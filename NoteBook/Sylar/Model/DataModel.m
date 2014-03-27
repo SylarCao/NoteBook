@@ -9,6 +9,8 @@
 #import "DataModel.h"
 #import "ItemModel.h"
 ////////////////////////////////////////////////////////////////////////
+# define kDataModelKey   @"data"
+////////////////////////////////////////////////////////////////////////
 @interface DataModel()
 {
     NSMutableArray* m_current;
@@ -32,10 +34,25 @@
     self = [super init];
     if (self)
     {
-        m_current = [[NSMutableArray alloc] init];
-        [self fakeData];
+        [self SetInitData];
+//        [self fakeData];
     }
     return self;
+}
+
+- (void) SetInitData
+{
+    m_current = [[NSMutableArray alloc] init];
+    NSUserDefaults* user = [NSUserDefaults standardUserDefaults];
+    NSArray* arr = [user objectForKey:kDataModelKey];
+    if (arr)
+    {
+        for (NSDictionary *dic in arr)
+        {
+            ItemModel *each_model = [ItemModel GetFromDictionary:dic];
+            [m_current addObject:each_model];
+        }
+    }
 }
 
 - (int) GetItemCount
@@ -65,6 +82,23 @@
     }
 }
 
+- (void) AddItem:(ItemModel *)_item
+{
+    [m_current addObject:_item];
+}
+
+- (void) Synchronize
+{
+    NSMutableArray* arr = [[NSMutableArray alloc] init];
+    for (ItemModel *model in m_current)
+    {
+        NSDictionary *each_dic = [model ToDictionary];
+        [arr addObject:each_dic];
+    }
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    [user setObject:arr forKey:kDataModelKey];
+    [user synchronize];
+}
 
 
 
