@@ -12,7 +12,7 @@ const NSString* c_note_list_view_cell_id = @"c_note_list_view_cell_id";
 //////////////////////////////////////////////////////
 @interface NoteListViewCell()
 {
-    UILabel* m_test_label;
+    UILabel *m_title;
 }
 @end
 //////////////////////////////////////////////////////
@@ -28,35 +28,28 @@ const NSString* c_note_list_view_cell_id = @"c_note_list_view_cell_id";
     return self;
 }
 
++ (NSString *) GetCellId
+{
+    NSString *rt = @"c_note_list_view_cell_id";
+    return rt;
+}
+
 - (void) SetInitialValue
 {
-    static int i=0;
-    i++;
-    NSLog(@"\n i = %d", i);
-    
-    [self setBackgroundColor:[UIColor greenColor]];
-    
-    m_test_label = [[UILabel alloc] init];
-    [m_test_label setFrame:self.bounds];
-    [self addSubview:m_test_label];
-    [m_test_label setText:[NSString stringWithFormat:@"%d", i]];
-
+    m_title = [[UILabel alloc] init];
+    m_title.frame = self.contentView.bounds;
+    m_title.backgroundColor = [UIColor greenColor];
+    m_title.text = @"text";
+    m_title.textAlignment = NSTextAlignmentCenter;
+    [self.contentView addSubview:m_title];
 }
 
 
-- (void) SetTest
+- (void) SetWithTitle:(NSString *)_labelTitle
 {
-    
+    m_title.text = _labelTitle;
 }
 
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

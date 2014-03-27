@@ -12,6 +12,8 @@
 #import "DraggableCollectionViewFlowLayout.h"
 #import "NoteListViewCell.h"
 #import "PasswordViewController.h"
+#import "DataModel.h"
+#import "NoteListDetailedViewController.h"
 
 // test
 //#import "OpenUDID.h"
@@ -19,7 +21,7 @@
 //#import "CommonTools.h"
 #import "ItemModel.h"
 /////////////////////////////////////////////////////////////////////
-extern NSString* c_note_list_view_cell_id;
+
 /////////////////////////////////////////////////////////////////////
 @interface NoteListViewController ()
 <UICollectionViewDataSource_Draggable, UICollectionViewDelegate>
@@ -36,6 +38,7 @@ extern NSString* c_note_list_view_cell_id;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [self SetInitialValue];
     }
     return self;
 }
@@ -54,42 +57,33 @@ extern NSString* c_note_list_view_cell_id;
 
 - (void) SetInitialValue
 {
-    [self test];
-    m_cell_number = 10;
+    m_cell_number = [[DataModel Share] GetItemCount];
     [self SetNaviBar];
     [self SetCollectionView];
 }
 
 - (void) SetNaviBar
 {
-    UIBarButtonItem* left_item = [[UIBarButtonItem alloc] initWithTitle:@"left" style:UIBarButtonItemStylePlain target:nil action:nil];
-    left_item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"11"] style:UIBarButtonItemStylePlain target:self action:@selector(Btntest)];
-    [left_item setBackgroundImage:[UIImage imageNamed:@"11.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [left_item setBackgroundImage:[UIImage imageNamed:@"14"] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
-    
-    [self.navigationItem setLeftBarButtonItem:left_item];
-}
-
-- (void) Btntest
-{
-    [self ShowPasswordView];
+    [self SetNaviTitle:LocalizedString(@"NoteListTitle")];
 }
 
 - (void) SetCollectionView
 {
     DraggableCollectionViewFlowLayout* layout = [[DraggableCollectionViewFlowLayout alloc] init];
     layout.itemSize = CGSizeMake(100, 100);
-    
-    float navi_bar_height = self.navigationController.navigationBar.frame.size.height;
-    CGRect collection_frame = CGRectMake(0, navi_bar_height, kSCREEN_WIDTH, kSCREEN_HEIGHT-navi_bar_height);
+    layout.minimumInteritemSpacing = 0;
+    layout.minimumLineSpacing = 5;
+    layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
+    float navi = [CommonTools GetNaviStatusBarHeight];
+    CGRect collection_frame = CGRectMake(0, navi, kSCREEN_WIDTH, kSCREEN_HEIGHT-navi);
     m_collection_view = [[UICollectionView alloc] initWithFrame:collection_frame collectionViewLayout:layout];
-    [m_collection_view setDraggable:NO];
+    [m_collection_view setDraggable:YES];
     [m_collection_view setBackgroundColor:[UIColor clearColor]];
     [m_collection_view setDelegate:self];
     [m_collection_view setDataSource:self];
     [self.view addSubview:m_collection_view];
     
-    [m_collection_view registerClass:[NoteListViewCell class] forCellWithReuseIdentifier:c_note_list_view_cell_id.copy];
+    [m_collection_view registerClass:[NoteListViewCell class] forCellWithReuseIdentifier:[NoteListViewCell GetCellId]];
 }
 
 
@@ -97,38 +91,52 @@ extern NSString* c_note_list_view_cell_id;
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return m_cell_number;
+    return m_cell_number+1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NoteListViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:c_note_list_view_cell_id.copy forIndexPath:indexPath];
-    [cell SetTest];
+    NoteListViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:[NoteListViewCell GetCellId] forIndexPath:indexPath];
+    if (indexPath.row == m_cell_number)
+    {
+        [cell SetWithTitle:@"add"];
+    }
+    else
+    {
+        NSString *title = [[DataModel Share] GetItemAtIndex:indexPath.row].titleOnNoteList;
+        [cell SetWithTitle:title];
+    }
     
     return cell;
 }
 
-
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    ItemModel *item = [[DataModel Share] GetItemAtIndex:indexPath.row];
+    NoteListDetailedViewController* nn = [NoteListDetailedViewController CreateWithData:item];
+    [self.navigationController pushViewController:nn animated:YES];
+}
 
 
 
 - (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
-    
+//    NSLog(@"move from %d to %d", fromIndexPath.row, toIndexPath.row);
+    [[DataModel Share] MoveItemAtIndex:fromIndexPath.row To:toIndexPath.row];
 }
 
 - (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == m_cell_number-1)
+    if (indexPath.row == m_cell_number)
         return NO;
     return YES;
 }
 
 - (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
-    if (indexPath.row == m_cell_number-1)
+    if (indexPath.row == m_cell_number)
         return NO;
-    if (toIndexPath.row == m_cell_number-1)
+    if (toIndexPath.row == m_cell_number)
         return NO;
     return YES;
 }

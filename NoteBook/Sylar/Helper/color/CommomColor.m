@@ -10,7 +10,8 @@
 /////////////////////////////////////////////////////////////////////
 @interface CommomColor()
 
-@property (nonatomic, strong) UIColor* p_bkg_color;
+@property (nonatomic, strong) UIColor *p_bkg_color;
+@property (nonatomic, strong) UIColor *p_border_color;
 
 @end
 /////////////////////////////////////////////////////////////////////
@@ -46,12 +47,18 @@
     {
         // default
         self.p_bkg_color = [UIColor lightGrayColor];
+        self.p_border_color = [UIColor blackColor];
     }
 }
 
-+ (UIColor*) GetBkgColor
++ (UIColor *) GetBkgColor
 {
     return [CommomColor Share].p_bkg_color;
+}
+
++ (UIColor *) GetBorderColor
+{
+    return [CommomColor Share].p_border_color;
 }
 
 

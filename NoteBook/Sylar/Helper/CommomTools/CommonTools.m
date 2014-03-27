@@ -59,5 +59,10 @@
     }
 }
 
++ (int) GetNaviStatusBarHeight
+{
+    return 64;
+}
+
 
 @end

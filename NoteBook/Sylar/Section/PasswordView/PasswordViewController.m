@@ -26,6 +26,7 @@ const float c_securyView_title_height = 70;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [self SetInitialValue];
     }
     return self;
 }
@@ -47,7 +48,7 @@ const float c_securyView_title_height = 70;
     // title label
     m_label_title = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kSCREEN_WIDTH, c_securyView_title_height)];
     [m_label_title setBackgroundColor:[[UIColor redColor] colorWithAlphaComponent:0.5]];
-    [m_label_title setText:@"请输入密码"];
+    [m_label_title setText:LocalizedString(@"InputPassword")];
     [m_label_title setFont:[UIFont systemFontOfSize:30]];
     [m_label_title setTextAlignment:NSTextAlignmentCenter];
     [self.view addSubview:m_label_title];

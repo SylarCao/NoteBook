@@ -10,8 +10,9 @@
 
 @interface NoteListViewCell : UICollectionViewCell
 
++ (NSString *) GetCellId;
 
-- (void) SetTest;
+- (void) SetWithTitle:(NSString *)_labelTitle;
 
 
 

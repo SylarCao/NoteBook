@@ -10,7 +10,7 @@
 //////////////////////////////////////////////////////////////////
 @interface ItemModel()
 {
-    NSString* m_title_on_list;
+    
 }
 @end
 //////////////////////////////////////////////////////////////////
@@ -21,15 +21,19 @@
     self = [super init];
     if (self)
     {
-        m_title_on_list = @"12345";
+        
     }
     return self;
 }
 
-- (NSString*) titleOnNoteList
+- (void) setTitle:(NSString *)title
 {
-    NSString* rt = [NSString stringWithFormat:@"abc+%@", m_title_on_list];
-    return rt;
+    if (!_titleOnNoteList)
+    {
+        _titleOnNoteList = title.copy;
+    }
+    _title = title;
 }
+
 
 @end

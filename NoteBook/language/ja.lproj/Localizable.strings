@@ -6,10 +6,4 @@
   Copyright (c) 2012年 AirView.com. All rights reserved.
 */
 "enter" = "Enter";
-"demo" = "english:this is a demo";
-"InputPassword" = "Please input the password";
-"NoteListTitle" = "Note";
-"Cancel" = "Cancel";
-
-
-
+"demo" = "japan:this is a demo";

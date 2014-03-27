@@ -10,7 +10,8 @@
 
 @interface DefaultViewController : UIViewController
 
-- (void) SetInitialValue;
+- (void) SetNaviBackItemTitle:(NSString *)_naviBack;
+- (void) SetNaviTitle:(NSString *)_naviTitle;
 
 - (void) BtnBack;
 

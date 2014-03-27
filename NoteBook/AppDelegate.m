@@ -20,6 +20,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     NoteListViewController* dd = [[NoteListViewController alloc] initWithNibName:nil bundle:nil];
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:dd];
+//    [nav setNavigationBarHidden:YES];
     self.window.rootViewController = nav;
     [_window addSubview:[nav view]];
     [self.window makeKeyAndVisible];

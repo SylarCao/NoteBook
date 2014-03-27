@@ -10,6 +10,8 @@
 
 @interface CommomColor : NSObject
 
-+ (UIColor*) GetBkgColor;
++ (UIColor *) GetBkgColor;
+
++ (UIColor *) GetBorderColor;
 
 @end
