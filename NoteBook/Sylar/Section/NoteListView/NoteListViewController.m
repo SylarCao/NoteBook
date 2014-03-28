@@ -17,6 +17,7 @@
 #import "NoteListDetailedViewController.h"
 #import "ItemModel.h"
 #import "CommonActionSheet.h"
+#import "MenuViewController.h"
 /////////////////////////////////////////////////////////////////////
 @interface NoteListViewController ()
 <UICollectionViewDataSource_Draggable, UICollectionViewDelegate>
@@ -75,6 +76,12 @@
     [m_btn_edit addTarget:self action:@selector(BtnEdit) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *item_left = [[UIBarButtonItem alloc] initWithCustomView:m_btn_edit];
     [self.navigationItem setLeftBarButtonItem:item_left];
+    
+    // right -> menu
+    UIButton *menu = [self GetNaviButtonWithTitle:LocalizedString(@"Menu")];
+    [menu addTarget:self action:@selector(BtnMenu) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *item_right = [[UIBarButtonItem alloc] initWithCustomView:menu];
+    [self.navigationItem setRightBarButtonItem:item_right];
 }
 
 - (void) SetCollectionView
@@ -95,6 +102,12 @@
     
     [m_collection_view registerClass:[NoteListViewCell class] forCellWithReuseIdentifier:[NoteListViewCell GetCellId]];
     [m_collection_view registerClass:[NoteListNewCell class] forCellWithReuseIdentifier:[NoteListNewCell GetCellId]];
+}
+
+- (void) BtnMenu
+{
+    MenuViewController *mm = [[MenuViewController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:mm animated:YES];
 }
 
 - (void) BtnEdit

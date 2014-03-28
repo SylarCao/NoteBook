@@ -57,7 +57,7 @@
 {
     [[AVOHelper Share] UploadBecomeActivesIfNeed];
     DefaultViewController *top_view_controller = (DefaultViewController *)[m_navi topViewController];
-    [top_view_controller ShowPasswordView];
+//    [top_view_controller ShowPasswordView];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

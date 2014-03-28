@@ -10,6 +10,7 @@
 		B6291A6D18E553FF00B9B09D /* CommonActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A6A18E553FF00B9B09D /* CommonActionSheet.m */; };
 		B6291A6E18E553FF00B9B09D /* LXActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A6C18E553FF00B9B09D /* LXActionSheet.m */; };
 		B6291A7318E5645000B9B09D /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6291A7218E5645000B9B09D /* AVOSCloud.framework */; };
+		B6291A7718E565A100B9B09D /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A7618E565A100B9B09D /* MenuViewController.m */; };
 		B68CB0B618E5195D00167BFB /* test1.png in Resources */ = {isa = PBXBuildFile; fileRef = B68CB0B418E5195D00167BFB /* test1.png */; };
 		B68CB0B718E5195D00167BFB /* test1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B68CB0B518E5195D00167BFB /* test1@2x.png */; };
 		B68CB0CA18E5271100167BFB /* back_bkg_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = B68CB0C618E5271100167BFB /* back_bkg_HL.png */; };
@@ -109,6 +110,8 @@
 		B6291A6B18E553FF00B9B09D /* LXActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXActionSheet.h; sourceTree = "<group>"; };
 		B6291A6C18E553FF00B9B09D /* LXActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXActionSheet.m; sourceTree = "<group>"; };
 		B6291A7218E5645000B9B09D /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
+		B6291A7518E565A100B9B09D /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		B6291A7618E565A100B9B09D /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		B68CB0B418E5195D00167BFB /* test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test1.png; sourceTree = "<group>"; };
 		B68CB0B518E5195D00167BFB /* test1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test1@2x.png"; sourceTree = "<group>"; };
 		B68CB0C618E5271100167BFB /* back_bkg_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_bkg_HL.png; sourceTree = "<group>"; };
@@ -277,6 +280,15 @@
 				B6291A7218E5645000B9B09D /* AVOSCloud.framework */,
 			);
 			path = AVO;
+			sourceTree = "<group>";
+		};
+		B6291A7418E5656F00B9B09D /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				B6291A7518E565A100B9B09D /* MenuViewController.h */,
+				B6291A7618E565A100B9B09D /* MenuViewController.m */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		B68CB0B318E5195D00167BFB /* test */ = {
@@ -555,6 +567,7 @@
 		B6CB6D3318CEFB7000033F15 /* Section */ = {
 			isa = PBXGroup;
 			children = (
+				B6291A7418E5656F00B9B09D /* Menu */,
 				B6B4130E18E15D720051F54B /* PasswordView */,
 				B6AC8DDA18CFF707009D88B9 /* NoteListView */,
 			);
@@ -809,6 +822,7 @@
 				B690055A18E4043D00870905 /* StateButton.m in Sources */,
 				B6B4132518E16A020051F54B /* AESCrypt.m in Sources */,
 				B6AC8DD318CFF636009D88B9 /* LSCollectionViewLayoutHelper.m in Sources */,
+				B6291A7718E565A100B9B09D /* MenuViewController.m in Sources */,
 				B6AC8DD418CFF636009D88B9 /* DraggableCollectionViewFlowLayout.m in Sources */,
 				B6B4132B18E16EF70051F54B /* DataModel.m in Sources */,
 				B6291A6D18E553FF00B9B09D /* CommonActionSheet.m in Sources */,
