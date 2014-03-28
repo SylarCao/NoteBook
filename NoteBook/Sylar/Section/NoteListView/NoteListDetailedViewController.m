@@ -12,7 +12,7 @@
 #import "DataModel.h"
 ////////////////////////////////////////////////////////////////////////////////////
 @interface NoteListDetailedViewController ()
-<UITextViewDelegate>
+<UITextViewDelegate, UITextFieldDelegate>
 {
     ItemModel    *m_data;      // data
     UITextField  *m_title;     // title
@@ -81,18 +81,14 @@
     
     // title
     m_title = [[UITextField alloc] init];
-    m_title.frame = CGRectMake(0, 0, 100, 40);
+    m_title.frame = CGRectMake(0, 0, 140, 40);
     m_title.text = m_data.title;
+    m_title.delegate = self;
     self.navigationItem.titleView = m_title;
     
     // right button
-    UIButton* btn_ok = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn_ok setFrame:CGRectMake(0, 0, 60, 36)];
+    UIButton* btn_ok = [self GetNaviButtonWithTitle:LocalizedString(@"Save")];
     [btn_ok addTarget:self action:@selector(BtnSave) forControlEvents:UIControlEventTouchUpInside];
-    [btn_ok setTitle:LocalizedString(@"Save") forState:UIControlStateNormal];
-    [btn_ok setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [btn_ok setBackgroundImage:[CommonTools GetResizeImageWithName:@"btn_bkg"] forState:UIControlStateNormal];
-    [btn_ok setBackgroundImage:[CommonTools GetResizeImageWithName:@"btn_bkg_highlighted"] forState:UIControlStateHighlighted];
     UIBarButtonItem* right_item = [[UIBarButtonItem alloc] initWithCustomView:btn_ok];
     [self.navigationItem setRightBarButtonItem:right_item];
 }
@@ -133,12 +129,23 @@
     // save title
     m_data.title = m_title.text;
     m_data.content = m_content.text;
-    [[DataModel Share] Synchronize];
+    [[DataModel Share] SynchronizeWithEditingItem:m_data];
     [self BtnBack];
 }
 
 
 // delegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    textField.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    textField.borderStyle = UITextBorderStyleNone;
+    textField.backgroundColor = [UIColor clearColor];
+}
 
 - (void)textViewDidChange:(UITextView *)textView
 {

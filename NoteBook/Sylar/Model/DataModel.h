@@ -21,6 +21,10 @@
 
 - (void) AddItem:(ItemModel *)_item;
 
+- (void) RemoveItem:(ItemModel *)_item;
+
+- (void) SynchronizeWithEditingItem:(ItemModel *)_model;
+
 - (void) Synchronize;
 
 @end

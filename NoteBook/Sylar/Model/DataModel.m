@@ -87,6 +87,21 @@
     [m_current addObject:_item];
 }
 
+- (void) RemoveItem:(ItemModel *)_item
+{
+    [m_current removeObject:_item];
+    [self Synchronize];
+}
+
+- (void) SynchronizeWithEditingItem:(ItemModel *)_model
+{
+    if ([m_current containsObject:_model] == NO && _model)
+    {
+        [m_current addObject:_model];
+    }
+    [self Synchronize];
+}
+
 - (void) Synchronize
 {
     NSMutableArray* arr = [[NSMutableArray alloc] init];

@@ -10,6 +10,7 @@
 #import "CommomColor.h"
 #import "PasswordViewController.h"
 #import "NoteListViewController.h"
+#import "CommonTools.h"
 /////////////////////////////////////////////////////////////////////
 @interface DefaultViewController ()
 
@@ -65,10 +66,15 @@
 {
     UIImage* bkg = [UIImage imageNamed:@"btn_bkg"];
     UIImage* bkg_highlighted = [UIImage imageNamed:@"btn_bkg_highlighted"];
+    UIImage* close = [UIImage imageNamed:@"close"];
     UIImage *arrow = [UIImage imageNamed:@"navi_back"];
+    UIImage* test1 = [UIImage imageNamed:@"test1"];
+    UIImage* test2 = [UIImage imageNamed:@"test2"];
+    UIImage* ii = [test2 resizableImageWithCapInsets:UIEdgeInsetsMake(0, 16, 0, 5) resizingMode:UIImageResizingModeStretch];
     
-    UIImageView* imv = [[UIImageView alloc] initWithImage:bkg];
-    [imv setFrame:CGRectMake(0, 0, 50, 30)];
+    
+    UIImageView* imv = [[UIImageView alloc] initWithImage:arrow];
+    [imv setFrame:CGRectMake(0, 0, arrow.size.width, arrow.size.height)];
     UIBarButtonItem *rt = [[UIBarButtonItem alloc] initWithTitle:@"cancel" style:UIBarButtonItemStylePlain target:nil action:nil];
 //    rt.customView = imv;
 //    rt.image = bkg;
@@ -77,21 +83,61 @@
 //    [rt setBackButtonBackgroundImage:bkg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
 //    rt.width = -20;
 //    [rt setBackButtonBackgroundImage:bkg_highlighted forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
-    self.navigationItem.backBarButtonItem = rt;
-    return;
-    UIBarButtonItem* bb = [[UIBarButtonItem alloc] initWithCustomView:imv];
-    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"navi_back"]];
-    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"navi_back"]];
+//    self.navigationItem.backBarButtonItem = rt;
+//    return;
+    UIBarButtonItem* bb = [[UIBarButtonItem alloc] initWithTitle:@"back" style:UIBarButtonItemStylePlain target:nil action:NULL];
+//    bb.width = -20;
+    [bb setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIColor darkTextColor] forKey:NSForegroundColorAttributeName] forState:UIControlStateNormal];
+    [bb setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIColor lightTextColor] forKey:NSForegroundColorAttributeName] forState:UIControlStateHighlighted];
+//    UITextAttributeTextColor
+//    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"navi_back"]];
+//    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"navi_back"]];
+    [bb setBackButtonBackgroundImage:ii forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
 //    bb.image = arrow;
-    bb.title = @" ";
+//    bb.title = @" ";
 //    [self.navigationItem.]
-    bb.width = 20;
-    self.navigationItem.backBarButtonItem = bb;
+//    bb.width = 20;
+//    [self.navigationController.navigationBar setBackIndicatorImage:arrow];
+//    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:arrow];
+    [self.navigationItem setBackBarButtonItem:bb];
+//    self.navigationItem.backBarButtonItem = bb;
 }
 
 - (void) SetNaviTitle:(NSString *)_naviTitle
 {
     self.navigationItem.title = _naviTitle;
+}
+
+- (UIButton *) GetNaviButtonWithTitle:(NSString *)_naviTitle
+{
+    UIButton *rt = [UIButton buttonWithType:UIButtonTypeCustom];
+    [rt setFrame:CGRectMake(0, 0, 60, 36)];
+    [rt setTitle:_naviTitle forState:UIControlStateNormal];
+    [rt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [rt setTitleColor:[UIColor darkGrayColor] forState:UIControlStateHighlighted];
+    [rt setBackgroundImage:[CommonTools GetResizeImageWithName:@"btn_bkg"] forState:UIControlStateNormal];
+    [rt setBackgroundImage:[CommonTools GetResizeImageWithName:@"btn_bkg_highlighted"] forState:UIControlStateHighlighted];
+    return rt;
+}
+
+- (void) SetNaviBackItem
+{
+    [self SetNaviBackItemWithTitle:LocalizedString(@"Back")];
+}
+
+- (void) SetNaviBackItemWithTitle:(NSString *)_backTitle
+{
+    UIImage *back = [UIImage imageNamed:@"back_bkg"];
+    UIImage *back_HL = [UIImage imageNamed:@"back_bkg_HL"];
+    UIEdgeInsets inset = UIEdgeInsetsMake(0, 16, 0, 5);
+    UIImage *back_resize = [back resizableImageWithCapInsets:inset resizingMode:UIImageResizingModeStretch];
+    UIImage *back_HL_resize = [back_HL resizableImageWithCapInsets:inset resizingMode:UIImageResizingModeStretch];
+    UIBarButtonItem* bb = [[UIBarButtonItem alloc] initWithTitle:_backTitle style:UIBarButtonItemStylePlain target:nil action:NULL];
+    [bb setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIColor darkTextColor] forKey:NSForegroundColorAttributeName] forState:UIControlStateNormal];
+    [bb setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIColor grayColor] forKey:NSForegroundColorAttributeName] forState:UIControlStateHighlighted];
+    [bb setBackButtonBackgroundImage:back_resize forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [bb setBackButtonBackgroundImage:back_HL_resize forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
+    [self.navigationItem setBackBarButtonItem:bb];
 }
 
 - (void) BtnBack

@@ -8,8 +8,19 @@
 "enter" = "Enter";
 "demo" = "english:this is a demo";
 "InputPassword" = "Please input the password";
-"NoteListTitle" = "Note";
-"Cancel" = "Cancel";
-"Save" = "Save";
+"NoteListTitle" = "Note"; 
+"Cancel" = "Cancel";  // 取消
+"Save" = "Save";  // 保存
 "NewNoteTitle" = "untitled note";   // 新建文件夹
 "AddNewOne" = "New";    // 新建
+"Back" = "Back";  // 返回
+"Edit" = "Edit";  // 编辑
+"Done" = "Done";  // 完成
+"OK" = "OK"; // 确定
+"Delete" = "Delete"; // 删除
+
+
+// sentence
+"SureDelete" = "Are you sure to delete?"; // 确定删除？
+
+

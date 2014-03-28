@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "DefaultViewController.h"
+@class NoteListViewCell;
 
 @interface NoteListViewController : DefaultViewController
+
+- (void) cbFromCellRemoveCell:(NoteListViewCell *)_cell;
+
+- (void) cbFromCellBeginEditing;
+
+
 
 @end

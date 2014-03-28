@@ -270,11 +270,7 @@ typedef NS_ENUM(NSInteger, _ScrollingDirection) {
                 self.layoutHelper.fromIndexPath = nil;
                 self.layoutHelper.toIndexPath = nil;
             } completion:^(BOOL finished) {
-                if (finished) {
-                    if ([dataSource respondsToSelector:@selector(collectionView:didMoveItemAtIndexPath:toIndexPath:)]) {
-                        [dataSource collectionView:self.collectionView didMoveItemAtIndexPath:fromIndexPath toIndexPath:toIndexPath];
-                    }
-                }
+
             }];
             
             // Switch mock for cell
@@ -286,10 +282,18 @@ typedef NS_ENUM(NSInteger, _ScrollingDirection) {
                  mockCell.transform = CGAffineTransformMakeScale(1.f, 1.f);
              }
              completion:^(BOOL finished) {
-                 [mockCell removeFromSuperview];
-                 mockCell = nil;
-                 self.layoutHelper.hideIndexPath = nil;
-                 [self.collectionView.collectionViewLayout invalidateLayout];
+                 if (finished)
+                 {
+                     [mockCell removeFromSuperview];
+                     mockCell = nil;
+                     self.layoutHelper.hideIndexPath = nil;
+                     [self.collectionView.collectionViewLayout invalidateLayout];
+                     dispatch_async(dispatch_get_main_queue(), ^{
+                         if ([dataSource respondsToSelector:@selector(collectionView:didMoveItemAtIndexPath:toIndexPath:)]) {
+                             [dataSource collectionView:self.collectionView didMoveItemAtIndexPath:fromIndexPath toIndexPath:toIndexPath];
+                         }
+                     });
+                 }
              }];
             
             // Reset

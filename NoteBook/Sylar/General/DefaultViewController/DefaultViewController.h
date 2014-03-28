@@ -10,13 +10,15 @@
 
 @interface DefaultViewController : UIViewController
 
-- (void) SetNaviBackItemTitle:(NSString *)_naviBack;
+//- (void) SetNaviBackItemTitle:(NSString *)_naviBack;
 - (void) SetNaviTitle:(NSString *)_naviTitle;
+- (UIButton *) GetNaviButtonWithTitle:(NSString *)_naviTitle;
+- (void) SetNaviBackItem;
 
 - (void) BtnBack;
 
 - (void) ShowPasswordView;
 
-- (UIButton*) GetButtonWithTitle:(NSString*)_pTitle;
+- (UIButton *) GetButtonWithTitle:(NSString *)_pTitle;
 
 @end
