@@ -9,7 +9,13 @@
 #import "AppDelegate.h"
 #import "NoteListViewController.h"
 #import "AVOHelper.h"
-
+//////////////////////////////////////////////////////////////////
+@interface AppDelegate()
+{
+    UINavigationController   *m_navi;
+}
+@end
+//////////////////////////////////////////////////////////////////
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -20,7 +26,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     NoteListViewController* dd = [[NoteListViewController alloc] initWithNibName:nil bundle:nil];
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:dd];
-//    [nav setNavigationBarHidden:YES];
+    m_navi = nav;
     self.window.rootViewController = nav;
     [_window addSubview:[nav view]];
     [self.window makeKeyAndVisible];
@@ -49,8 +55,9 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    NSLog(@"");
     [[AVOHelper Share] UploadBecomeActivesIfNeed];
+    DefaultViewController *top_view_controller = (DefaultViewController *)[m_navi topViewController];
+    [top_view_controller ShowPasswordView];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

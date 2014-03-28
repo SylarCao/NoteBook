@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B6291A6D18E553FF00B9B09D /* CommonActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A6A18E553FF00B9B09D /* CommonActionSheet.m */; };
 		B6291A6E18E553FF00B9B09D /* LXActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A6C18E553FF00B9B09D /* LXActionSheet.m */; };
+		B6291A7318E5645000B9B09D /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6291A7218E5645000B9B09D /* AVOSCloud.framework */; };
 		B68CB0B618E5195D00167BFB /* test1.png in Resources */ = {isa = PBXBuildFile; fileRef = B68CB0B418E5195D00167BFB /* test1.png */; };
 		B68CB0B718E5195D00167BFB /* test1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B68CB0B518E5195D00167BFB /* test1@2x.png */; };
 		B68CB0CA18E5271100167BFB /* back_bkg_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = B68CB0C618E5271100167BFB /* back_bkg_HL.png */; };
@@ -57,7 +58,6 @@
 		B6CB6D1218CEFADA00033F15 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6CB6D1118CEFADA00033F15 /* Images.xcassets */; };
 		B6CB6D3E18CF06F400033F15 /* DefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CB6D3D18CF06F400033F15 /* DefaultViewController.m */; };
 		B6CB6D4218CF075100033F15 /* CommomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CB6D4118CF075100033F15 /* CommomColor.m */; };
-		B6D043FB18D2EFEF00424389 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D043FA18D2EFEF00424389 /* AVOSCloud.framework */; };
 		B6D0441E18D2F36C00424389 /* a1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6D043FE18D2F36C00424389 /* a1.jpg */; };
 		B6D0441F18D2F36C00424389 /* a2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6D043FF18D2F36C00424389 /* a2.jpg */; };
 		B6D0442018D2F36C00424389 /* a28m1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6D0440018D2F36C00424389 /* a28m1.jpg */; };
@@ -108,6 +108,7 @@
 		B6291A6A18E553FF00B9B09D /* CommonActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonActionSheet.m; sourceTree = "<group>"; };
 		B6291A6B18E553FF00B9B09D /* LXActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXActionSheet.h; sourceTree = "<group>"; };
 		B6291A6C18E553FF00B9B09D /* LXActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXActionSheet.m; sourceTree = "<group>"; };
+		B6291A7218E5645000B9B09D /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		B68CB0B418E5195D00167BFB /* test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test1.png; sourceTree = "<group>"; };
 		B68CB0B518E5195D00167BFB /* test1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test1@2x.png"; sourceTree = "<group>"; };
 		B68CB0C618E5271100167BFB /* back_bkg_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_bkg_HL.png; sourceTree = "<group>"; };
@@ -188,7 +189,6 @@
 		B6CB6D3D18CF06F400033F15 /* DefaultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultViewController.m; sourceTree = "<group>"; };
 		B6CB6D4018CF075100033F15 /* CommomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommomColor.h; sourceTree = "<group>"; };
 		B6CB6D4118CF075100033F15 /* CommomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommomColor.m; sourceTree = "<group>"; };
-		B6D043FA18D2EFEF00424389 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		B6D043FE18D2F36C00424389 /* a1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a1.jpg; sourceTree = "<group>"; };
 		B6D043FF18D2F36C00424389 /* a2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a2.jpg; sourceTree = "<group>"; };
 		B6D0440018D2F36C00424389 /* a28m1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a28m1.jpg; sourceTree = "<group>"; };
@@ -252,7 +252,7 @@
 				B6AC8E1618D01E43009D88B9 /* SystemConfiguration.framework in Frameworks */,
 				B6CB6CFC18CEFAD900033F15 /* CoreGraphics.framework in Frameworks */,
 				B6CB6CFE18CEFAD900033F15 /* UIKit.framework in Frameworks */,
-				B6D043FB18D2EFEF00424389 /* AVOSCloud.framework in Frameworks */,
+				B6291A7318E5645000B9B09D /* AVOSCloud.framework in Frameworks */,
 				B6CB6CFA18CEFAD900033F15 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +269,14 @@
 				B6291A6C18E553FF00B9B09D /* LXActionSheet.m */,
 			);
 			path = LXActionSheet;
+			sourceTree = "<group>";
+		};
+		B6291A7118E5645000B9B09D /* AVO */ = {
+			isa = PBXGroup;
+			children = (
+				B6291A7218E5645000B9B09D /* AVOSCloud.framework */,
+			);
+			path = AVO;
 			sourceTree = "<group>";
 		};
 		B68CB0B318E5195D00167BFB /* test */ = {
@@ -371,14 +379,6 @@
 				B6AC8E0818D01B91009D88B9 /* MJPathLayer.m */,
 			);
 			path = mjpasswordview;
-			sourceTree = "<group>";
-		};
-		B6AC8E0C18D01D06009D88B9 /* AVO */ = {
-			isa = PBXGroup;
-			children = (
-				B6D043FA18D2EFEF00424389 /* AVOSCloud.framework */,
-			);
-			path = AVO;
 			sourceTree = "<group>";
 		};
 		B6AC8E1B18D02063009D88B9 /* udid */ = {
@@ -564,10 +564,10 @@
 		B6CB6D3418CEFB7000033F15 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				B6291A7118E5645000B9B09D /* AVO */,
 				B6291A6818E553FF00B9B09D /* LXActionSheet */,
 				B6B4131C18E16A020051F54B /* AES */,
 				B6AC8E1B18D02063009D88B9 /* udid */,
-				B6AC8E0C18D01D06009D88B9 /* AVO */,
 				B6AC8E0218D01B91009D88B9 /* mjpasswordview */,
 				B6AC8DC518CFF636009D88B9 /* DraggableCollectionView */,
 			);
@@ -940,8 +940,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Derek Lu (HQD7YZRASD)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/appledev014/Desktop/PwcProject/txt/NoteBook/NoteBook/NoteBook/Sylar/Vendor/AVO,
-					/Users/appledev014/Desktop/sylar/GitHub/NoteBook/NoteBook/NoteBook/Sylar/Vendor/AVO,
+					"$(PROJECT_DIR)/NoteBook/Sylar/Vendor/AVO",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NoteBook/NoteBook-Prefix.pch";
@@ -959,8 +958,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Derek Lu (HQD7YZRASD)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/appledev014/Desktop/PwcProject/txt/NoteBook/NoteBook/NoteBook/Sylar/Vendor/AVO,
-					/Users/appledev014/Desktop/sylar/GitHub/NoteBook/NoteBook/NoteBook/Sylar/Vendor/AVO,
+					"$(PROJECT_DIR)/NoteBook/Sylar/Vendor/AVO",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NoteBook/NoteBook-Prefix.pch";
