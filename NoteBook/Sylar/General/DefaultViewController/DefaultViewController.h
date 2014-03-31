@@ -8,17 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^BlockCompletion)(BOOL complete);
+
 @interface DefaultViewController : UIViewController
 
-//- (void) SetNaviBackItemTitle:(NSString *)_naviBack;
+// anvi
 - (void) SetNaviTitle:(NSString *)_naviTitle;
 - (UIButton *) GetNaviButtonWithTitle:(NSString *)_naviTitle;
 - (void) SetNaviBackItem;
 
+// back
 - (void) BtnBack;
 
+// password view
 - (void) ShowPasswordView;
 
+// common get button
 - (UIButton *) GetButtonWithTitle:(NSString *)_pTitle;
+
+// pop view
+- (void) ShowPopViewWithText:(NSString *)popViewTitle Complete:(BlockCompletion)_block;
 
 @end

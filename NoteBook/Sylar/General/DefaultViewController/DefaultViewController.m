@@ -11,6 +11,7 @@
 #import "PasswordViewController.h"
 #import "NoteListViewController.h"
 #import "CommonTools.h"
+#import "PopView.h"
 /////////////////////////////////////////////////////////////////////
 @interface DefaultViewController ()
 
@@ -55,54 +56,10 @@
 - (void) SetInitialValued
 {
     [self.view setBackgroundColor:[CommomColor GetBkgColor]];
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-        UILabel* lb = [[UILabel alloc] init];
-        [self.view addSubview:lb];
-//    });
-}
+    UILabel* lb = [[UILabel alloc] init];
+    [self.view addSubview:lb];
 
-- (void) SetNaviBackItemTitle:(NSString *)_naviBack
-{
-//    UIImage* bkg = [UIImage imageNamed:@"btn_bkg"];
-//    UIImage* bkg_highlighted = [UIImage imageNamed:@"btn_bkg_highlighted"];
-//    UIImage* close = [UIImage imageNamed:@"close"];
-//    UIImage *arrow = [UIImage imageNamed:@"navi_back"];
-//    UIImage* test1 = [UIImage imageNamed:@"test1"];
-//    UIImage* test2 = [UIImage imageNamed:@"test2"];
-//    UIImage* ii = [test2 resizableImageWithCapInsets:UIEdgeInsetsMake(0, 16, 0, 5) resizingMode:UIImageResizingModeStretch];
-//    
-//    
-//    UIImageView* imv = [[UIImageView alloc] initWithImage:arrow];
-//    [imv setFrame:CGRectMake(0, 0, arrow.size.width, arrow.size.height)];
-//    UIBarButtonItem *rt = [[UIBarButtonItem alloc] initWithTitle:@"cancel" style:UIBarButtonItemStylePlain target:nil action:nil];
-////    rt.customView = imv;
-////    rt.image = bkg;
-////    rt.customView = [[UIImageView alloc] initWithImage:bkg];
-////    rt = [[UIBarButtonItem alloc] initWith];
-////    [rt setBackButtonBackgroundImage:bkg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-////    rt.width = -20;
-////    [rt setBackButtonBackgroundImage:bkg_highlighted forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
-////    self.navigationItem.backBarButtonItem = rt;
-////    return;
-//    UIBarButtonItem* bb = [[UIBarButtonItem alloc] initWithTitle:@"back" style:UIBarButtonItemStylePlain target:nil action:NULL];
-////    bb.width = -20;
-//    [bb setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIColor darkTextColor] forKey:NSForegroundColorAttributeName] forState:UIControlStateNormal];
-//    [bb setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIColor lightTextColor] forKey:NSForegroundColorAttributeName] forState:UIControlStateHighlighted];
-////    UITextAttributeTextColor
-////    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"navi_back"]];
-////    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"navi_back"]];
-//    [bb setBackButtonBackgroundImage:ii forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-////    bb.image = arrow;
-////    bb.title = @" ";
-////    [self.navigationItem.]
-////    bb.width = 20;
-////    [self.navigationController.navigationBar setBackIndicatorImage:arrow];
-////    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:arrow];
-//    [self.navigationItem setBackBarButtonItem:bb];
-////    self.navigationItem.backBarButtonItem = bb;
 }
-
 - (void) SetNaviTitle:(NSString *)_naviTitle
 {
     self.navigationItem.title = _naviTitle;
@@ -173,6 +130,14 @@
     [rt setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [rt setTitleColor:[UIColor lightTextColor] forState:UIControlStateHighlighted];
     return rt;
+}
+
+- (void) ShowPopViewWithText:(NSString *)popViewTitle Complete:(BlockCompletion)_block
+{
+    PopView *pop = [[PopView alloc] initWithTitle:popViewTitle];
+    [pop ShowCompletion:^(BOOL complete) {
+        _block(complete);
+    }];
 }
 
 

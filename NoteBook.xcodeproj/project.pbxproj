@@ -11,6 +11,13 @@
 		B6291A6E18E553FF00B9B09D /* LXActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A6C18E553FF00B9B09D /* LXActionSheet.m */; };
 		B6291A7318E5645000B9B09D /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6291A7218E5645000B9B09D /* AVOSCloud.framework */; };
 		B6291A7718E565A100B9B09D /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A7618E565A100B9B09D /* MenuViewController.m */; };
+		B6291A7A18E914C300B9B09D /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A7918E914C300B9B09D /* MenuTableViewCell.m */; };
+		B6291A7E18E916E800B9B09D /* ChangPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A7D18E916E800B9B09D /* ChangPasswordViewController.m */; };
+		B6291A8318E92DCA00B9B09D /* right_arrow_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = B6291A7F18E92DCA00B9B09D /* right_arrow_HL.png */; };
+		B6291A8418E92DCA00B9B09D /* right_arrow_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6291A8018E92DCA00B9B09D /* right_arrow_HL@2x.png */; };
+		B6291A8518E92DCA00B9B09D /* right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B6291A8118E92DCA00B9B09D /* right_arrow.png */; };
+		B6291A8618E92DCA00B9B09D /* right_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6291A8218E92DCA00B9B09D /* right_arrow@2x.png */; };
+		B6291A8E18E93F1300B9B09D /* PopView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A8D18E93F1300B9B09D /* PopView.m */; };
 		B68CB0B618E5195D00167BFB /* test1.png in Resources */ = {isa = PBXBuildFile; fileRef = B68CB0B418E5195D00167BFB /* test1.png */; };
 		B68CB0B718E5195D00167BFB /* test1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B68CB0B518E5195D00167BFB /* test1@2x.png */; };
 		B68CB0CA18E5271100167BFB /* back_bkg_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = B68CB0C618E5271100167BFB /* back_bkg_HL.png */; };
@@ -112,6 +119,16 @@
 		B6291A7218E5645000B9B09D /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		B6291A7518E565A100B9B09D /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		B6291A7618E565A100B9B09D /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		B6291A7818E914C300B9B09D /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
+		B6291A7918E914C300B9B09D /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
+		B6291A7C18E916E800B9B09D /* ChangPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangPasswordViewController.h; sourceTree = "<group>"; };
+		B6291A7D18E916E800B9B09D /* ChangPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangPasswordViewController.m; sourceTree = "<group>"; };
+		B6291A7F18E92DCA00B9B09D /* right_arrow_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow_HL.png; sourceTree = "<group>"; };
+		B6291A8018E92DCA00B9B09D /* right_arrow_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_arrow_HL@2x.png"; sourceTree = "<group>"; };
+		B6291A8118E92DCA00B9B09D /* right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow.png; sourceTree = "<group>"; };
+		B6291A8218E92DCA00B9B09D /* right_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_arrow@2x.png"; sourceTree = "<group>"; };
+		B6291A8C18E93F1300B9B09D /* PopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopView.h; sourceTree = "<group>"; };
+		B6291A8D18E93F1300B9B09D /* PopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopView.m; sourceTree = "<group>"; };
 		B68CB0B418E5195D00167BFB /* test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test1.png; sourceTree = "<group>"; };
 		B68CB0B518E5195D00167BFB /* test1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test1@2x.png"; sourceTree = "<group>"; };
 		B68CB0C618E5271100167BFB /* back_bkg_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_bkg_HL.png; sourceTree = "<group>"; };
@@ -287,8 +304,29 @@
 			children = (
 				B6291A7518E565A100B9B09D /* MenuViewController.h */,
 				B6291A7618E565A100B9B09D /* MenuViewController.m */,
+				B6291A7818E914C300B9B09D /* MenuTableViewCell.h */,
+				B6291A7918E914C300B9B09D /* MenuTableViewCell.m */,
+				B6291A7B18E916C800B9B09D /* password */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		B6291A7B18E916C800B9B09D /* password */ = {
+			isa = PBXGroup;
+			children = (
+				B6291A7C18E916E800B9B09D /* ChangPasswordViewController.h */,
+				B6291A7D18E916E800B9B09D /* ChangPasswordViewController.m */,
+			);
+			path = password;
+			sourceTree = "<group>";
+		};
+		B6291A8B18E93F0000B9B09D /* PopView */ = {
+			isa = PBXGroup;
+			children = (
+				B6291A8C18E93F1300B9B09D /* PopView.h */,
+				B6291A8D18E93F1300B9B09D /* PopView.m */,
+			);
+			path = PopView;
 			sourceTree = "<group>";
 		};
 		B68CB0B318E5195D00167BFB /* test */ = {
@@ -405,6 +443,10 @@
 		B6B4130918E15C100051F54B /* navigation */ = {
 			isa = PBXGroup;
 			children = (
+				B6291A7F18E92DCA00B9B09D /* right_arrow_HL.png */,
+				B6291A8018E92DCA00B9B09D /* right_arrow_HL@2x.png */,
+				B6291A8118E92DCA00B9B09D /* right_arrow.png */,
+				B6291A8218E92DCA00B9B09D /* right_arrow@2x.png */,
 				B68CB0C618E5271100167BFB /* back_bkg_HL.png */,
 				B68CB0C718E5271100167BFB /* back_bkg_HL@2x.png */,
 				B68CB0C818E5271100167BFB /* back_bkg.png */,
@@ -534,6 +576,7 @@
 		B6CB6D3018CEFB7000033F15 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B6291A8B18E93F0000B9B09D /* PopView */,
 				B690055718E4042400870905 /* UI */,
 				B6F97C7518D029FC00BA9A92 /* CommomTools */,
 				B6F97C7118D026A600BA9A92 /* AVONetWork */,
@@ -743,12 +786,15 @@
 				B6D0442218D2F36C00424389 /* a28m3.jpg in Resources */,
 				B6D0442018D2F36C00424389 /* a28m1.jpg in Resources */,
 				B6D0442618D2F36C00424389 /* a45.jpg in Resources */,
+				B6291A8618E92DCA00B9B09D /* right_arrow@2x.png in Resources */,
 				B6EEC3D718E2BDCE00D883CE /* btn_bkg.png in Resources */,
+				B6291A8418E92DCA00B9B09D /* right_arrow_HL@2x.png in Resources */,
 				B6B4131818E160520051F54B /* password.png in Resources */,
 				B6D0441E18D2F36C00424389 /* a1.jpg in Resources */,
 				B690056118E41ACC00870905 /* note_cell_bkg@2x.png in Resources */,
 				B6D0442418D2F36C00424389 /* a28m5.jpg in Resources */,
 				B6D0442818D2F36C00424389 /* 10.png in Resources */,
+				B6291A8318E92DCA00B9B09D /* right_arrow_HL.png in Resources */,
 				B6D0442118D2F36C00424389 /* a28m2.jpg in Resources */,
 				B6D0443B18D2F36C00424389 /* 9.png in Resources */,
 				B6D0442318D2F36C00424389 /* a28m4.jpg in Resources */,
@@ -771,6 +817,7 @@
 				B68CB0B718E5195D00167BFB /* test1@2x.png in Resources */,
 				B6D0443418D2F36C00424389 /* 21.png in Resources */,
 				B6D0441F18D2F36C00424389 /* a2.jpg in Resources */,
+				B6291A8518E92DCA00B9B09D /* right_arrow.png in Resources */,
 				B6D0443518D2F36C00424389 /* 3.png in Resources */,
 				B6D0443618D2F36C00424389 /* 4.png in Resources */,
 				B6D0443718D2F36C00424389 /* 5.png in Resources */,
@@ -808,6 +855,7 @@
 				B6B4132718E16A020051F54B /* NSData+CommonCrypto.m in Sources */,
 				B6AC8E0A18D01B91009D88B9 /* MJPasswordView.m in Sources */,
 				B6CB6D4218CF075100033F15 /* CommomColor.m in Sources */,
+				B6291A7A18E914C300B9B09D /* MenuTableViewCell.m in Sources */,
 				B6F97C7818D02A0B00BA9A92 /* CommonTools.m in Sources */,
 				B6CB6D0A18CEFAD900033F15 /* AppDelegate.m in Sources */,
 				B690056418E41E7D00870905 /* NoteListNewCell.m in Sources */,
@@ -823,11 +871,13 @@
 				B6B4132518E16A020051F54B /* AESCrypt.m in Sources */,
 				B6AC8DD318CFF636009D88B9 /* LSCollectionViewLayoutHelper.m in Sources */,
 				B6291A7718E565A100B9B09D /* MenuViewController.m in Sources */,
+				B6291A8E18E93F1300B9B09D /* PopView.m in Sources */,
 				B6AC8DD418CFF636009D88B9 /* DraggableCollectionViewFlowLayout.m in Sources */,
 				B6B4132B18E16EF70051F54B /* DataModel.m in Sources */,
 				B6291A6D18E553FF00B9B09D /* CommonActionSheet.m in Sources */,
 				B6291A6E18E553FF00B9B09D /* LXActionSheet.m in Sources */,
 				B6AC8E0B18D01B91009D88B9 /* MJPathLayer.m in Sources */,
+				B6291A7E18E916E800B9B09D /* ChangPasswordViewController.m in Sources */,
 				B6F97C7E18D0455600BA9A92 /* ItemModel.m in Sources */,
 				B6B4132618E16A020051F54B /* NSData+Base64.m in Sources */,
 				B6CB6D0618CEFAD900033F15 /* main.m in Sources */,

@@ -10,7 +10,8 @@
 #import "MJPasswordView.h"
 #import "CommonTools.h"
 ////////////////////////////////////////////////////////////////////////////////////
-const float c_securyView_title_height = 70;
+const float c_securyView_title_height = 50;
+const float c_securyView_title_font_size = 25;
 ////////////////////////////////////////////////////////////////////////////////////
 @interface PasswordViewController ()
 <MJPasswordDelegate>
@@ -49,7 +50,7 @@ const float c_securyView_title_height = 70;
     m_label_title = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kSCREEN_WIDTH, c_securyView_title_height)];
     [m_label_title setBackgroundColor:[[UIColor redColor] colorWithAlphaComponent:0.5]];
     [m_label_title setText:LocalizedString(@"InputPassword")];
-    [m_label_title setFont:[UIFont systemFontOfSize:30]];
+    [m_label_title setFont:[UIFont systemFontOfSize:c_securyView_title_font_size]];
     [m_label_title setTextAlignment:NSTextAlignmentCenter];
     [self.view addSubview:m_label_title];
     
@@ -59,8 +60,6 @@ const float c_securyView_title_height = 70;
     [password_view setDelegate:self];
     [password_view setP_image:[UIImage imageNamed:@"password"]];
     [password_view setP_image_highlighted:[UIImage imageNamed:@"password_highlighted"]];
-    //    [password_view setCircleFillColour:[UIColor colorWithPatternImage:[UIImage imageNamed:@"settings"]]];
-    //    [password_view setCircleFillColourHighlighted:[UIColor colorWithPatternImage:[UIImage imageNamed:@"close"]]];
     [self.view addSubview:password_view];
     
     // auto layout

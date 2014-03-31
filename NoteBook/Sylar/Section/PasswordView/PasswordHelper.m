@@ -26,6 +26,7 @@
 + (BOOL) CheckLoginPassword:(NSString *)_password
 {
     NSString* old_password = [[NSUserDefaults standardUserDefaults] objectForKey:kLoginPlistKey];
+    old_password = [AESCrypt decrypt:old_password password:kLoginAESPassword];
     BOOL rt = YES;
     if (old_password.length > 1)
     {

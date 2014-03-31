@@ -7,9 +7,15 @@
 //
 ///////////////////////////////////////////////////////////////////////////
 #import "MenuViewController.h"
+#import "MenuTableViewCell.h"
+#import "ChangPasswordViewController.h"
+#import "CommonTools.h"
 ///////////////////////////////////////////////////////////////////////////
 @interface MenuViewController ()
-
+<UITableViewDelegate, UITableViewDataSource>
+{
+    
+}
 @end
 ///////////////////////////////////////////////////////////////////////////
 @implementation MenuViewController
@@ -22,18 +28,6 @@
         [self SetInitialValue];
     }
     return self;
-}
-
-- (void) viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-//    self.navigationController.interactivePopGestureRecognizer.enabled = NO ;
-}
-
-- (void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-//    self.navigationController.interactivePopGestureRecognizer.enabled = NO ;
 }
 
 - (void)viewDidLoad
@@ -52,18 +46,74 @@
 - (void) SetInitialValue
 {
     [self SetNavi];
+    [self SetTableView];
+    [self SetNaviBackItem];
 }
 
 - (void) SetNavi
 {
-    UIImage* back_normal = [UIImage imageNamed:@"navi_back"];
-    UIImage* back_highlight = [UIImage imageNamed:@"navi_back_highlighted"];
-    UIButton* back = [UIButton buttonWithType:UIButtonTypeCustom];
-    back.frame = CGRectMake(0, 0, back_normal.size.width, back_normal.size.height);
-    [back setImage:back_normal forState:UIControlStateNormal];
-    [back setImage:back_highlight forState:UIControlStateHighlighted];
-    [back addTarget:self action:@selector(BtnBack) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem* left_item = [[UIBarButtonItem alloc] initWithCustomView:back];
-    [self.navigationItem setRightBarButtonItem:left_item];
+    [self SetNaviTitle:LocalizedString(@"Menu")];
 }
+
+- (void) SetTableView
+{
+    float navi_height = [CommonTools GetNaviStatusBarHeight];
+    CGRect table_frame = CGRectMake(0, navi_height, kSCREEN_WIDTH, kSCREEN_HEIGHT-navi_height);
+    UITableView* table = [[UITableView alloc] initWithFrame:table_frame style:UITableViewStylePlain];
+    table.delegate = self;
+    table.dataSource = self;
+    table.tableFooterView = [[UIView alloc] init];
+    [self.view addSubview:table];
+}
+
+
+
+
+
+// delegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[MenuTableViewCell GetCellId]];
+    if (cell == nil)
+    {
+        cell = [[MenuTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[MenuTableViewCell GetCellId]];
+    }
+    [cell SetWithTitle:[self GetTitleForIndexPath:indexPath]];
+    return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self SelectIndexPath:indexPath];
+}
+
+// data
+- (NSString *) GetTitleForIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *rt = @"";
+    int row = indexPath.row;
+    if (row == 0)
+    {
+        rt = LocalizedString(@"ChangePassword");
+    }
+    
+    return rt;
+}
+
+- (void) SelectIndexPath:(NSIndexPath *)indexPath
+{
+    int row = indexPath.row;
+    if (row == 0)
+    {
+        ChangPasswordViewController *cc = [[ChangPasswordViewController alloc] initWithNibName:nil bundle:nil];
+        [self.navigationController pushViewController:cc animated:YES];
+    }
+}
+
+
 @end

@@ -92,5 +92,13 @@
     return image;
 }
 
++ (CGFloat) GetLabelHeightWithLabel:(UILabel*)_label Text:(NSString*)_text
+{
+    CGRect rect = [_text boundingRectWithSize:CGSizeMake(_label.frame.size.width, 9999) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: _label.font} context:nil];
+    CGRect rect_one_line = [@"123" boundingRectWithSize:CGSizeMake(_label.frame.size.width, 9999) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: _label.font} context:nil];
+    int addition_height = rect.size.height/rect_one_line.size.height;
+    CGFloat rt = rect.size.height+addition_height;
+    return rt;
+}
 
 @end

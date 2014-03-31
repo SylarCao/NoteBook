@@ -35,4 +35,7 @@
 
 + (UIImage *)imageWithColor:(UIColor *)color;
 
+// constrain label height
++ (CGFloat) GetLabelHeightWithLabel:(UILabel*)_label Text:(NSString*)_text;
+
 @end
