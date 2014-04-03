@@ -55,12 +55,13 @@
     }
 }
 
-- (void) RevertVersion:(NSMutableArray *)data PlistData:(NSMutableArray *)plistData
+- (BOOL) RevertVersion:(NSMutableArray *)data PlistData:(NSMutableArray *)plistData
 {
     m_current = data;
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     [user setObject:plistData forKey:kDataModelKey];
-    [user synchronize];
+    BOOL rt = [user synchronize];
+    return rt;
 }
 
 - (int) GetItemCount

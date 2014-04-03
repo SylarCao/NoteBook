@@ -12,7 +12,7 @@
 //////////////////////////////////////////////////////////////////////////////
 # define kAVOHelperBecomeActiveTimes         @"kAVOHelperBecomeActiveTimes"
 # define kAVOHelperBecomeActiveUploadTime0   @"kAVOHelperBecomeActiveUploadTime0"
-# define kAVOBecomeActiveInterval            3600
+# define kAVOBecomeActiveInterval            (60*60*24*7)
 //////////////////////////////////////////////////////////////////////////////
 @interface AVOHelper()
 {
@@ -107,6 +107,19 @@
     }
     
     [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void) UploadFeedbacks:(NSString *)feedbacks Completion:(BlockCompletion)block
+{
+    AVObject* obj = [AVObject objectWithClassName:@"CFeedbacks"];
+    [obj setObject:m_udid forKey:@"UDID"];
+    [obj setObject:feedbacks forKey:@"Feedbacks"];
+    [obj saveEventually:^(BOOL succeeded, NSError *error) {
+        if (block)
+        {
+            block(succeeded);
+        }
+    }];
 }
 
 @end

@@ -141,7 +141,10 @@
 {
     PopView *pop = [[PopView alloc] initWithTitle:popViewTitle];
     [pop ShowCompletion:^(BOOL complete) {
-        _block(complete);
+        if (_block)
+        {
+            _block(complete);
+        }
     }];
 }
 

@@ -14,7 +14,7 @@
 + (instancetype) Share;
 
 // revert version
-- (void) RevertVersion:(NSMutableArray *)data PlistData:(NSMutableArray *)plistData;
+- (BOOL) RevertVersion:(NSMutableArray *)data PlistData:(NSMutableArray *)plistData;
 
 - (int) GetItemCount;
 

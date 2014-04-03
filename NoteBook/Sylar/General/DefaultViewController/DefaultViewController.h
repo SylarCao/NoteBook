@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef void (^BlockCompletion)(BOOL complete);
+#import "PopView.h"
 
 @interface DefaultViewController : UIViewController
 

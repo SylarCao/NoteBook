@@ -25,6 +25,7 @@
 		B6291AAA18E9653400B9B09D /* version_btn_bkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6291AA618E9653400B9B09D /* version_btn_bkg@2x.png */; };
 		B6291AAB18E9653400B9B09D /* version_btn_bkg_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = B6291AA718E9653400B9B09D /* version_btn_bkg_HL.png */; };
 		B6291AAC18E9653400B9B09D /* version_btn_bkg_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6291AA818E9653400B9B09D /* version_btn_bkg_HL@2x.png */; };
+		B631F14818ED08F400B488E0 /* FeedbacksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B631F14718ED08F400B488E0 /* FeedbacksViewController.m */; };
 		B63FD4C618EA552D00A73254 /* LocalVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FD4C518EA552D00A73254 /* LocalVersion.m */; };
 		B63FD4DE18EA9C7700A73254 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FD4DD18EA9C7700A73254 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B63FD4E118EAA2B200A73254 /* RevertVersionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FD4E018EAA2B200A73254 /* RevertVersionViewController.m */; };
@@ -152,6 +153,8 @@
 		B6291AA618E9653400B9B09D /* version_btn_bkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "version_btn_bkg@2x.png"; sourceTree = "<group>"; };
 		B6291AA718E9653400B9B09D /* version_btn_bkg_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = version_btn_bkg_HL.png; sourceTree = "<group>"; };
 		B6291AA818E9653400B9B09D /* version_btn_bkg_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "version_btn_bkg_HL@2x.png"; sourceTree = "<group>"; };
+		B631F14618ED08F400B488E0 /* FeedbacksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbacksViewController.h; sourceTree = "<group>"; };
+		B631F14718ED08F400B488E0 /* FeedbacksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbacksViewController.m; sourceTree = "<group>"; };
 		B63FD4C418EA552D00A73254 /* LocalVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalVersion.h; sourceTree = "<group>"; };
 		B63FD4C518EA552D00A73254 /* LocalVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalVersion.m; sourceTree = "<group>"; };
 		B63FD4DC18EA9C7700A73254 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
@@ -342,6 +345,7 @@
 				B6291A7618E565A100B9B09D /* MenuViewController.m */,
 				B6291A7818E914C300B9B09D /* MenuTableViewCell.h */,
 				B6291A7918E914C300B9B09D /* MenuTableViewCell.m */,
+				B631F14518ED08E600B488E0 /* Feedbacks */,
 				B6291A9118E94FD300B9B09D /* SaveVersion */,
 				B6291A9018E94FCE00B9B09D /* RevertVersion */,
 				B6291A7B18E916C800B9B09D /* password */,
@@ -408,6 +412,15 @@
 				B6291AA818E9653400B9B09D /* version_btn_bkg_HL@2x.png */,
 			);
 			path = version;
+			sourceTree = "<group>";
+		};
+		B631F14518ED08E600B488E0 /* Feedbacks */ = {
+			isa = PBXGroup;
+			children = (
+				B631F14618ED08F400B488E0 /* FeedbacksViewController.h */,
+				B631F14718ED08F400B488E0 /* FeedbacksViewController.m */,
+			);
+			path = Feedbacks;
 			sourceTree = "<group>";
 		};
 		B63FD4DB18EA9C7700A73254 /* JsonKit */ = {
@@ -986,6 +999,7 @@
 				B690055A18E4043D00870905 /* StateButton.m in Sources */,
 				B6B4132518E16A020051F54B /* AESCrypt.m in Sources */,
 				B675584E18ECFE260093D6AB /* RevertNoteListDetailedViewController.m in Sources */,
+				B631F14818ED08F400B488E0 /* FeedbacksViewController.m in Sources */,
 				B6AC8DD318CFF636009D88B9 /* LSCollectionViewLayoutHelper.m in Sources */,
 				B6291A7718E565A100B9B09D /* MenuViewController.m in Sources */,
 				B6291A8E18E93F1300B9B09D /* PopView.m in Sources */,

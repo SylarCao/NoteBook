@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AVODefines.h"
+#import "PopView.h"
 
 @interface AVOHelper : NSObject
 
@@ -16,6 +17,8 @@
 - (void) RegisterIfNot;
 
 - (void) UploadBecomeActivesIfNeed;
+
+- (void) UploadFeedbacks:(NSString *)feedbacks Completion:(BlockCompletion)block;
 
 @end
 

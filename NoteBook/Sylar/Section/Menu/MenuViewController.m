@@ -12,10 +12,12 @@
 #import "CommonTools.h"
 #import "SaveVersionViewController.h"
 #import "RevertVersionViewController.h"
+#import "FeedbacksViewController.h"
 ///////////////////////////////////////////////////////////////////////////
 # define kMenuIndexPassword      0
 # define kMenuIndexSaveVersion   1
 # define kMenuIndexRevertVersion 2
+# define kMenuIndexFeedbacks     3
 ///////////////////////////////////////////////////////////////////////////
 @interface MenuViewController ()
 <UITableViewDelegate, UITableViewDataSource>
@@ -80,7 +82,7 @@
 // delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -117,6 +119,10 @@
     {
         rt = LocalizedString(@"RevertVersion");
     }
+    else if (row == kMenuIndexFeedbacks)
+    {
+        rt = LocalizedString(@"FeedBacks");
+    }
     
     return rt;
 }
@@ -138,6 +144,11 @@
     {
         RevertVersionViewController *rr = [[RevertVersionViewController alloc] initWithNibName:nil bundle:nil];
         [self.navigationController pushViewController:rr animated:YES];
+    }
+    else if (row == kMenuIndexFeedbacks)
+    {
+        FeedbacksViewController *ff = [[FeedbacksViewController alloc] initWithNibName:nil bundle:nil];
+        [self.navigationController pushViewController:ff animated:YES];
     }
 }
 

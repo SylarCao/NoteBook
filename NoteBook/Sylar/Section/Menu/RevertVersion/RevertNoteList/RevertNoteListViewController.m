@@ -64,7 +64,18 @@
         if (index == 0)
         {
             // revert
-            [[DataModel Share] RevertVersion:[m_local_version_item.items mutableCopy] PlistData:m_local_version_item.data];
+            BOOL success = [[DataModel Share] RevertVersion:[m_local_version_item.items mutableCopy] PlistData:m_local_version_item.data];
+            NSString *pop_title = nil;
+            if (success)
+            {
+                pop_title = LocalizedString(@"RevertSuccess");
+            }
+            else
+            {
+                pop_title = LocalizedString(@"RevertFail");
+            }
+            [self ShowPopViewWithText:pop_title Complete:nil];
+            
         }
     }];
 }
@@ -87,15 +98,6 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-//    if (m_editing)
-//        return;
-//    ItemModel *item = [[DataModel Share] GetItemAtIndex:indexPath.row];
-//    if (item == nil)
-//    {
-//        item = [[ItemModel alloc] init];
-//    }
-//    NoteListDetailedViewController* nn = [NoteListDetailedViewController CreateWithData:item];
-//    [self.navigationController pushViewController:nn animated:YES];
     RevertNoteListDetailedViewController *rr = [RevertNoteListDetailedViewController CreateWithData:[m_local_version_item.items objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:rr animated:YES];
 }

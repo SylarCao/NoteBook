@@ -26,10 +26,12 @@
 "SaveFail" = "Save Failed"; // 保存失败 请重试
 "RevertVersion" = "Revert Version"; // 以前版本
 "NaviRevert" = "Revert";   // 返回到这个版本
-
+"FeedBacks" = "Feedbacks";  // 用户反馈
+"Send" = "Send"; // 发送
 
 
 // sentence
+"NetWorkFail" = "network error"; // 网络不给力，请稍后重试
 "SureDelete" = "Are you sure to delete?"; // 确定删除？
 "InputPassword" = "Please input the password";  // 请输入密码
 "InputOldPassword" = "old password"; // 请输入原密码
@@ -39,8 +41,9 @@
 "ConfirmError" = "confirm not same, input again";   // 输入不一致 请重新输入
 "ChangePassordSuccess" = "Password change successfully.";  // 密码设置成功
 "SureRevert" = "Are you sure to revert to this version"; // 确定返回这个版本?
-
-
+"RevertSuccess" = "revert successfully"; // 还原成功
+"RevertFail" = "revert failed"; // 还原失败
+"FeedbacksSuccess" = "Thanks for your suggestion"; // 感谢您的反馈
 
 
 
