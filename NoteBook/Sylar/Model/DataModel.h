@@ -13,6 +13,9 @@
 
 + (instancetype) Share;
 
+// revert version
+- (void) RevertVersion:(NSMutableArray *)data PlistData:(NSMutableArray *)plistData;
+
 - (int) GetItemCount;
 
 - (ItemModel *) GetItemAtIndex:(int)_index;
@@ -26,5 +29,11 @@
 - (void) SynchronizeWithEditingItem:(ItemModel *)_model;
 
 - (void) Synchronize;
+
+// save current version
+- (BOOL) SaveCurrentWithTitle:(NSString *)_title;
+
+// get previous version
+- (NSArray *) GetPreviousVersions;
 
 @end

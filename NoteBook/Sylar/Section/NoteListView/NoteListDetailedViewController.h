@@ -11,7 +11,15 @@
 @class ItemModel;
 
 @interface NoteListDetailedViewController : DefaultViewController
+{
+    @public
+    ItemModel    *m_data;      // data
+    UITextField  *m_title;     // title
+    UITextView   *m_content;   // textview
+}
 
 + (id) CreateWithData:(ItemModel *)_data;
+
+- (id) initWithData:(ItemModel *)_data;
 
 @end

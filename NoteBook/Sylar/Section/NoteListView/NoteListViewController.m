@@ -52,6 +52,15 @@
     [m_collection_view reloadData];
 }
 
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    if (m_editing)
+    {
+        [self BtnEdit];
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

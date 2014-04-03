@@ -10,6 +10,12 @@
 #import "MenuTableViewCell.h"
 #import "ChangPasswordViewController.h"
 #import "CommonTools.h"
+#import "SaveVersionViewController.h"
+#import "RevertVersionViewController.h"
+///////////////////////////////////////////////////////////////////////////
+# define kMenuIndexPassword      0
+# define kMenuIndexSaveVersion   1
+# define kMenuIndexRevertVersion 2
 ///////////////////////////////////////////////////////////////////////////
 @interface MenuViewController ()
 <UITableViewDelegate, UITableViewDataSource>
@@ -33,7 +39,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.interactivePopGestureRecognizer.enabled = NO ;
+//    self.navigationController.interactivePopGestureRecognizer.enabled = NO ;
     // Do any additional setup after loading the view.
 }
 
@@ -60,6 +66,7 @@
     float navi_height = [CommonTools GetNaviStatusBarHeight];
     CGRect table_frame = CGRectMake(0, navi_height, kSCREEN_WIDTH, kSCREEN_HEIGHT-navi_height);
     UITableView* table = [[UITableView alloc] initWithFrame:table_frame style:UITableViewStylePlain];
+    table.backgroundColor = [UIColor lightGrayColor];
     table.delegate = self;
     table.dataSource = self;
     table.tableFooterView = [[UIView alloc] init];
@@ -73,7 +80,7 @@
 // delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -89,6 +96,7 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self SelectIndexPath:indexPath];
 }
 
@@ -97,9 +105,17 @@
 {
     NSString *rt = @"";
     int row = indexPath.row;
-    if (row == 0)
+    if (row == kMenuIndexPassword)
     {
         rt = LocalizedString(@"ChangePassword");
+    }
+    else if (row == kMenuIndexSaveVersion)
+    {
+        rt = LocalizedString(@"SaveVersion");
+    }
+    else if (row == kMenuIndexRevertVersion)
+    {
+        rt = LocalizedString(@"RevertVersion");
     }
     
     return rt;
@@ -108,10 +124,20 @@
 - (void) SelectIndexPath:(NSIndexPath *)indexPath
 {
     int row = indexPath.row;
-    if (row == 0)
+    if (row == kMenuIndexPassword)
     {
         ChangPasswordViewController *cc = [[ChangPasswordViewController alloc] initWithNibName:nil bundle:nil];
         [self.navigationController pushViewController:cc animated:YES];
+    }
+    else if (row == kMenuIndexSaveVersion)
+    {
+        SaveVersionViewController *ss = [[SaveVersionViewController alloc] initWithNibName:nil bundle:nil];
+        [self.navigationController pushViewController:ss animated:YES];
+    }
+    else if (row == kMenuIndexRevertVersion)
+    {
+        RevertVersionViewController *rr = [[RevertVersionViewController alloc] initWithNibName:nil bundle:nil];
+        [self.navigationController pushViewController:rr animated:YES];
     }
 }
 

@@ -13,11 +13,11 @@
 ////////////////////////////////////////////////////////////////////////////////////
 @interface NoteListDetailedViewController ()
 <UITextViewDelegate, UITextFieldDelegate>
-{
-    ItemModel    *m_data;      // data
-    UITextField  *m_title;     // title
-    UITextView   *m_content;   // textview
-}
+//{
+//    ItemModel    *m_data;      // data
+//    UITextField  *m_title;     // title
+//    UITextView   *m_content;   // textview
+//}
 @end
 ////////////////////////////////////////////////////////////////////////////////////
 @implementation NoteListDetailedViewController
@@ -80,8 +80,9 @@
                                              selector:@selector(KeyBoardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
-    [self SetNaviBar];
+    
     [self SetTextView];
+    [self SetNaviBar];
 }
 
 - (void) SetNaviBar

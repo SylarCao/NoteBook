@@ -46,7 +46,7 @@
     
     // label
     m_label = [[UILabel alloc] init];
-    m_label.frame = CGRectMake(20, 0, kSCREEN_WIDTH, content_size.size.height);
+    m_label.frame = CGRectMake(20, 0, content_size.size.width, content_size.size.height);
     m_label.text = @"label";
     [self.contentView addSubview:m_label];
     

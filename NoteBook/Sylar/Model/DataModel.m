@@ -8,12 +8,13 @@
 ////////////////////////////////////////////////////////////////////////
 #import "DataModel.h"
 #import "ItemModel.h"
+#import "LocalVersion.h"
 ////////////////////////////////////////////////////////////////////////
 # define kDataModelKey   @"data"
 ////////////////////////////////////////////////////////////////////////
 @interface DataModel()
 {
-    NSMutableArray* m_current;
+    NSMutableArray* m_current;  // array of ItemModel
 }
 @end
 ////////////////////////////////////////////////////////////////////////
@@ -35,7 +36,6 @@
     if (self)
     {
         [self SetInitData];
-//        [self fakeData];
     }
     return self;
 }
@@ -53,6 +53,14 @@
             [m_current addObject:each_model];
         }
     }
+}
+
+- (void) RevertVersion:(NSMutableArray *)data PlistData:(NSMutableArray *)plistData
+{
+    m_current = data;
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    [user setObject:plistData forKey:kDataModelKey];
+    [user synchronize];
 }
 
 - (int) GetItemCount
@@ -115,18 +123,17 @@
     [user synchronize];
 }
 
-
-
-// test
-- (void) fakeData
+- (BOOL) SaveCurrentWithTitle:(NSString *)_title
 {
-    for (int i=0; i<5; i++)
-    {
-        ItemModel* each_item = [[ItemModel alloc] init];
-        each_item.title = [NSString stringWithFormat:@"title_%d", i];
-        each_item.content = [NSString stringWithFormat:@"this is content %d_%d_%d", i, i, i];
-        [m_current addObject:each_item];
-    }
+    NSArray *data = [[NSUserDefaults standardUserDefaults] objectForKey:kDataModelKey];
+    BOOL rt = [[LocalVersion Share] SaveData:data WithTitle:_title];
+    return rt;
+}
+
+- (NSArray *) GetPreviousVersions
+{
+    NSArray *rt = [[LocalVersion Share] GetLocalVersions];
+    return rt;
 }
 
 
