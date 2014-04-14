@@ -12,6 +12,7 @@
 #import "NoteListViewController.h"
 #import "CommonTools.h"
 #import "PopView.h"
+#import "MBProgressHUD.h"
 /////////////////////////////////////////////////////////////////////
 @interface DefaultViewController ()
 
@@ -137,15 +138,37 @@
     return rt;
 }
 
-- (void) ShowPopViewWithText:(NSString *)popViewTitle Complete:(BlockCompletion)_block
+- (void) ShowHudWithTitle:(NSString *)pTitle Complete:(BlockCompletion)_block
 {
-    PopView *pop = [[PopView alloc] initWithTitle:popViewTitle];
-    [pop ShowCompletion:^(BOOL complete) {
-        if (_block)
-        {
-            _block(complete);
-        }
-    }];
+    [self ShowHudWithTitle:pTitle DeltaTime:0.8 Complete:_block];
+}
+
+- (void) ShowHudWithTitle:(NSString *)pTitle DeltaTime:(float)deltaTime Complete:(BlockCompletion)_block
+{
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:hud];
+    hud.mode = MBProgressHUDModeCustomView;
+    UILabel *label = [[UILabel alloc] init];
+    label.text = pTitle;
+    label.font = [UIFont systemFontOfSize:18];
+    label.textAlignment = NSTextAlignmentLeft;
+    label.textColor = [UIColor whiteColor];
+    label.numberOfLines = 0;
+    label.frame = CGRectMake(0, 0, 280, 100);
+    [label sizeToFit];
+    hud.customView = label;
+    [hud show:YES];
+    float time = deltaTime;
+    [hud hide:YES afterDelay:time];
+    [self performSelector:@selector(ShowHudHelperCompletion:) withObject:_block afterDelay:time];
+}
+
+- (void) ShowHudHelperCompletion:(BlockCompletion)_block
+{
+    if (_block)
+    {
+        _block(YES);
+    }
 }
 
 

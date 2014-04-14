@@ -101,4 +101,14 @@
     return rt;
 }
 
++ (NSDate *) MaxDate1:(NSDate *)date1 Date2:(NSDate *)date2
+{
+    NSDate *rt = date1;
+    if ([date1 compare:date2] == NSOrderedAscending)
+    {
+        rt = date2;
+    }
+    return rt;
+}
+
 @end

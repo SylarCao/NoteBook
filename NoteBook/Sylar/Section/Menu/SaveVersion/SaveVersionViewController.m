@@ -99,7 +99,7 @@
         }
         else
         {
-            [self ShowPopViewWithText:LocalizedString(@"SaveFail") Complete:nil];
+            [self ShowHudWithTitle:LocalizedString(@"SaveFail") Complete:nil];
         }
     }
 }

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B60B26AF18FBA5300092BDAC /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = B60B26A318FBA5300092BDAC /* NSMutableArray+SWUtilityButtons.m */; };
+		B60B26B018FBA5300092BDAC /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B60B26A518FBA5300092BDAC /* SWCellScrollView.m */; };
+		B60B26B118FBA5300092BDAC /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B60B26A818FBA5300092BDAC /* SWLongPressGestureRecognizer.m */; };
+		B60B26B218FBA5300092BDAC /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B60B26AA18FBA5300092BDAC /* SWTableViewCell.m */; };
+		B60B26B318FBA5300092BDAC /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B60B26AC18FBA5300092BDAC /* SWUtilityButtonTapGestureRecognizer.m */; };
+		B60B26B418FBA5300092BDAC /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = B60B26AE18FBA5300092BDAC /* SWUtilityButtonView.m */; };
+		B60B26B618FBA9C80092BDAC /* ReminderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B60B26B518FBA9C80092BDAC /* ReminderViewCell.xib */; };
 		B6291A6D18E553FF00B9B09D /* CommonActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A6A18E553FF00B9B09D /* CommonActionSheet.m */; };
 		B6291A6E18E553FF00B9B09D /* LXActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A6C18E553FF00B9B09D /* LXActionSheet.m */; };
 		B6291A7318E5645000B9B09D /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6291A7218E5645000B9B09D /* AVOSCloud.framework */; };
@@ -26,6 +33,8 @@
 		B6291AAB18E9653400B9B09D /* version_btn_bkg_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = B6291AA718E9653400B9B09D /* version_btn_bkg_HL.png */; };
 		B6291AAC18E9653400B9B09D /* version_btn_bkg_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6291AA818E9653400B9B09D /* version_btn_bkg_HL@2x.png */; };
 		B631F14818ED08F400B488E0 /* FeedbacksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B631F14718ED08F400B488E0 /* FeedbacksViewController.m */; };
+		B631F14D18ED2E9100B488E0 /* ReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B631F14C18ED2E9100B488E0 /* ReminderViewController.m */; };
+		B631F15018ED416000B488E0 /* ReminderDetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B631F14F18ED416000B488E0 /* ReminderDetailedViewController.m */; };
 		B63FD4C618EA552D00A73254 /* LocalVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FD4C518EA552D00A73254 /* LocalVersion.m */; };
 		B63FD4DE18EA9C7700A73254 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FD4DD18EA9C7700A73254 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B63FD4E118EAA2B200A73254 /* RevertVersionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FD4E018EAA2B200A73254 /* RevertVersionViewController.m */; };
@@ -33,13 +42,18 @@
 		B63FD4E618EAA3D800A73254 /* RevertVersionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B63FD4E418EAA3D800A73254 /* RevertVersionTableViewCell.xib */; };
 		B675584B18ECF5CB0093D6AB /* RevertNoteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B675584A18ECF5CB0093D6AB /* RevertNoteListViewController.m */; };
 		B675584E18ECFE260093D6AB /* RevertNoteListDetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B675584D18ECFE260093D6AB /* RevertNoteListDetailedViewController.m */; };
+		B67C514118EE434700121C4C /* ReminderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B67C513F18EE434700121C4C /* ReminderViewCell.m */; };
+		B67C514518EE5D1600121C4C /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = B67C514318EE5D1600121C4C /* delete.png */; };
+		B67C514618EE5D1600121C4C /* delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B67C514418EE5D1600121C4C /* delete@2x.png */; };
+		B67C514A18EE973C00121C4C /* ReminderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B67C514918EE973C00121C4C /* ReminderHelper.m */; };
+		B67C514D18EE9C7F00121C4C /* red_dot.png in Resources */ = {isa = PBXBuildFile; fileRef = B67C514B18EE9C7F00121C4C /* red_dot.png */; };
+		B67C514E18EE9C7F00121C4C /* red_dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B67C514C18EE9C7F00121C4C /* red_dot@2x.png */; };
 		B68CB0B618E5195D00167BFB /* test1.png in Resources */ = {isa = PBXBuildFile; fileRef = B68CB0B418E5195D00167BFB /* test1.png */; };
 		B68CB0B718E5195D00167BFB /* test1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B68CB0B518E5195D00167BFB /* test1@2x.png */; };
 		B68CB0CA18E5271100167BFB /* back_bkg_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = B68CB0C618E5271100167BFB /* back_bkg_HL.png */; };
 		B68CB0CB18E5271100167BFB /* back_bkg_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B68CB0C718E5271100167BFB /* back_bkg_HL@2x.png */; };
 		B68CB0CC18E5271100167BFB /* back_bkg.png in Resources */ = {isa = PBXBuildFile; fileRef = B68CB0C818E5271100167BFB /* back_bkg.png */; };
 		B68CB0CD18E5271100167BFB /* back_bkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B68CB0C918E5271100167BFB /* back_bkg@2x.png */; };
-		B690055618E3D5F900870905 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = B690055518E3D5F900870905 /* Config.m */; };
 		B690055A18E4043D00870905 /* StateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B690055918E4043D00870905 /* StateButton.m */; };
 		B690055C18E408DD00870905 /* btn_bkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B690055B18E408DD00870905 /* btn_bkg@2x.png */; };
 		B690056018E41ACC00870905 /* note_cell_bkg.png in Resources */ = {isa = PBXBuildFile; fileRef = B690055E18E41ACC00870905 /* note_cell_bkg.png */; };
@@ -127,6 +141,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B60B26A218FBA5300092BDAC /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
+		B60B26A318FBA5300092BDAC /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
+		B60B26A418FBA5300092BDAC /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
+		B60B26A518FBA5300092BDAC /* SWCellScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCellScrollView.m; sourceTree = "<group>"; };
+		B60B26A618FBA5300092BDAC /* SWConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWConstants.h; sourceTree = "<group>"; };
+		B60B26A718FBA5300092BDAC /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		B60B26A818FBA5300092BDAC /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
+		B60B26A918FBA5300092BDAC /* SWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTableViewCell.h; sourceTree = "<group>"; };
+		B60B26AA18FBA5300092BDAC /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
+		B60B26AB18FBA5300092BDAC /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
+		B60B26AC18FBA5300092BDAC /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
+		B60B26AD18FBA5300092BDAC /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
+		B60B26AE18FBA5300092BDAC /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
+		B60B26B518FBA9C80092BDAC /* ReminderViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReminderViewCell.xib; sourceTree = "<group>"; };
 		B6291A6918E553FF00B9B09D /* CommonActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonActionSheet.h; sourceTree = "<group>"; };
 		B6291A6A18E553FF00B9B09D /* CommonActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonActionSheet.m; sourceTree = "<group>"; };
 		B6291A6B18E553FF00B9B09D /* LXActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXActionSheet.h; sourceTree = "<group>"; };
@@ -155,6 +183,10 @@
 		B6291AA818E9653400B9B09D /* version_btn_bkg_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "version_btn_bkg_HL@2x.png"; sourceTree = "<group>"; };
 		B631F14618ED08F400B488E0 /* FeedbacksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbacksViewController.h; sourceTree = "<group>"; };
 		B631F14718ED08F400B488E0 /* FeedbacksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbacksViewController.m; sourceTree = "<group>"; };
+		B631F14B18ED2E9100B488E0 /* ReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderViewController.h; sourceTree = "<group>"; };
+		B631F14C18ED2E9100B488E0 /* ReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderViewController.m; sourceTree = "<group>"; };
+		B631F14E18ED416000B488E0 /* ReminderDetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderDetailedViewController.h; sourceTree = "<group>"; };
+		B631F14F18ED416000B488E0 /* ReminderDetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderDetailedViewController.m; sourceTree = "<group>"; };
 		B63FD4C418EA552D00A73254 /* LocalVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalVersion.h; sourceTree = "<group>"; };
 		B63FD4C518EA552D00A73254 /* LocalVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalVersion.m; sourceTree = "<group>"; };
 		B63FD4DC18EA9C7700A73254 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
@@ -168,14 +200,20 @@
 		B675584A18ECF5CB0093D6AB /* RevertNoteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RevertNoteListViewController.m; sourceTree = "<group>"; };
 		B675584C18ECFE260093D6AB /* RevertNoteListDetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RevertNoteListDetailedViewController.h; sourceTree = "<group>"; };
 		B675584D18ECFE260093D6AB /* RevertNoteListDetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RevertNoteListDetailedViewController.m; sourceTree = "<group>"; };
+		B67C513E18EE434700121C4C /* ReminderViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderViewCell.h; sourceTree = "<group>"; };
+		B67C513F18EE434700121C4C /* ReminderViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderViewCell.m; sourceTree = "<group>"; };
+		B67C514318EE5D1600121C4C /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		B67C514418EE5D1600121C4C /* delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@2x.png"; sourceTree = "<group>"; };
+		B67C514818EE973C00121C4C /* ReminderHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderHelper.h; sourceTree = "<group>"; };
+		B67C514918EE973C00121C4C /* ReminderHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderHelper.m; sourceTree = "<group>"; };
+		B67C514B18EE9C7F00121C4C /* red_dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_dot.png; sourceTree = "<group>"; };
+		B67C514C18EE9C7F00121C4C /* red_dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_dot@2x.png"; sourceTree = "<group>"; };
 		B68CB0B418E5195D00167BFB /* test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test1.png; sourceTree = "<group>"; };
 		B68CB0B518E5195D00167BFB /* test1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test1@2x.png"; sourceTree = "<group>"; };
 		B68CB0C618E5271100167BFB /* back_bkg_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_bkg_HL.png; sourceTree = "<group>"; };
 		B68CB0C718E5271100167BFB /* back_bkg_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_bkg_HL@2x.png"; sourceTree = "<group>"; };
 		B68CB0C818E5271100167BFB /* back_bkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_bkg.png; sourceTree = "<group>"; };
 		B68CB0C918E5271100167BFB /* back_bkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_bkg@2x.png"; sourceTree = "<group>"; };
-		B690055418E3D5F900870905 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
-		B690055518E3D5F900870905 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		B690055818E4043D00870905 /* StateButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateButton.h; sourceTree = "<group>"; };
 		B690055918E4043D00870905 /* StateButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateButton.m; sourceTree = "<group>"; };
 		B690055B18E408DD00870905 /* btn_bkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_bkg@2x.png"; sourceTree = "<group>"; };
@@ -319,6 +357,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B60B26A118FBA5300092BDAC /* SWTCell */ = {
+			isa = PBXGroup;
+			children = (
+				B60B26A218FBA5300092BDAC /* NSMutableArray+SWUtilityButtons.h */,
+				B60B26A318FBA5300092BDAC /* NSMutableArray+SWUtilityButtons.m */,
+				B60B26A418FBA5300092BDAC /* SWCellScrollView.h */,
+				B60B26A518FBA5300092BDAC /* SWCellScrollView.m */,
+				B60B26A618FBA5300092BDAC /* SWConstants.h */,
+				B60B26A718FBA5300092BDAC /* SWLongPressGestureRecognizer.h */,
+				B60B26A818FBA5300092BDAC /* SWLongPressGestureRecognizer.m */,
+				B60B26A918FBA5300092BDAC /* SWTableViewCell.h */,
+				B60B26AA18FBA5300092BDAC /* SWTableViewCell.m */,
+				B60B26AB18FBA5300092BDAC /* SWUtilityButtonTapGestureRecognizer.h */,
+				B60B26AC18FBA5300092BDAC /* SWUtilityButtonTapGestureRecognizer.m */,
+				B60B26AD18FBA5300092BDAC /* SWUtilityButtonView.h */,
+				B60B26AE18FBA5300092BDAC /* SWUtilityButtonView.m */,
+			);
+			path = SWTCell;
+			sourceTree = "<group>";
+		};
 		B6291A6818E553FF00B9B09D /* LXActionSheet */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +403,7 @@
 				B6291A7618E565A100B9B09D /* MenuViewController.m */,
 				B6291A7818E914C300B9B09D /* MenuTableViewCell.h */,
 				B6291A7918E914C300B9B09D /* MenuTableViewCell.m */,
+				B631F14A18ED2E8200B488E0 /* Reminder */,
 				B631F14518ED08E600B488E0 /* Feedbacks */,
 				B6291A9118E94FD300B9B09D /* SaveVersion */,
 				B6291A9018E94FCE00B9B09D /* RevertVersion */,
@@ -423,6 +482,20 @@
 			path = Feedbacks;
 			sourceTree = "<group>";
 		};
+		B631F14A18ED2E8200B488E0 /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				B631F14B18ED2E9100B488E0 /* ReminderViewController.h */,
+				B631F14C18ED2E9100B488E0 /* ReminderViewController.m */,
+				B67C513E18EE434700121C4C /* ReminderViewCell.h */,
+				B67C513F18EE434700121C4C /* ReminderViewCell.m */,
+				B60B26B518FBA9C80092BDAC /* ReminderViewCell.xib */,
+				B631F14E18ED416000B488E0 /* ReminderDetailedViewController.h */,
+				B631F14F18ED416000B488E0 /* ReminderDetailedViewController.m */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
 		B63FD4DB18EA9C7700A73254 /* JsonKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,6 +514,15 @@
 				B675584D18ECFE260093D6AB /* RevertNoteListDetailedViewController.m */,
 			);
 			path = RevertNoteList;
+			sourceTree = "<group>";
+		};
+		B67C514718EE972D00121C4C /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				B67C514818EE973C00121C4C /* ReminderHelper.h */,
+				B67C514918EE973C00121C4C /* ReminderHelper.m */,
+			);
+			path = Reminder;
 			sourceTree = "<group>";
 		};
 		B68CB0B318E5195D00167BFB /* test */ = {
@@ -557,6 +639,10 @@
 		B6B4130918E15C100051F54B /* navigation */ = {
 			isa = PBXGroup;
 			children = (
+				B67C514B18EE9C7F00121C4C /* red_dot.png */,
+				B67C514C18EE9C7F00121C4C /* red_dot@2x.png */,
+				B67C514318EE5D1600121C4C /* delete.png */,
+				B67C514418EE5D1600121C4C /* delete@2x.png */,
 				B6291A7F18E92DCA00B9B09D /* right_arrow_HL.png */,
 				B6291A8018E92DCA00B9B09D /* right_arrow_HL@2x.png */,
 				B6291A8118E92DCA00B9B09D /* right_arrow.png */,
@@ -690,6 +776,7 @@
 		B6CB6D3018CEFB7000033F15 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B67C514718EE972D00121C4C /* Reminder */,
 				B6291A8B18E93F0000B9B09D /* PopView */,
 				B690055718E4042400870905 /* UI */,
 				B6F97C7518D029FC00BA9A92 /* CommomTools */,
@@ -715,8 +802,6 @@
 				B6B4132A18E16EF70051F54B /* DataModel.m */,
 				B6F97C7C18D0455600BA9A92 /* ItemModel.h */,
 				B6F97C7D18D0455600BA9A92 /* ItemModel.m */,
-				B690055418E3D5F900870905 /* Config.h */,
-				B690055518E3D5F900870905 /* Config.m */,
 				B63FD4C418EA552D00A73254 /* LocalVersion.h */,
 				B63FD4C518EA552D00A73254 /* LocalVersion.m */,
 			);
@@ -736,6 +821,7 @@
 		B6CB6D3418CEFB7000033F15 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				B60B26A118FBA5300092BDAC /* SWTCell */,
 				B63FD4DB18EA9C7700A73254 /* JsonKit */,
 				B6291A9518E952BA00B9B09D /* MBProgressHUD */,
 				B6291A7118E5645000B9B09D /* AVO */,
@@ -908,6 +994,7 @@
 				B6291A8618E92DCA00B9B09D /* right_arrow@2x.png in Resources */,
 				B6EEC3D718E2BDCE00D883CE /* btn_bkg.png in Resources */,
 				B6291A8418E92DCA00B9B09D /* right_arrow_HL@2x.png in Resources */,
+				B67C514618EE5D1600121C4C /* delete@2x.png in Resources */,
 				B6B4131818E160520051F54B /* password.png in Resources */,
 				B6D0441E18D2F36C00424389 /* a1.jpg in Resources */,
 				B690056118E41ACC00870905 /* note_cell_bkg@2x.png in Resources */,
@@ -932,12 +1019,14 @@
 				B68CB0CA18E5271100167BFB /* back_bkg_HL.png in Resources */,
 				B6D0442E18D2F36C00424389 /* 16.png in Resources */,
 				B6291AA918E9653400B9B09D /* version_btn_bkg.png in Resources */,
+				B67C514E18EE9C7F00121C4C /* red_dot@2x.png in Resources */,
 				B63FD4E618EAA3D800A73254 /* RevertVersionTableViewCell.xib in Resources */,
 				B6D0442A18D2F36C00424389 /* 12.png in Resources */,
 				B6EEC3D018E2820C00D883CE /* navi_back@2x.png in Resources */,
 				B6D0442B18D2F36C00424389 /* 13.png in Resources */,
 				B68CB0B718E5195D00167BFB /* test1@2x.png in Resources */,
 				B6D0443418D2F36C00424389 /* 21.png in Resources */,
+				B67C514518EE5D1600121C4C /* delete.png in Resources */,
 				B6D0441F18D2F36C00424389 /* a2.jpg in Resources */,
 				B6291A8518E92DCA00B9B09D /* right_arrow.png in Resources */,
 				B6D0443518D2F36C00424389 /* 3.png in Resources */,
@@ -947,6 +1036,7 @@
 				B6D0442F18D2F36C00424389 /* 17.png in Resources */,
 				B68CB0CD18E5271100167BFB /* back_bkg@2x.png in Resources */,
 				B6291AAA18E9653400B9B09D /* version_btn_bkg@2x.png in Resources */,
+				B67C514D18EE9C7F00121C4C /* red_dot.png in Resources */,
 				B6D0443018D2F36C00424389 /* 18.png in Resources */,
 				B6EEC3CE18E2820C00D883CE /* navi_back_highlighted@2x.png in Resources */,
 				B690056B18E422CC00870905 /* close.png in Resources */,
@@ -963,6 +1053,7 @@
 				B6AC8DFF18CFF9AD009D88B9 /* InfoPlist.strings in Resources */,
 				B6AC8E0118CFF9AD009D88B9 /* LocalizableViewController.xib in Resources */,
 				B6EEC3CF18E2820C00D883CE /* navi_back.png in Resources */,
+				B60B26B618FBA9C80092BDAC /* ReminderViewCell.xib in Resources */,
 				B6D0442718D2F36C00424389 /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -975,7 +1066,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6AC8E0918D01B91009D88B9 /* MJCircleLayer.m in Sources */,
-				B690055618E3D5F900870905 /* Config.m in Sources */,
 				B6AC8DD518CFF636009D88B9 /* UICollectionView+Draggable.m in Sources */,
 				B6B4132718E16A020051F54B /* NSData+CommonCrypto.m in Sources */,
 				B6AC8E0A18D01B91009D88B9 /* MJPasswordView.m in Sources */,
@@ -990,10 +1080,14 @@
 				B6AC8E1E18D02063009D88B9 /* OpenUDID.m in Sources */,
 				B6B4132818E16A020051F54B /* NSString+Base64.m in Sources */,
 				B6B4131B18E169DA0051F54B /* PasswordHelper.m in Sources */,
+				B631F14D18ED2E9100B488E0 /* ReminderViewController.m in Sources */,
+				B67C514118EE434700121C4C /* ReminderViewCell.m in Sources */,
 				B63FD4DE18EA9C7700A73254 /* JSONKit.m in Sources */,
 				B675584B18ECF5CB0093D6AB /* RevertNoteListViewController.m in Sources */,
 				B6CB6D3E18CF06F400033F15 /* DefaultViewController.m in Sources */,
 				B6F97C7418D026DE00BA9A92 /* AVOHelper.m in Sources */,
+				B60B26B418FBA5300092BDAC /* SWUtilityButtonView.m in Sources */,
+				B60B26B218FBA5300092BDAC /* SWTableViewCell.m in Sources */,
 				B6EEC3C818E2798300D883CE /* NoteListDetailedViewController.m in Sources */,
 				B6F97C7B18D03D7D00BA9A92 /* NoteListViewCell.m in Sources */,
 				B690055A18E4043D00870905 /* StateButton.m in Sources */,
@@ -1006,16 +1100,22 @@
 				B6AC8DD418CFF636009D88B9 /* DraggableCollectionViewFlowLayout.m in Sources */,
 				B6B4132B18E16EF70051F54B /* DataModel.m in Sources */,
 				B6291A6D18E553FF00B9B09D /* CommonActionSheet.m in Sources */,
+				B60B26B018FBA5300092BDAC /* SWCellScrollView.m in Sources */,
 				B6291A6E18E553FF00B9B09D /* LXActionSheet.m in Sources */,
 				B6AC8E0B18D01B91009D88B9 /* MJPathLayer.m in Sources */,
 				B6291A7E18E916E800B9B09D /* ChangPasswordViewController.m in Sources */,
 				B63FD4E518EAA3D800A73254 /* RevertVersionTableViewCell.m in Sources */,
 				B6F97C7E18D0455600BA9A92 /* ItemModel.m in Sources */,
 				B6291A9818E952BA00B9B09D /* MBProgressHUD.m in Sources */,
+				B60B26AF18FBA5300092BDAC /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				B6B4132618E16A020051F54B /* NSData+Base64.m in Sources */,
 				B63FD4E118EAA2B200A73254 /* RevertVersionViewController.m in Sources */,
+				B60B26B118FBA5300092BDAC /* SWLongPressGestureRecognizer.m in Sources */,
+				B67C514A18EE973C00121C4C /* ReminderHelper.m in Sources */,
+				B631F15018ED416000B488E0 /* ReminderDetailedViewController.m in Sources */,
 				B6CB6D0618CEFAD900033F15 /* main.m in Sources */,
 				B6AC8DD218CFF636009D88B9 /* LSCollectionViewHelper.m in Sources */,
+				B60B26B318FBA5300092BDAC /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				B6B4131118E15E120051F54B /* PasswordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,6 +26,7 @@
 - (UIButton *) GetButtonWithTitle:(NSString *)_pTitle;
 
 // pop view
-- (void) ShowPopViewWithText:(NSString *)popViewTitle Complete:(BlockCompletion)_block;
+- (void) ShowHudWithTitle:(NSString *)pTitle Complete:(BlockCompletion)_block;
+- (void) ShowHudWithTitle:(NSString *)pTitle DeltaTime:(float)deltaTime Complete:(BlockCompletion)_block;
 
 @end

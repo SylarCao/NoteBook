@@ -16,7 +16,6 @@ typedef void (^BlockCompletion)(BOOL complete);
 
 - (id) initWithCustomView:(UIView *)customView;
 
-
 - (void) ShowCompletion:(BlockCompletion)_block;
 
 

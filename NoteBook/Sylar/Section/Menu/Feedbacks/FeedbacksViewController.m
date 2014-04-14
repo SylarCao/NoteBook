@@ -77,11 +77,8 @@
         {
             success = LocalizedString(@"NetWorkFail");
         }
-        [self ShowPopViewWithText:success Complete:^(BOOL completes) {
-            if (complete)
-            {
-                [self BtnBack];
-            }
+        [self ShowHudWithTitle:success Complete:^(BOOL complete) {
+            [self BtnBack];
         }];
     }];
 }

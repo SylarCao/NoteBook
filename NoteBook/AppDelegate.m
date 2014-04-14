@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "NoteListViewController.h"
 #import "AVOHelper.h"
+#import "ReminderHelper.h"
 //////////////////////////////////////////////////////////////////
 @interface AppDelegate()
 {
@@ -58,6 +59,7 @@
     [[AVOHelper Share] UploadBecomeActivesIfNeed];
     DefaultViewController *top_view_controller = (DefaultViewController *)[m_navi topViewController];
 //    [top_view_controller ShowPasswordView];
+    [[ReminderHelper Share] ClearBadgeNumber];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

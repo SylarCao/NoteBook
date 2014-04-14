@@ -28,6 +28,11 @@
 "NaviRevert" = "Revert";   // 返回到这个版本
 "FeedBacks" = "Feedbacks";  // 用户反馈
 "Send" = "Send"; // 发送
+"Reminder" = "Reminder";  // 提醒事项
+"Create" = "Create"; // 新建
+"NewReminder" = "Untitled Reminder"; // 新建提醒
+
+
 
 
 // sentence
@@ -44,6 +49,7 @@
 "RevertSuccess" = "revert successfully"; // 还原成功
 "RevertFail" = "revert failed"; // 还原失败
 "FeedbacksSuccess" = "Thanks for your suggestion"; // 感谢您的反馈
+"DeleteReminderFail" = "You can't delete undone reminders"; // 没有done 不能删除
 
 
 

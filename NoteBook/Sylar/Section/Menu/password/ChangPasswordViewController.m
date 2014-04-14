@@ -135,13 +135,13 @@ extern float c_securyView_title_height;
 {
     if (correct)
     {
-        [self ShowPopViewWithText:LocalizedString(@"ChangePassordSuccess") Complete:^(BOOL complete) {
+        [self ShowHudWithTitle:LocalizedString(@"ChangePassordSuccess") Complete:^(BOOL complete) {
             [self BtnBack];
         }];
     }
     else
     {
-        [self ShowPopViewWithText:LocalizedString(@"ConfirmError") Complete:^(BOOL complete) {
+        [self ShowHudWithTitle:LocalizedString(@"ConfirmError") Complete:^(BOOL complete) {
             m_state = en_change_password_state_old_password;
             [self RefreshState];
         }];

@@ -13,11 +13,13 @@
 #import "SaveVersionViewController.h"
 #import "RevertVersionViewController.h"
 #import "FeedbacksViewController.h"
+#import "ReminderViewController.h"
 ///////////////////////////////////////////////////////////////////////////
-# define kMenuIndexPassword      0
-# define kMenuIndexSaveVersion   1
-# define kMenuIndexRevertVersion 2
-# define kMenuIndexFeedbacks     3
+# define kMenuIndexPassword         0
+# define kMenuIndexSaveVersion      1
+# define kMenuIndexRevertVersion    2
+# define kMenuIndexFeedbacks        3
+# define kMenuIndexReminder         4
 ///////////////////////////////////////////////////////////////////////////
 @interface MenuViewController ()
 <UITableViewDelegate, UITableViewDataSource>
@@ -41,7 +43,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    self.navigationController.interactivePopGestureRecognizer.enabled = NO ;
     // Do any additional setup after loading the view.
 }
 
@@ -75,14 +76,10 @@
     [self.view addSubview:table];
 }
 
-
-
-
-
 // delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -123,6 +120,10 @@
     {
         rt = LocalizedString(@"FeedBacks");
     }
+    else if (row == kMenuIndexReminder)
+    {
+        rt = LocalizedString(@"Reminder");
+    }
     
     return rt;
 }
@@ -149,6 +150,11 @@
     {
         FeedbacksViewController *ff = [[FeedbacksViewController alloc] initWithNibName:nil bundle:nil];
         [self.navigationController pushViewController:ff animated:YES];
+    }
+    else if (row == kMenuIndexReminder)
+    {
+        ReminderViewController *rr = [[ReminderViewController alloc] initWithNibName:nil bundle:nil];
+        [self.navigationController pushViewController:rr animated:YES];
     }
 }
 

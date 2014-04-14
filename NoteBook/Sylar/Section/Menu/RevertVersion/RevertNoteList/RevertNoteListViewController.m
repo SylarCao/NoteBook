@@ -74,7 +74,7 @@
             {
                 pop_title = LocalizedString(@"RevertFail");
             }
-            [self ShowPopViewWithText:pop_title Complete:nil];
+            [self ShowHudWithTitle:pop_title Complete:nil];
             
         }
     }];

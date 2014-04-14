@@ -39,4 +39,9 @@
 // constrain label height
 + (CGFloat) GetLabelHeightWithLabel:(UILabel*)_label Text:(NSString*)_text;
 
+// get max date
++ (NSDate *) MaxDate1:(NSDate *)date1 Date2:(NSDate *)date2;
+
+
+
 @end
