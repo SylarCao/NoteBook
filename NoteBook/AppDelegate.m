@@ -58,8 +58,7 @@
 {
     [[AVOHelper Share] UploadBecomeActivesIfNeed];
     DefaultViewController *top_view_controller = (DefaultViewController *)[m_navi topViewController];
-//    [top_view_controller ShowPasswordView];
-    [[ReminderHelper Share] ClearBadgeNumber];
+    [top_view_controller ShowPasswordView];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

@@ -230,6 +230,7 @@ const int c_reminder_detail_view_controller_label_height = 30;
     NSDictionary *user_info = notification.userInfo;
     m_title.text = [user_info objectForKey:kReminderTitle];
     m_content.text = [user_info objectForKey:kReminderContent];
+    m_time.text = [CommonTools GetStringFromDate:notification.fireDate];
     [m_picker setDate:notification.fireDate animated:YES];
 }
 

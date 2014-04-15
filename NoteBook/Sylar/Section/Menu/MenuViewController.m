@@ -18,8 +18,8 @@
 # define kMenuIndexPassword         0
 # define kMenuIndexSaveVersion      1
 # define kMenuIndexRevertVersion    2
-# define kMenuIndexFeedbacks        3
-# define kMenuIndexReminder         4
+# define kMenuIndexFeedbacks        4
+# define kMenuIndexReminder         3
 ///////////////////////////////////////////////////////////////////////////
 @interface MenuViewController ()
 <UITableViewDelegate, UITableViewDataSource>

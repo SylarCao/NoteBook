@@ -17,7 +17,6 @@
 {
     NSMutableArray   *m_reminders;
     UITableView      *m_table;
-//    ReminderViewCell *m_editing_cell;
 }
 @end
 ////////////////////////////////////////////////////////////////////////////

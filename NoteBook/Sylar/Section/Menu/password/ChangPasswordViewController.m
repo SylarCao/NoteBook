@@ -69,11 +69,11 @@ extern float c_securyView_title_height;
     // title
     [self SetNaviTitle:LocalizedString(@"ChangePassword")];
     
-    // right item
-    UIButton *forget_passord = [self GetNaviButtonWithTitle:LocalizedString(@"ForgetPassowrd")];
-    [forget_passord addTarget:self action:@selector(BtnForgetPassword) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem* right_item = [[UIBarButtonItem alloc] initWithCustomView:forget_passord];
-    [self.navigationItem setRightBarButtonItem:right_item];
+//    // right item
+//    UIButton *forget_passord = [self GetNaviButtonWithTitle:LocalizedString(@"ForgetPassowrd")];
+//    [forget_passord addTarget:self action:@selector(BtnForgetPassword) forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem* right_item = [[UIBarButtonItem alloc] initWithCustomView:forget_passord];
+//    [self.navigationItem setRightBarButtonItem:right_item];
     
 }
 
@@ -175,7 +175,10 @@ extern float c_securyView_title_height;
     else if (m_state == en_change_password_state_confirm)
     {
         BOOL same = [m_temp_password isEqualToString:password];
-        [PasswordHelper SetLoginPassword:password];
+        if (same)
+        {
+            [PasswordHelper SetLoginPassword:password];
+        }
         [self Confirm:same];
     }
 }
