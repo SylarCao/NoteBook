@@ -44,6 +44,12 @@
 
 - (void) RefreshBadgeNumber
 {
+    int number = [self GetBadgeNumber];
+    m_application.applicationIconBadgeNumber = number;
+}
+
+- (int) GetBadgeNumber
+{
     int number = 0;
     NSArray *notifications = [UIApplication sharedApplication].scheduledLocalNotifications;
     for (UILocalNotification *each in notifications)
@@ -58,7 +64,7 @@
             }
         }
     }
-    m_application.applicationIconBadgeNumber = number;
+    return number;
 }
 
 + (BOOL) CheckNotificationBegin:(UILocalNotification *)notification

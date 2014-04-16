@@ -16,6 +16,6 @@
 
 - (void) cbFromCellBeginEditing;
 
-
+- (void) EndEdit;
 
 @end

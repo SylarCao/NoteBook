@@ -80,6 +80,16 @@
 		B69C179A18FCC7F900981016 /* version_btn_bkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B69C177018FCC7F900981016 /* version_btn_bkg@2x.png */; };
 		B69C179B18FCC7F900981016 /* version_btn_bkg_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = B69C177118FCC7F900981016 /* version_btn_bkg_HL.png */; };
 		B69C179C18FCC7F900981016 /* version_btn_bkg_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B69C177218FCC7F900981016 /* version_btn_bkg_HL@2x.png */; };
+		B69C17A018FCD37B00981016 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B69C179F18FCD37B00981016 /* SettingViewController.m */; };
+		B69C17A418FCD48000981016 /* SettingPasswordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B69C17A218FCD48000981016 /* SettingPasswordCell.m */; };
+		B69C17A518FCD48000981016 /* SettingPasswordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B69C17A318FCD48000981016 /* SettingPasswordCell.xib */; };
+		B69C17AC18FCD4B600981016 /* SettingFontSizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B69C17AA18FCD4B600981016 /* SettingFontSizeCell.m */; };
+		B69C17B118FCD52900981016 /* SettingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B69C17B018FCD52900981016 /* SettingHelper.m */; };
+		B69C17B518FD02EE00981016 /* SettingFontSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B69C17B418FD02EE00981016 /* SettingFontSizeViewController.m */; };
+		B69C17B918FD063800981016 /* SettingFontSizeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B69C17B718FD063800981016 /* SettingFontSizeDetailCell.m */; };
+		B69C17BA18FD063800981016 /* SettingFontSizeDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B69C17B818FD063800981016 /* SettingFontSizeDetailCell.xib */; };
+		B69C17CA18FD09EC00981016 /* tick.png in Resources */ = {isa = PBXBuildFile; fileRef = B69C17C218FD09EC00981016 /* tick.png */; };
+		B69C17CB18FD09EC00981016 /* tick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B69C17C318FD09EC00981016 /* tick@2x.png */; };
 		B6AC8DD218CFF636009D88B9 /* LSCollectionViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AC8DC818CFF636009D88B9 /* LSCollectionViewHelper.m */; };
 		B6AC8DD318CFF636009D88B9 /* LSCollectionViewLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AC8DCA18CFF636009D88B9 /* LSCollectionViewLayoutHelper.m */; };
 		B6AC8DD418CFF636009D88B9 /* DraggableCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AC8DCD18CFF636009D88B9 /* DraggableCollectionViewFlowLayout.m */; };
@@ -219,6 +229,22 @@
 		B69C177018FCC7F900981016 /* version_btn_bkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "version_btn_bkg@2x.png"; sourceTree = "<group>"; };
 		B69C177118FCC7F900981016 /* version_btn_bkg_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = version_btn_bkg_HL.png; sourceTree = "<group>"; };
 		B69C177218FCC7F900981016 /* version_btn_bkg_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "version_btn_bkg_HL@2x.png"; sourceTree = "<group>"; };
+		B69C179E18FCD37B00981016 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		B69C179F18FCD37B00981016 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		B69C17A118FCD48000981016 /* SettingPasswordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingPasswordCell.h; sourceTree = "<group>"; };
+		B69C17A218FCD48000981016 /* SettingPasswordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingPasswordCell.m; sourceTree = "<group>"; };
+		B69C17A318FCD48000981016 /* SettingPasswordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingPasswordCell.xib; sourceTree = "<group>"; };
+		B69C17A918FCD4B600981016 /* SettingFontSizeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingFontSizeCell.h; sourceTree = "<group>"; };
+		B69C17AA18FCD4B600981016 /* SettingFontSizeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingFontSizeCell.m; sourceTree = "<group>"; };
+		B69C17AF18FCD52900981016 /* SettingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingHelper.h; sourceTree = "<group>"; };
+		B69C17B018FCD52900981016 /* SettingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingHelper.m; sourceTree = "<group>"; };
+		B69C17B318FD02EE00981016 /* SettingFontSizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingFontSizeViewController.h; sourceTree = "<group>"; };
+		B69C17B418FD02EE00981016 /* SettingFontSizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingFontSizeViewController.m; sourceTree = "<group>"; };
+		B69C17B618FD063800981016 /* SettingFontSizeDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingFontSizeDetailCell.h; sourceTree = "<group>"; };
+		B69C17B718FD063800981016 /* SettingFontSizeDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingFontSizeDetailCell.m; sourceTree = "<group>"; };
+		B69C17B818FD063800981016 /* SettingFontSizeDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingFontSizeDetailCell.xib; sourceTree = "<group>"; };
+		B69C17C218FD09EC00981016 /* tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tick.png; sourceTree = "<group>"; };
+		B69C17C318FD09EC00981016 /* tick@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tick@2x.png"; sourceTree = "<group>"; };
 		B6AC8DC718CFF636009D88B9 /* LSCollectionViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCollectionViewHelper.h; sourceTree = "<group>"; };
 		B6AC8DC818CFF636009D88B9 /* LSCollectionViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCollectionViewHelper.m; sourceTree = "<group>"; };
 		B6AC8DC918CFF636009D88B9 /* LSCollectionViewLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCollectionViewLayoutHelper.h; sourceTree = "<group>"; };
@@ -361,6 +387,7 @@
 				B631F14518ED08E600B488E0 /* Feedbacks */,
 				B6291A9118E94FD300B9B09D /* SaveVersion */,
 				B6291A9018E94FCE00B9B09D /* RevertVersion */,
+				B69C179D18FCD36800981016 /* setting */,
 				B6291A7B18E916C800B9B09D /* password */,
 			);
 			path = Menu;
@@ -554,6 +581,51 @@
 			path = version;
 			sourceTree = "<group>";
 		};
+		B69C179D18FCD36800981016 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				B69C179E18FCD37B00981016 /* SettingViewController.h */,
+				B69C179F18FCD37B00981016 /* SettingViewController.m */,
+				B69C17A118FCD48000981016 /* SettingPasswordCell.h */,
+				B69C17A218FCD48000981016 /* SettingPasswordCell.m */,
+				B69C17A318FCD48000981016 /* SettingPasswordCell.xib */,
+				B69C17A918FCD4B600981016 /* SettingFontSizeCell.h */,
+				B69C17AA18FCD4B600981016 /* SettingFontSizeCell.m */,
+				B69C17B218FD02CA00981016 /* fontSize */,
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
+		B69C17AE18FCD4F500981016 /* settingHelper */ = {
+			isa = PBXGroup;
+			children = (
+				B69C17AF18FCD52900981016 /* SettingHelper.h */,
+				B69C17B018FCD52900981016 /* SettingHelper.m */,
+			);
+			path = settingHelper;
+			sourceTree = "<group>";
+		};
+		B69C17B218FD02CA00981016 /* fontSize */ = {
+			isa = PBXGroup;
+			children = (
+				B69C17B318FD02EE00981016 /* SettingFontSizeViewController.h */,
+				B69C17B418FD02EE00981016 /* SettingFontSizeViewController.m */,
+				B69C17B618FD063800981016 /* SettingFontSizeDetailCell.h */,
+				B69C17B718FD063800981016 /* SettingFontSizeDetailCell.m */,
+				B69C17B818FD063800981016 /* SettingFontSizeDetailCell.xib */,
+			);
+			path = fontSize;
+			sourceTree = "<group>";
+		};
+		B69C17BB18FD09EC00981016 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				B69C17C218FD09EC00981016 /* tick.png */,
+				B69C17C318FD09EC00981016 /* tick@2x.png */,
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
 		B6AC8DC518CFF636009D88B9 /* DraggableCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -738,6 +810,7 @@
 		B6CB6D3018CEFB7000033F15 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B69C17AE18FCD4F500981016 /* settingHelper */,
 				B67C514718EE972D00121C4C /* Reminder */,
 				B6291A8B18E93F0000B9B09D /* PopView */,
 				B690055718E4042400870905 /* UI */,
@@ -817,6 +890,7 @@
 		B6D043FC18D2F35500424389 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B69C17BB18FD09EC00981016 /* setting */,
 				B69C174418FCC7F900981016 /* icon */,
 				B69C174D18FCC7F900981016 /* navigation */,
 				B69C176218FCC7F900981016 /* note */,
@@ -903,6 +977,7 @@
 				B69C179A18FCC7F900981016 /* version_btn_bkg@2x.png in Resources */,
 				B69C178418FCC7F900981016 /* delete@2x.png in Resources */,
 				B69C179418FCC7F900981016 /* note_cell_bkg@2x.png in Resources */,
+				B69C17CA18FD09EC00981016 /* tick.png in Resources */,
 				B6CB6D1218CEFADA00033F15 /* Images.xcassets in Resources */,
 				B6291AA318E95BAA00B9B09D /* SaveVersion.xib in Resources */,
 				B69C179218FCC7F900981016 /* close_HL@2x.png in Resources */,
@@ -937,16 +1012,19 @@
 				B69C177418FCC7F900981016 /* icon120.png in Resources */,
 				B69C179918FCC7F900981016 /* version_btn_bkg.png in Resources */,
 				B69C179118FCC7F900981016 /* close_HL.png in Resources */,
+				B69C17A518FCD48000981016 /* SettingPasswordCell.xib in Resources */,
 				B69C178518FCC7F900981016 /* navi_back.png in Resources */,
 				B69C178618FCC7F900981016 /* navi_back@2x.png in Resources */,
 				B69C179618FCC7F900981016 /* password@2x.png in Resources */,
 				B69C178E18FCC7F900981016 /* right_arrow_HL@2x.png in Resources */,
 				B69C177F18FCC7F900981016 /* btn_bkg.png in Resources */,
+				B69C17BA18FD063800981016 /* SettingFontSizeDetailCell.xib in Resources */,
 				B69C177918FCC7F900981016 /* icon76.png in Resources */,
 				B69C177A18FCC7F900981016 /* icon80.png in Resources */,
 				B69C178918FCC7F900981016 /* red_dot.png in Resources */,
 				B69C178118FCC7F900981016 /* btn_bkg_highlighted.png in Resources */,
 				B69C178218FCC7F900981016 /* btn_bkg_highlighted@2x.png in Resources */,
+				B69C17CB18FD09EC00981016 /* tick@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -968,17 +1046,21 @@
 				B6CB6D0A18CEFAD900033F15 /* AppDelegate.m in Sources */,
 				B690056418E41E7D00870905 /* NoteListNewCell.m in Sources */,
 				B63FD4C618EA552D00A73254 /* LocalVersion.m in Sources */,
+				B69C17A018FCD37B00981016 /* SettingViewController.m in Sources */,
 				B6AC8DDD18CFF707009D88B9 /* NoteListViewController.m in Sources */,
+				B69C17B918FD063800981016 /* SettingFontSizeDetailCell.m in Sources */,
 				B6AC8E1E18D02063009D88B9 /* OpenUDID.m in Sources */,
 				B6B4132818E16A020051F54B /* NSString+Base64.m in Sources */,
 				B6B4131B18E169DA0051F54B /* PasswordHelper.m in Sources */,
 				B631F14D18ED2E9100B488E0 /* ReminderViewController.m in Sources */,
+				B69C17B518FD02EE00981016 /* SettingFontSizeViewController.m in Sources */,
 				B67C514118EE434700121C4C /* ReminderViewCell.m in Sources */,
 				B63FD4DE18EA9C7700A73254 /* JSONKit.m in Sources */,
 				B675584B18ECF5CB0093D6AB /* RevertNoteListViewController.m in Sources */,
 				B6CB6D3E18CF06F400033F15 /* DefaultViewController.m in Sources */,
 				B6F97C7418D026DE00BA9A92 /* AVOHelper.m in Sources */,
 				B60B26B418FBA5300092BDAC /* SWUtilityButtonView.m in Sources */,
+				B69C17AC18FCD4B600981016 /* SettingFontSizeCell.m in Sources */,
 				B60B26B218FBA5300092BDAC /* SWTableViewCell.m in Sources */,
 				B6EEC3C818E2798300D883CE /* NoteListDetailedViewController.m in Sources */,
 				B6F97C7B18D03D7D00BA9A92 /* NoteListViewCell.m in Sources */,
@@ -1003,6 +1085,8 @@
 				B6B4132618E16A020051F54B /* NSData+Base64.m in Sources */,
 				B63FD4E118EAA2B200A73254 /* RevertVersionViewController.m in Sources */,
 				B60B26B118FBA5300092BDAC /* SWLongPressGestureRecognizer.m in Sources */,
+				B69C17B118FCD52900981016 /* SettingHelper.m in Sources */,
+				B69C17A418FCD48000981016 /* SettingPasswordCell.m in Sources */,
 				B67C514A18EE973C00121C4C /* ReminderHelper.m in Sources */,
 				B631F15018ED416000B488E0 /* ReminderDetailedViewController.m in Sources */,
 				B6CB6D0618CEFAD900033F15 /* main.m in Sources */,

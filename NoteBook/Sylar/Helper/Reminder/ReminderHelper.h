@@ -20,6 +20,8 @@
 
 - (void) RefreshBadgeNumber;
 
+- (int) GetBadgeNumber;
+
 + (BOOL) CheckNotificationBegin:(UILocalNotification *)notification;
 
 + (BOOL) CheckNotificationDone:(UILocalNotification *)notification;

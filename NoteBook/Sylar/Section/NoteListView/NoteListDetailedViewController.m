@@ -10,6 +10,7 @@
 #import "ItemModel.h"
 #import "CommonTools.h"
 #import "DataModel.h"
+#import "SettingHelper.h"
 ////////////////////////////////////////////////////////////////////////////////////
 @interface NoteListDetailedViewController ()
 <UITextViewDelegate, UITextFieldDelegate>
@@ -91,6 +92,7 @@
     m_title = [[UITextField alloc] init];
     m_title.frame = CGRectMake(0, 0, 140, 40);
     m_title.text = m_data.title;
+    m_title.textAlignment = NSTextAlignmentCenter;
     m_title.delegate = self;
     self.navigationItem.titleView = m_title;
     
@@ -107,7 +109,8 @@
     int navi_height = [CommonTools GetNaviStatusBarHeight];
     int edge = 5;
     m_content.frame = CGRectMake(5, navi_height+edge, kSCREEN_WIDTH-2*edge, kSCREEN_HEIGHT-navi_height-2*edge);
-    m_content.font = [UIFont systemFontOfSize:14];
+    int font_size = [[SettingHelper Share] GetFontSize];
+    m_content.font = [UIFont systemFontOfSize:font_size];
     UIEdgeInsets inset = UIEdgeInsetsMake(0, 0, 50, 0);
     m_content.contentInset = inset;
     m_content.textContainerInset = UIEdgeInsetsMake(5, 3, 5, 3);
@@ -133,7 +136,6 @@
 
 - (void) BtnSave
 {
-    NSLog(@"save");
     // save title
     m_data.title = m_title.text;
     m_data.content = m_content.text;
@@ -147,12 +149,14 @@
 {
     textField.borderStyle = UITextBorderStyleRoundedRect;
     textField.backgroundColor = [UIColor whiteColor];
+    textField.textAlignment = NSTextAlignmentLeft;
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     textField.borderStyle = UITextBorderStyleNone;
     textField.backgroundColor = [UIColor clearColor];
+    textField.textAlignment = NSTextAlignmentCenter;
 }
 
 - (void)textViewDidChange:(UITextView *)textView

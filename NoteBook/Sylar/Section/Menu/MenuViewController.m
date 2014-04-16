@@ -14,12 +14,14 @@
 #import "RevertVersionViewController.h"
 #import "FeedbacksViewController.h"
 #import "ReminderViewController.h"
+#import "SettingViewController.h"
 ///////////////////////////////////////////////////////////////////////////
-# define kMenuIndexPassword         0
-# define kMenuIndexSaveVersion      1
-# define kMenuIndexRevertVersion    2
-# define kMenuIndexFeedbacks        4
-# define kMenuIndexReminder         3
+# define kMenuIndexPassword         1
+# define kMenuIndexSaveVersion      2
+# define kMenuIndexRevertVersion    3
+# define kMenuIndexFeedbacks        5
+# define kMenuIndexReminder         4
+# define kMenuIndexSetting          0
 ///////////////////////////////////////////////////////////////////////////
 @interface MenuViewController ()
 <UITableViewDelegate, UITableViewDataSource>
@@ -79,7 +81,7 @@
 // delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -124,6 +126,10 @@
     {
         rt = LocalizedString(@"Reminder");
     }
+    else if (row == kMenuIndexSetting)
+    {
+        rt = LocalizedString(@"Setting");
+    }
     
     return rt;
 }
@@ -155,6 +161,11 @@
     {
         ReminderViewController *rr = [[ReminderViewController alloc] initWithNibName:nil bundle:nil];
         [self.navigationController pushViewController:rr animated:YES];
+    }
+    else if (row == kMenuIndexSetting)
+    {
+        SettingViewController *ss = [[SettingViewController alloc] initWithNibName:nil bundle:nil];
+        [self.navigationController pushViewController:ss animated:YES];
     }
 }
 

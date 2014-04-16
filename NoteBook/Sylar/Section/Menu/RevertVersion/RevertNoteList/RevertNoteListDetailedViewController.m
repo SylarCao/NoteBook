@@ -44,6 +44,7 @@
     m_title = [[UITextField alloc] init];
     m_title.frame = CGRectMake(0, 0, 140, 40);
     m_title.text = m_data.title;
+    m_title.textAlignment = NSTextAlignmentCenter;
     self.navigationItem.titleView = m_title;
     
     m_title.enabled = NO;

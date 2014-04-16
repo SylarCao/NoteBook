@@ -9,6 +9,7 @@
 #import "ReminderDetailedViewController.h"
 #import "CommonTools.h"
 #import "ReminderHelper.h"
+#import "SettingHelper.h"
 ///////////////////////////////////////////////////////////////////////////
 @interface ReminderDetailedViewController ()
 <UITextViewDelegate, UITextFieldDelegate>
@@ -62,6 +63,7 @@ const int c_reminder_detail_view_controller_label_height = 30;
     m_title = [[UITextField alloc] init];
     m_title.frame = CGRectMake(0, 0, 140, 40);
     m_title.text = LocalizedString(@"NewReminder");
+    m_title.textAlignment = NSTextAlignmentCenter;
     m_title.delegate = self;
     self.navigationItem.titleView = m_title;
     
@@ -98,6 +100,8 @@ const int c_reminder_detail_view_controller_label_height = 30;
     m_rect_big = CGRectMake(edge, navi_height+edge, kSCREEN_WIDTH-2*edge, kSCREEN_HEIGHT-time_height-navi_height);
     m_content = [[UITextView alloc] initWithFrame:m_rect_small];
     m_content.delegate = self;
+    int font_size = [[SettingHelper Share] GetFontSize];
+    m_content.font = [UIFont systemFontOfSize:font_size];
     m_content.textColor = [UIColor darkTextColor];
     [m_content.layer setBorderColor:[UIColor blackColor].CGColor];
     [m_content.layer setBorderWidth:1.3];
@@ -128,12 +132,14 @@ const int c_reminder_detail_view_controller_label_height = 30;
 {
     textField.borderStyle = UITextBorderStyleRoundedRect;
     textField.backgroundColor = [UIColor whiteColor];
+    textField.textAlignment = NSTextAlignmentLeft;
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     textField.borderStyle = UITextBorderStyleNone;
     textField.backgroundColor = [UIColor clearColor];
+    textField.textAlignment = NSTextAlignmentCenter;
 }
 
 - (void)textViewDidChange:(UITextView *)textView
@@ -241,7 +247,9 @@ const int c_reminder_detail_view_controller_label_height = 30;
         // press create
         UILocalNotification *ll = [[UILocalNotification alloc] init];
         ll.fireDate = [CommonTools MaxDate1:m_picker.date Date2:[NSDate dateWithTimeIntervalSinceNow:10]];
-//        ll.applicationIconBadgeNumber = 1;
+        ll.applicationIconBadgeNumber = [[ReminderHelper Share] GetBadgeNumber]+1;
+        ll.soundName = UILocalNotificationDefaultSoundName;
+        ll.alertBody = m_title.text;
         ll.repeatInterval = NSCalendarUnitDay;
         ll.userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
                        m_title.text,   kReminderTitle,
@@ -249,7 +257,7 @@ const int c_reminder_detail_view_controller_label_height = 30;
                        @"0",           kReminderDone,
                        nil];
         [[UIApplication sharedApplication] scheduleLocalNotification:ll];
-        [[ReminderHelper Share] RefreshBadgeNumber];
+//        [[ReminderHelper Share] RefreshBadgeNumber];
         [self BtnBack];
     }
     else if (_state == en_reminder_state_view)
@@ -266,6 +274,7 @@ const int c_reminder_detail_view_controller_label_height = 30;
                                   m_title.text,   kReminderTitle,
                                   m_content.text, kReminderContent,
                                   nil];
+        new_notification.applicationIconBadgeNumber = [[ReminderHelper Share] GetBadgeNumber]+1;
         [[UIApplication sharedApplication] cancelLocalNotification:_notification];
         [[UIApplication sharedApplication] scheduleLocalNotification:new_notification];
         [[ReminderHelper Share] RefreshBadgeNumber];

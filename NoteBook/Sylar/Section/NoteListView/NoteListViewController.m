@@ -139,6 +139,14 @@
     }
 }
 
+- (void) EndEdit
+{
+    if (m_editing)
+    {
+        [self BtnEdit];
+    }
+}
+
 - (void) cbFromCellBeginEditing
 {
     if (m_editing)

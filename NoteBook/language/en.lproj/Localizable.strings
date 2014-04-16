@@ -31,7 +31,12 @@
 "Reminder" = "Reminder";  // 提醒事项
 "Create" = "Create"; // 新建
 "NewReminder" = "Untitled Reminder"; // 新建提醒
-
+"Setting" = "Setting"; // 设置
+"SettingFontSize" = "Font size"; // 字体设置
+"Small" = "Small"; // xiao
+"Middle" = "Middle";
+"Big" = "Big"; 
+"PasswordOn" = "Password On"; // 开启密码
 
 
 
