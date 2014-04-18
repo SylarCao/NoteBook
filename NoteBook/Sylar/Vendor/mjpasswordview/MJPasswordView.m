@@ -12,7 +12,7 @@
 
 @interface MJPasswordView()
 
-@property (nonatomic,retain) MJPathLayer* pathLayer;
+@property (nonatomic,strong) MJPathLayer* pathLayer;
 
 - (void) setLayerFrames;
 

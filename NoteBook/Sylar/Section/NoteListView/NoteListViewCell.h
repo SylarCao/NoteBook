@@ -22,5 +22,6 @@
 - (void) SetLabelFontSize:(int)_fontSize;
 
 - (void) SetEditing:(BOOL)_editing;
+- (void) SetEditing:(BOOL)_editing Animation:(BOOL)animation;
 
 @end

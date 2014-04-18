@@ -16,11 +16,11 @@
 #import "ReminderViewController.h"
 #import "SettingViewController.h"
 ///////////////////////////////////////////////////////////////////////////
-# define kMenuIndexPassword         1
-# define kMenuIndexSaveVersion      2
-# define kMenuIndexRevertVersion    3
-# define kMenuIndexFeedbacks        5
-# define kMenuIndexReminder         4
+# define kMenuIndexPassword         100
+# define kMenuIndexSaveVersion      1
+# define kMenuIndexRevertVersion    2
+# define kMenuIndexFeedbacks        4
+# define kMenuIndexReminder         3
 # define kMenuIndexSetting          0
 ///////////////////////////////////////////////////////////////////////////
 @interface MenuViewController ()
@@ -81,7 +81,7 @@
 // delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

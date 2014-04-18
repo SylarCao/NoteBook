@@ -215,6 +215,7 @@
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:[NoteListViewCell GetCellId] forIndexPath:indexPath];
         cell.data = [[DataModel Share] GetItemAtIndex:indexPath.row];
         cell.delegate = self;
+        [cell SetEditing:NO Animation:NO];
     }
     
     return cell;

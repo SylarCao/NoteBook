@@ -85,27 +85,50 @@
 
 - (void) SetEditing:(BOOL)_editing
 {
-    float scale_time = 0.1;
-    int rand = random()%60;
-    rand += 40;
-    float delay = (float)rand/200;
-    if (_editing)
+    [self SetEditing:_editing Animation:YES];
+}
+
+- (void) SetEditing:(BOOL)_editing Animation:(BOOL)animation
+{
+    if (animation)
     {
-        [UIView animateWithDuration:scale_time delay:delay options:0 animations:^{
-            m_bkg.frame = m_title.frame;
-        } completion:^(BOOL finished) {
-            [m_close setHidden:NO];
-            [self BeginWobble];
-        }];
+        float scale_time = 0.1;
+        int rand = random()%60;
+        rand += 40;
+        float delay = (float)rand/200;
+        if (_editing)
+        {
+            [UIView animateWithDuration:scale_time delay:delay options:0 animations:^{
+                m_bkg.frame = m_title.frame;
+            } completion:^(BOOL finished) {
+                [m_close setHidden:NO];
+                [self BeginWobble];
+            }];
+        }
+        else
+        {
+            [UIView animateWithDuration:scale_time delay:delay options:0 animations:^{
+                m_bkg.frame = self.contentView.bounds;
+            } completion:^(BOOL finished) {
+                [m_close setHidden:YES];
+                [self EndWobble];
+            }];
+        }
     }
     else
     {
-        [UIView animateWithDuration:scale_time delay:delay options:0 animations:^{
+        if (_editing)
+        {
+            m_bkg.frame = m_title.frame;
+            [m_close setHidden:NO];
+            [self BeginWobble];
+        }
+        else
+        {
             m_bkg.frame = self.contentView.bounds;
-        } completion:^(BOOL finished) {
             [m_close setHidden:YES];
             [self EndWobble];
-        }];
+        }
     }
 }
 

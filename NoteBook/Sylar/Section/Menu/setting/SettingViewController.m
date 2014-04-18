@@ -8,12 +8,14 @@
 ////////////////////////////////////////////////////////////////////////
 #import "SettingViewController.h"
 #import "CommonTools.h"
-#import "SettingFontSizeCell.h"
 #import "SettingPasswordCell.h"
+#import "MenuTableViewCell.h"
 #import "SettingFontSizeViewController.h"
+#import "ChangPasswordViewController.h"
 ////////////////////////////////////////////////////////////////////////
-# define kSettingIndexFontSize   0
-# define kSettingIndexPassword   1
+# define kSettingIndexFontSize       2
+# define kSettingIndexPassword       0
+# define kSettingIndexPasswordChange 1
 ////////////////////////////////////////////////////////////////////////
 @interface SettingViewController ()
 <UITableViewDataSource, UITableViewDelegate>
@@ -68,13 +70,13 @@
     [self.view addSubview:table];
     
     [table registerNib:[UINib nibWithNibName:@"SettingPasswordCell" bundle:nil]forCellReuseIdentifier:[SettingPasswordCell GetCellId]];
-    [table registerClass:[SettingFontSizeCell class] forCellReuseIdentifier:[SettingFontSizeCell GetCellId]];
+    [table registerClass:[MenuTableViewCell class] forCellReuseIdentifier:[MenuTableViewCell GetCellId]];
 }
 
 // delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -88,8 +90,13 @@
     }
     else if (row == kSettingIndexFontSize)
     {
-        rt = [tableView dequeueReusableCellWithIdentifier:[SettingFontSizeCell GetCellId] forIndexPath:indexPath];
-        [(SettingFontSizeCell *)rt SetWithTitle:LocalizedString(@"SettingFontSize")];
+        rt = [tableView dequeueReusableCellWithIdentifier:[MenuTableViewCell GetCellId] forIndexPath:indexPath];
+        [(MenuTableViewCell *)rt SetWithTitle:LocalizedString(@"SettingFontSize")];
+    }
+    else if (row == kSettingIndexPasswordChange)
+    {
+        rt = [tableView dequeueReusableCellWithIdentifier:[MenuTableViewCell GetCellId] forIndexPath:indexPath];
+        [(MenuTableViewCell *)rt SetWithTitle:LocalizedString(@"ChangePassword")];
     }
     return rt;
 }
@@ -98,7 +105,7 @@
 {
     BOOL rt = NO;
     int row = indexPath.row;
-    if (row == kSettingIndexFontSize)
+    if (row == kSettingIndexFontSize || kSettingIndexPasswordChange)
     {
         rt = YES;
     }
@@ -113,6 +120,11 @@
     {
         SettingFontSizeViewController *ss = [[SettingFontSizeViewController alloc] initWithNibName:nil bundle:nil];
         [self.navigationController pushViewController:ss animated:YES];
+    }
+    else if (row == kSettingIndexPasswordChange)
+    {
+        ChangPasswordViewController *cc = [[ChangPasswordViewController alloc] initWithNibName:nil bundle:nil];
+        [self.navigationController pushViewController:cc animated:YES];
     }
 }
 

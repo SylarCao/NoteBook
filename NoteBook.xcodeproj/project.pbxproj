@@ -19,7 +19,6 @@
 		B6291A7318E5645000B9B09D /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6291A7218E5645000B9B09D /* AVOSCloud.framework */; };
 		B6291A7718E565A100B9B09D /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A7618E565A100B9B09D /* MenuViewController.m */; };
 		B6291A7A18E914C300B9B09D /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A7918E914C300B9B09D /* MenuTableViewCell.m */; };
-		B6291A7E18E916E800B9B09D /* ChangPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A7D18E916E800B9B09D /* ChangPasswordViewController.m */; };
 		B6291A8E18E93F1300B9B09D /* PopView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A8D18E93F1300B9B09D /* PopView.m */; };
 		B6291A9418E94FE900B9B09D /* SaveVersionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A9318E94FE900B9B09D /* SaveVersionViewController.m */; };
 		B6291A9818E952BA00B9B09D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B6291A9718E952BA00B9B09D /* MBProgressHUD.m */; };
@@ -32,6 +31,7 @@
 		B63FD4E118EAA2B200A73254 /* RevertVersionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FD4E018EAA2B200A73254 /* RevertVersionViewController.m */; };
 		B63FD4E518EAA3D800A73254 /* RevertVersionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FD4E318EAA3D800A73254 /* RevertVersionTableViewCell.m */; };
 		B63FD4E618EAA3D800A73254 /* RevertVersionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B63FD4E418EAA3D800A73254 /* RevertVersionTableViewCell.xib */; };
+		B65CA2B718FE6A1400ECABC8 /* ChangPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B65CA2B618FE6A1400ECABC8 /* ChangPasswordViewController.m */; };
 		B675584B18ECF5CB0093D6AB /* RevertNoteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B675584A18ECF5CB0093D6AB /* RevertNoteListViewController.m */; };
 		B675584E18ECFE260093D6AB /* RevertNoteListDetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B675584D18ECFE260093D6AB /* RevertNoteListDetailedViewController.m */; };
 		B67C514118EE434700121C4C /* ReminderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B67C513F18EE434700121C4C /* ReminderViewCell.m */; };
@@ -83,7 +83,6 @@
 		B69C17A018FCD37B00981016 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B69C179F18FCD37B00981016 /* SettingViewController.m */; };
 		B69C17A418FCD48000981016 /* SettingPasswordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B69C17A218FCD48000981016 /* SettingPasswordCell.m */; };
 		B69C17A518FCD48000981016 /* SettingPasswordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B69C17A318FCD48000981016 /* SettingPasswordCell.xib */; };
-		B69C17AC18FCD4B600981016 /* SettingFontSizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B69C17AA18FCD4B600981016 /* SettingFontSizeCell.m */; };
 		B69C17B118FCD52900981016 /* SettingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B69C17B018FCD52900981016 /* SettingHelper.m */; };
 		B69C17B518FD02EE00981016 /* SettingFontSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B69C17B418FD02EE00981016 /* SettingFontSizeViewController.m */; };
 		B69C17B918FD063800981016 /* SettingFontSizeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B69C17B718FD063800981016 /* SettingFontSizeDetailCell.m */; };
@@ -151,8 +150,6 @@
 		B6291A7618E565A100B9B09D /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		B6291A7818E914C300B9B09D /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
 		B6291A7918E914C300B9B09D /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
-		B6291A7C18E916E800B9B09D /* ChangPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangPasswordViewController.h; sourceTree = "<group>"; };
-		B6291A7D18E916E800B9B09D /* ChangPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangPasswordViewController.m; sourceTree = "<group>"; };
 		B6291A8C18E93F1300B9B09D /* PopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopView.h; sourceTree = "<group>"; };
 		B6291A8D18E93F1300B9B09D /* PopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopView.m; sourceTree = "<group>"; };
 		B6291A9218E94FE900B9B09D /* SaveVersionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveVersionViewController.h; sourceTree = "<group>"; };
@@ -175,6 +172,8 @@
 		B63FD4E218EAA3D800A73254 /* RevertVersionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RevertVersionTableViewCell.h; sourceTree = "<group>"; };
 		B63FD4E318EAA3D800A73254 /* RevertVersionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RevertVersionTableViewCell.m; sourceTree = "<group>"; };
 		B63FD4E418EAA3D800A73254 /* RevertVersionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RevertVersionTableViewCell.xib; sourceTree = "<group>"; };
+		B65CA2B518FE6A1400ECABC8 /* ChangPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangPasswordViewController.h; sourceTree = "<group>"; };
+		B65CA2B618FE6A1400ECABC8 /* ChangPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangPasswordViewController.m; sourceTree = "<group>"; };
 		B675584918ECF5CB0093D6AB /* RevertNoteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RevertNoteListViewController.h; sourceTree = "<group>"; };
 		B675584A18ECF5CB0093D6AB /* RevertNoteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RevertNoteListViewController.m; sourceTree = "<group>"; };
 		B675584C18ECFE260093D6AB /* RevertNoteListDetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RevertNoteListDetailedViewController.h; sourceTree = "<group>"; };
@@ -234,8 +233,6 @@
 		B69C17A118FCD48000981016 /* SettingPasswordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingPasswordCell.h; sourceTree = "<group>"; };
 		B69C17A218FCD48000981016 /* SettingPasswordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingPasswordCell.m; sourceTree = "<group>"; };
 		B69C17A318FCD48000981016 /* SettingPasswordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingPasswordCell.xib; sourceTree = "<group>"; };
-		B69C17A918FCD4B600981016 /* SettingFontSizeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingFontSizeCell.h; sourceTree = "<group>"; };
-		B69C17AA18FCD4B600981016 /* SettingFontSizeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingFontSizeCell.m; sourceTree = "<group>"; };
 		B69C17AF18FCD52900981016 /* SettingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingHelper.h; sourceTree = "<group>"; };
 		B69C17B018FCD52900981016 /* SettingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingHelper.m; sourceTree = "<group>"; };
 		B69C17B318FD02EE00981016 /* SettingFontSizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingFontSizeViewController.h; sourceTree = "<group>"; };
@@ -388,18 +385,8 @@
 				B6291A9118E94FD300B9B09D /* SaveVersion */,
 				B6291A9018E94FCE00B9B09D /* RevertVersion */,
 				B69C179D18FCD36800981016 /* setting */,
-				B6291A7B18E916C800B9B09D /* password */,
 			);
 			path = Menu;
-			sourceTree = "<group>";
-		};
-		B6291A7B18E916C800B9B09D /* password */ = {
-			isa = PBXGroup;
-			children = (
-				B6291A7C18E916E800B9B09D /* ChangPasswordViewController.h */,
-				B6291A7D18E916E800B9B09D /* ChangPasswordViewController.m */,
-			);
-			path = password;
 			sourceTree = "<group>";
 		};
 		B6291A8B18E93F0000B9B09D /* PopView */ = {
@@ -473,6 +460,15 @@
 				B63FD4DD18EA9C7700A73254 /* JSONKit.m */,
 			);
 			path = JsonKit;
+			sourceTree = "<group>";
+		};
+		B65CA2B418FE6A1400ECABC8 /* password */ = {
+			isa = PBXGroup;
+			children = (
+				B65CA2B518FE6A1400ECABC8 /* ChangPasswordViewController.h */,
+				B65CA2B618FE6A1400ECABC8 /* ChangPasswordViewController.m */,
+			);
+			path = password;
 			sourceTree = "<group>";
 		};
 		B675584818ECF5B40093D6AB /* RevertNoteList */ = {
@@ -589,8 +585,7 @@
 				B69C17A118FCD48000981016 /* SettingPasswordCell.h */,
 				B69C17A218FCD48000981016 /* SettingPasswordCell.m */,
 				B69C17A318FCD48000981016 /* SettingPasswordCell.xib */,
-				B69C17A918FCD4B600981016 /* SettingFontSizeCell.h */,
-				B69C17AA18FCD4B600981016 /* SettingFontSizeCell.m */,
+				B65CA2B418FE6A1400ECABC8 /* password */,
 				B69C17B218FD02CA00981016 /* fontSize */,
 			);
 			path = setting;
@@ -1060,7 +1055,6 @@
 				B6CB6D3E18CF06F400033F15 /* DefaultViewController.m in Sources */,
 				B6F97C7418D026DE00BA9A92 /* AVOHelper.m in Sources */,
 				B60B26B418FBA5300092BDAC /* SWUtilityButtonView.m in Sources */,
-				B69C17AC18FCD4B600981016 /* SettingFontSizeCell.m in Sources */,
 				B60B26B218FBA5300092BDAC /* SWTableViewCell.m in Sources */,
 				B6EEC3C818E2798300D883CE /* NoteListDetailedViewController.m in Sources */,
 				B6F97C7B18D03D7D00BA9A92 /* NoteListViewCell.m in Sources */,
@@ -1075,9 +1069,9 @@
 				B6B4132B18E16EF70051F54B /* DataModel.m in Sources */,
 				B6291A6D18E553FF00B9B09D /* CommonActionSheet.m in Sources */,
 				B60B26B018FBA5300092BDAC /* SWCellScrollView.m in Sources */,
+				B65CA2B718FE6A1400ECABC8 /* ChangPasswordViewController.m in Sources */,
 				B6291A6E18E553FF00B9B09D /* LXActionSheet.m in Sources */,
 				B6AC8E0B18D01B91009D88B9 /* MJPathLayer.m in Sources */,
-				B6291A7E18E916E800B9B09D /* ChangPasswordViewController.m in Sources */,
 				B63FD4E518EAA3D800A73254 /* RevertVersionTableViewCell.m in Sources */,
 				B6F97C7E18D0455600BA9A92 /* ItemModel.m in Sources */,
 				B6291A9818E952BA00B9B09D /* MBProgressHUD.m in Sources */,

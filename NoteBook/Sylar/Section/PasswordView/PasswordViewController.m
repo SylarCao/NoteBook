@@ -8,6 +8,7 @@
 ////////////////////////////////////////////////////////////////////////////////////
 #import "PasswordViewController.h"
 #import "MJPasswordView.h"
+#import "PasswordHelper.h"
 #import "CommonTools.h"
 ////////////////////////////////////////////////////////////////////////////////////
 const float c_securyView_title_height = 50;
@@ -70,8 +71,11 @@ const float c_securyView_title_font_size = 25;
 // delegate
 - (void)passwordView:(MJPasswordView*)passwordView withPassword:(NSString*)password
 {
-    NSLog(@"password = %@", password);
-    [self dismissViewControllerAnimated:YES completion:nil];
+    BOOL password_right = [PasswordHelper CheckLoginPassword:password];
+    if (password_right)
+    {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 @end
