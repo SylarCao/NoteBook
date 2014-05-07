@@ -55,7 +55,7 @@
 "RevertFail" = "还原失败"; // 还原失败
 "FeedbacksSuccess" = "感谢您的反馈"; // 感谢您的反馈
 "DeleteReminderFail" = "不能删除未完成的提醒事项"; // 没有done 不能删除
-
+"FeedbackDefault" = "请附上联系方式以便联系";
 
 
 

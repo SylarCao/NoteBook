@@ -44,11 +44,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWG-j2-j4e">
-                    <rect key="frame" x="135" y="304" width="50" height="30"/>
+                    <rect key="frame" x="35" y="250" width="250" height="100"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="8Cp-2f-0ix"/>
-                        <constraint firstAttribute="width" constant="50" id="che-rV-b4K"/>
+                        <constraint firstAttribute="width" constant="250" id="cSB-vv-xSV"/>
+                        <constraint firstAttribute="height" constant="100" id="uQR-DD-tPe"/>
                     </constraints>
                     <state key="normal" title="button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,8 +58,8 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="GWG-j2-j4e" secondAttribute="centerX" id="Yf5-6F-czV"/>
-                <constraint firstAttribute="bottom" secondItem="GWG-j2-j4e" secondAttribute="bottom" constant="66" id="lHt-7h-sSd"/>
+                <constraint firstAttribute="centerX" secondItem="GWG-j2-j4e" secondAttribute="centerX" id="Ua5-sn-lPb"/>
+                <constraint firstAttribute="bottom" secondItem="GWG-j2-j4e" secondAttribute="bottom" constant="50" id="anK-WM-LSN"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

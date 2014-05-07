@@ -83,21 +83,12 @@
 - (UILocalNotification *) SwapDelete
 {
     UILocalNotification *rt = nil;
-    if ([ReminderHelper CheckNotificationDone:m_local_notification])
+    if ([ReminderHelper CheckNotificationDone:m_local_notification] || [ReminderHelper CheckNotificationBegin:m_local_notification]==NO)
     {
         [[UIApplication sharedApplication] cancelLocalNotification:m_local_notification];
         rt = m_local_notification;
     }
     return rt;
-}
-
-- (void) test
-{
-    NSArray *aa = [UIApplication sharedApplication].scheduledLocalNotifications;
-    for (UILocalNotification *each in aa)
-    {
-        NSLog(@"each = %@", each.userInfo);
-    }
 }
 
 @end

@@ -76,7 +76,10 @@
     
     // button
     [m_btn_save setTitle:LocalizedString(@"Save") forState:UIControlStateNormal];
-//    [m_btn_save.titleLabel setFont:[UIFont systemFontOfSize:12]];
+    [m_btn_save.titleLabel setFont:[UIFont systemFontOfSize:30]];
+    m_btn_save.titleLabel.shadowColor = [UIColor whiteColor];
+    m_btn_save.titleLabel.shadowOffset = CGSizeMake(1, 1);
+    [m_btn_save setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [m_btn_save setBackgroundImage:[CommonTools GetResizeImageWithName:@"version_btn_bkg"] forState:UIControlStateNormal];
     [m_btn_save setBackgroundImage:[CommonTools GetResizeImageWithName:@"version_btn_bkg_HL"] forState:UIControlStateHighlighted];
     [m_btn_save addTarget:self action:@selector(BtnSave) forControlEvents:UIControlEventTouchUpInside];

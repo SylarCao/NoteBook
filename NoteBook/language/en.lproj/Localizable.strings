@@ -55,7 +55,7 @@
 "RevertFail" = "revert failed"; // 还原失败
 "FeedbacksSuccess" = "Thanks for your suggestion"; // 感谢您的反馈
 "DeleteReminderFail" = "You can't delete undone reminders"; // 没有done 不能删除
-
+"FeedbackDefault" = "Please attach your contact information so that we can contact you."; // 请在最后附上联系方式
 
 
 

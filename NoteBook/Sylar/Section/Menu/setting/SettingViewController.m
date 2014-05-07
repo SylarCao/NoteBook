@@ -12,6 +12,7 @@
 #import "MenuTableViewCell.h"
 #import "SettingFontSizeViewController.h"
 #import "ChangPasswordViewController.h"
+#import "SettingHelper.h"
 ////////////////////////////////////////////////////////////////////////
 # define kSettingIndexFontSize       2
 # define kSettingIndexPassword       0
@@ -87,6 +88,7 @@
     if (row == kSettingIndexPassword)
     {
         rt = [tableView dequeueReusableCellWithIdentifier:[SettingPasswordCell GetCellId] forIndexPath:indexPath];
+        ((SettingPasswordCell*)rt).parentViewcontroller = self;
     }
     else if (row == kSettingIndexFontSize)
     {
@@ -105,9 +107,13 @@
 {
     BOOL rt = NO;
     int row = indexPath.row;
-    if (row == kSettingIndexFontSize || kSettingIndexPasswordChange)
+    if (row == kSettingIndexFontSize)
     {
         rt = YES;
+    }
+    else if (row == kSettingIndexPasswordChange)
+    {
+        rt = [[SettingHelper Share] CheckPasswordOn];
     }
     return rt;
 }

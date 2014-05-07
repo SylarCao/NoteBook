@@ -9,6 +9,7 @@
 #import "SettingPasswordCell.h"
 #import "CommonTools.h"
 #import "SettingHelper.h"
+#import "OpenClosePasswordViewController.h"
 ////////////////////////////////////////////////////////////
 @interface SettingPasswordCell()
 {
@@ -50,8 +51,25 @@
 
 - (void) PasswordChange:(UISwitch *)switcher
 {
-    BOOL on_off = switcher.isOn;
-    [[SettingHelper Share] SetPasswordOnOff:on_off];
+    BOOL on_off = switcher.isOn;   // yes = open
+    switcher.on = !on_off;
+    
+    OpenClosePasswordViewController *openclose = [[OpenClosePasswordViewController alloc] initWithNibName:nil bundle:nil];
+    if (on_off)
+    {
+        openclose.openClose = en_open_close_password_open;
+    }
+    else
+    {
+        openclose.openClose = en_open_close_password_close;
+    }
+    [_parentViewcontroller.navigationController pushViewController:openclose animated:YES];
+    
+    __block UISwitch *block_switch = switcher;
+    [openclose didCompletion:^(BOOL complete) {
+        block_switch.on = on_off;
+        [[SettingHelper Share] SetPasswordOnOff:on_off];
+    }];
 }
 
 @end

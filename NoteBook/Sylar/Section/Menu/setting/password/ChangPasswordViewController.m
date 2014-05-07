@@ -11,21 +11,12 @@
 #import "MJPasswordView.h"
 #import "PasswordHelper.h"
 ///////////////////////////////////////////////////////////////////////////
-typedef NS_ENUM(NSInteger, enChangePassordState)
-{
-    en_change_password_state_old_password = 1,
-    en_change_password_state_new = 2,
-    en_change_password_state_confirm = 3,
-    en_change_password_incorrect = 4,
-};
-///////////////////////////////////////////////////////////////////////////
 extern float c_securyView_title_font_size;
 extern float c_securyView_title_height;
 ///////////////////////////////////////////////////////////////////////////
 @interface ChangPasswordViewController ()
 <MJPasswordDelegate>
 {
-    enChangePassordState  m_state;
     UILabel              *m_label_hint;
     MJPasswordView       *m_password_view;
     NSString             *m_temp_password;
@@ -68,13 +59,6 @@ extern float c_securyView_title_height;
 {
     // title
     [self SetNaviTitle:LocalizedString(@"ChangePassword")];
-    
-//    // right item
-//    UIButton *forget_passord = [self GetNaviButtonWithTitle:LocalizedString(@"ForgetPassowrd")];
-//    [forget_passord addTarget:self action:@selector(BtnForgetPassword) forControlEvents:UIControlEventTouchUpInside];
-//    UIBarButtonItem* right_item = [[UIBarButtonItem alloc] initWithCustomView:forget_passord];
-//    [self.navigationItem setRightBarButtonItem:right_item];
-    
 }
 
 - (void) SetPageView
@@ -131,24 +115,6 @@ extern float c_securyView_title_height;
     m_label_hint.text = hint;
 }
 
-- (void) Confirm:(BOOL)correct
-{
-    if (correct)
-    {
-        [self ShowHudWithTitle:LocalizedString(@"ChangePassordSuccess") Complete:^(BOOL complete) {
-            [self BtnBack];
-        }];
-    }
-    else
-    {
-        [self ShowHudWithTitle:LocalizedString(@"ConfirmError") Complete:^(BOOL complete) {
-            m_state = en_change_password_state_old_password;
-            [self RefreshState];
-        }];
-    }
-}
-
-
 // delegate
 - (void)passwordView:(MJPasswordView*)passwordView withPassword:(NSString*)password
 {
@@ -179,7 +145,19 @@ extern float c_securyView_title_height;
         {
             [PasswordHelper SetLoginPassword:password];
         }
-        [self Confirm:same];
+        if (same)
+        {
+            [self ShowHudWithTitle:LocalizedString(@"ChangePassordSuccess") Complete:^(BOOL complete) {
+                [self BtnBack];
+            }];
+        }
+        else
+        {
+            [self ShowHudWithTitle:LocalizedString(@"ConfirmError") Complete:^(BOOL complete) {
+                m_state = en_change_password_state_old_password;
+                [self RefreshState];
+            }];
+        }
     }
 }
 

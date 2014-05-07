@@ -38,6 +38,7 @@
 		B67C514A18EE973C00121C4C /* ReminderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B67C514918EE973C00121C4C /* ReminderHelper.m */; };
 		B690055A18E4043D00870905 /* StateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B690055918E4043D00870905 /* StateButton.m */; };
 		B690056418E41E7D00870905 /* NoteListNewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B690056318E41E7D00870905 /* NoteListNewCell.m */; };
+		B695BE4C1919C556009BDE02 /* OpenClosePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B695BE4B1919C556009BDE02 /* OpenClosePasswordViewController.m */; };
 		B69C177318FCC7F900981016 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B69C174518FCC7F900981016 /* icon.png */; };
 		B69C177418FCC7F900981016 /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = B69C174618FCC7F900981016 /* icon120.png */; };
 		B69C177518FCC7F900981016 /* icon152.png in Resources */ = {isa = PBXBuildFile; fileRef = B69C174718FCC7F900981016 /* icon152.png */; };
@@ -186,6 +187,8 @@
 		B690055918E4043D00870905 /* StateButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateButton.m; sourceTree = "<group>"; };
 		B690056218E41E7D00870905 /* NoteListNewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteListNewCell.h; sourceTree = "<group>"; };
 		B690056318E41E7D00870905 /* NoteListNewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteListNewCell.m; sourceTree = "<group>"; };
+		B695BE4A1919C556009BDE02 /* OpenClosePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenClosePasswordViewController.h; sourceTree = "<group>"; };
+		B695BE4B1919C556009BDE02 /* OpenClosePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenClosePasswordViewController.m; sourceTree = "<group>"; };
 		B69C174518FCC7F900981016 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		B69C174618FCC7F900981016 /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
 		B69C174718FCC7F900981016 /* icon152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon152.png; sourceTree = "<group>"; };
@@ -467,6 +470,8 @@
 			children = (
 				B65CA2B518FE6A1400ECABC8 /* ChangPasswordViewController.h */,
 				B65CA2B618FE6A1400ECABC8 /* ChangPasswordViewController.m */,
+				B695BE4A1919C556009BDE02 /* OpenClosePasswordViewController.h */,
+				B695BE4B1919C556009BDE02 /* OpenClosePasswordViewController.m */,
 			);
 			path = password;
 			sourceTree = "<group>";
@@ -1040,6 +1045,7 @@
 				B6F97C7818D02A0B00BA9A92 /* CommonTools.m in Sources */,
 				B6CB6D0A18CEFAD900033F15 /* AppDelegate.m in Sources */,
 				B690056418E41E7D00870905 /* NoteListNewCell.m in Sources */,
+				B695BE4C1919C556009BDE02 /* OpenClosePasswordViewController.m in Sources */,
 				B63FD4C618EA552D00A73254 /* LocalVersion.m in Sources */,
 				B69C17A018FCD37B00981016 /* SettingViewController.m in Sources */,
 				B6AC8DDD18CFF707009D88B9 /* NoteListViewController.m in Sources */,

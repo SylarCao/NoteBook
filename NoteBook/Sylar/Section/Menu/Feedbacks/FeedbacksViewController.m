@@ -97,6 +97,9 @@
     [m_feedbacks.layer setCornerRadius:5];
     [self.view addSubview:m_feedbacks];
     [m_feedbacks becomeFirstResponder];
+    
+    // place holder text
+    m_feedbacks.text = LocalizedString(@"FeedbackDefault");
 }
 
 - (void)textViewDidChange:(UITextView *)textView

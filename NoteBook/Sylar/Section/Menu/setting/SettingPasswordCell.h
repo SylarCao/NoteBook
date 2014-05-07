@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SettingViewController.h"
 
 @interface SettingPasswordCell : UITableViewCell
+
+@property (nonatomic, strong) SettingViewController *parentViewcontroller;
 
 + (NSString *) GetCellId;
 

@@ -274,6 +274,8 @@ const int c_reminder_detail_view_controller_label_height = 30;
                                   m_title.text,   kReminderTitle,
                                   m_content.text, kReminderContent,
                                   nil];
+        new_notification.fireDate = [CommonTools MaxDate1:m_picker.date Date2:[NSDate dateWithTimeIntervalSinceNow:10]];
+        new_notification.alertBody = m_title.text;
         new_notification.applicationIconBadgeNumber = [[ReminderHelper Share] GetBadgeNumber]+1;
         [[UIApplication sharedApplication] cancelLocalNotification:_notification];
         [[UIApplication sharedApplication] scheduleLocalNotification:new_notification];
@@ -281,5 +283,9 @@ const int c_reminder_detail_view_controller_label_height = 30;
     }
 }
 
+- (void) gestureSwapDown
+{
+    NSLog(@"down");
+}
 
 @end
