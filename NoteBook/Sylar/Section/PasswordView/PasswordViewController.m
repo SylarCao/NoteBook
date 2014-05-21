@@ -10,6 +10,7 @@
 #import "MJPasswordView.h"
 #import "PasswordHelper.h"
 #import "CommonTools.h"
+#import "SettingHelper.h"
 ////////////////////////////////////////////////////////////////////////////////////
 const float c_securyView_title_height = 50;
 const float c_securyView_title_font_size = 25;
@@ -65,6 +66,18 @@ const float c_securyView_title_font_size = 25;
     
     // auto layout
     [CommonTools AutoLayoutVerticleView:self.view WithSubviews:[NSArray arrayWithObjects:m_label_title, password_view, nil] TopEdge:0 BottomEdge:20 NeedCenter:YES];
+    
+    // add gesture
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gestureTap10)];
+    tap.numberOfTapsRequired = 20;
+    m_label_title.userInteractionEnabled = YES;
+    [m_label_title addGestureRecognizer:tap];
+}
+
+- (void) gestureTap10
+{
+    [[SettingHelper Share] SetPasswordOnOff:NO];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
