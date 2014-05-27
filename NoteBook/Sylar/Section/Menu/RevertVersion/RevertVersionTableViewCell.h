@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWTableViewCell.h"
 @class LocalVersionItem;
 
-@interface RevertVersionTableViewCell : UITableViewCell
+@interface RevertVersionTableViewCell : SWTableViewCell
 
 + (NSString *) GetCellId;
+
+- (NSArray *) SetRightButtons;
 
 - (void) SetWithData:(LocalVersionItem *)item;
 

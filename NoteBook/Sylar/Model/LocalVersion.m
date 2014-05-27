@@ -72,11 +72,32 @@
     NSMutableArray *rt = [[NSMutableArray alloc] init];
     for (NSString *each_name in versions)
     {
+        if ([each_name isEqualToString:@".DS_Store"])
+        {
+            continue;
+        }
         NSString *each_file = [m_path stringByAppendingPathComponent:each_name];
         NSData *data = [manager contentsAtPath:each_file];
         NSDictionary *dic = [data objectFromJSONData];
         LocalVersionItem *each_item = [LocalVersionItem CreateWithDictionary:dic];
         [rt addObject:each_item];
+    }
+    return rt;
+}
+
+- (BOOL) deleteLocalVersionWithTitle:(NSString *)aTitle
+{
+    BOOL rt = NO;
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSArray *versions = [manager contentsOfDirectoryAtPath:m_path error:nil];
+    for (NSString *each_name in versions)
+    {
+        if ([each_name isEqualToString:aTitle])
+        {
+            NSString *file_path = [m_path stringByAppendingPathComponent:each_name];
+            rt = [manager removeItemAtPath:file_path error:nil];
+            break;
+        }
     }
     return rt;
 }

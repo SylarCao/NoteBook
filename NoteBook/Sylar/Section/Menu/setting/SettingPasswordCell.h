@@ -11,7 +11,7 @@
 
 @interface SettingPasswordCell : UITableViewCell
 
-@property (nonatomic, strong) SettingViewController *parentViewcontroller;
+@property (nonatomic, weak) SettingViewController *parentViewcontroller;
 
 + (NSString *) GetCellId;
 

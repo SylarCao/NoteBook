@@ -16,6 +16,7 @@
 
 - (NSArray *) GetLocalVersions;
 
+- (BOOL) deleteLocalVersionWithTitle:(NSString *)aTitle;
 
 @end
 /////////////////////////////////////////////////////////////////////

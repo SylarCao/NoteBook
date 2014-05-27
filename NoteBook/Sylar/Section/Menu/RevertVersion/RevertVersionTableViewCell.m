@@ -8,6 +8,7 @@
 /////////////////////////////////////////////////////////
 #import "RevertVersionTableViewCell.h"
 #import "LocalVersion.h"
+#import "CommonTools.h"
 /////////////////////////////////////////////////////////
 @interface RevertVersionTableViewCell()
 {
@@ -29,7 +30,13 @@
 {
     // Initialization code
     [super awakeFromNib];
-    NSLog(@"awake");
+}
+
+- (NSArray *) SetRightButtons
+{
+    NSMutableArray *rt = [[NSMutableArray alloc] init];
+    [rt sw_addUtilityButtonWithColor:[UIColor redColor] title:LocalizedString(@"Delete")];
+    return rt;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

@@ -11,8 +11,7 @@
 
 @interface ReminderViewCell : SWTableViewCell
 
-//@property (nonatomic, strong) IBOutlet UILabel *title;
-@property (nonatomic, strong) id   parentView;
+@property (nonatomic, weak) id   parentView;
 
 + (NSString *) GetCellId;
 

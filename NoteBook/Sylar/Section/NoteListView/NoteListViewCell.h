@@ -12,7 +12,7 @@
 
 @interface NoteListViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) id delegate;
+@property (nonatomic, weak) id delegate;
 @property (nonatomic, strong) ItemModel  *data;
 
 + (NSString *) GetCellId;

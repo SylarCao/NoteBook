@@ -11,11 +11,13 @@
 #import "RevertVersionTableViewCell.h"
 #import "DataModel.h"
 #import "RevertNoteListViewController.h"
+#import "LocalVersion.h"
 /////////////////////////////////////////////////////////////////////
 @interface RevertVersionViewController ()
-<UITableViewDataSource, UITableViewDelegate>
+<UITableViewDataSource, UITableViewDelegate, SWTableViewCellDelegate>
 {
-    NSArray *m_versions;
+    NSArray     *m_versions;
+    UITableView *m_table;
 }
 
 @end
@@ -27,7 +29,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        m_versions = [[DataModel Share] GetPreviousVersions];
         [self SetInitialValue];
     }
     return self;
@@ -66,6 +67,7 @@
     table.dataSource = self;
     table.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:table];
+    m_table = table;
     
     [table registerNib:[UINib nibWithNibName:@"RevertVersionTableViewCell" bundle:nil] forCellReuseIdentifier:[RevertVersionTableViewCell GetCellId]];
 }
@@ -73,12 +75,23 @@
 // delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    m_versions = [[DataModel Share] GetPreviousVersions];
     return [m_versions count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     RevertVersionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[RevertVersionTableViewCell GetCellId]];
+    
+    __block RevertVersionTableViewCell *the_cell = cell;
+    [cell setAppearanceWithBlock:^{
+        the_cell.delegate = self;
+        the_cell.containingTableView = tableView;
+        the_cell.leftUtilityButtons = nil;
+        the_cell.rightUtilityButtons = [the_cell SetRightButtons];
+        [the_cell setCellHeight:100];
+    } force:NO];
+    
     
     [cell SetWithData:[m_versions objectAtIndex:indexPath.row]];
     
@@ -98,6 +111,31 @@
     RevertNoteListViewController *note = [RevertNoteListViewController CreateWithLocalVersion:[m_versions objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:note animated:YES];
     
+}
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index
+{
+    if (index == 0)
+    {
+        NSIndexPath *indexPath = [m_table indexPathForCell:cell];
+        LocalVersionItem *aItem = [m_versions objectAtIndex:indexPath.row];
+        BOOL delete_success = [[LocalVersion Share] deleteLocalVersionWithTitle:aItem.title];
+        if (delete_success)
+        {
+            [m_table deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationTop];
+            [self performSelector:@selector(reloadTableView) withObject:nil afterDelay:0.8];
+        }
+    }
+}
+
+- (void) reloadTableView
+{
+    [m_table reloadData];
+}
+
+- (BOOL)swipeableTableViewCellShouldHideUtilityButtonsOnSwipe:(SWTableViewCell *)cell
+{
+    return YES;
 }
 
 
