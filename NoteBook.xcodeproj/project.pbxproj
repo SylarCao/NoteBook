@@ -142,6 +142,9 @@
 		B60B26AD18FBA5300092BDAC /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
 		B60B26AE18FBA5300092BDAC /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
 		B60B26B518FBA9C80092BDAC /* ReminderViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReminderViewCell.xib; sourceTree = "<group>"; };
+		B61A85C11946C81F005F3A7D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		B61A85C21946C81F005F3A7D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B61A85C31946C81F005F3A7D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/LocalizableViewController.xib"; sourceTree = "<group>"; };
 		B6291A6918E553FF00B9B09D /* CommonActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonActionSheet.h; sourceTree = "<group>"; };
 		B6291A6A18E553FF00B9B09D /* CommonActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonActionSheet.m; sourceTree = "<group>"; };
 		B6291A6B18E553FF00B9B09D /* LXActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXActionSheet.h; sourceTree = "<group>"; };
@@ -956,6 +959,7 @@
 				Base,
 				"zh-Hans",
 				ja,
+				"zh-Hant",
 			);
 			mainGroup = B6CB6CED18CEFAD900033F15;
 			productRefGroup = B6CB6CF718CEFAD900033F15 /* Products */;
@@ -1105,6 +1109,7 @@
 				B6AC8DF718CFF9AD009D88B9 /* en */,
 				B6AC8DFC18CFF9AD009D88B9 /* zh-Hans */,
 				B6EEC3C318E26E0F00D883CE /* ja */,
+				B61A85C11946C81F005F3A7D /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1115,6 +1120,7 @@
 				B6AC8DF918CFF9AD009D88B9 /* en */,
 				B6AC8DFD18CFF9AD009D88B9 /* zh-Hans */,
 				B6EEC3C418E26E0F00D883CE /* ja */,
+				B61A85C21946C81F005F3A7D /* zh-Hant */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1125,6 +1131,7 @@
 				B6AC8DFB18CFF9AD009D88B9 /* en */,
 				B6AC8DFE18CFF9AD009D88B9 /* zh-Hans */,
 				B6EEC3C518E26E0F00D883CE /* ja */,
+				B61A85C31946C81F005F3A7D /* zh-Hant */,
 			);
 			name = LocalizableViewController.xib;
 			sourceTree = "<group>";
