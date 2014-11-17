@@ -8,9 +8,12 @@
 ///////////////////////////////////////////////////////////////
 #import "SettingHelper.h"
 ///////////////////////////////////////////////////////////////
-# define kSettingKeyAll        @"kSettingKey"
-# define kSettingKeyPassword   @"kSettingKeyPassword" // 1->on 0->off
-# define kSettingKeyFontSize   @"kSettingKeyFontSize"
+# define kSettingKeyAll                 @"kSettingKey"
+# define kSettingKeyPassword            @"kSettingKeyPassword" // 1->on 0->off
+# define kSettingKeyFontSize            @"kSettingKeyFontSize"
+# define kSettingKeyPasswordLastTime    @"kSettingKeyPasswordLastTime"
+///////////////////////////////////////////////////////////////
+const NSInteger c_password_time_delta = 60; // 1 min
 ///////////////////////////////////////////////////////////////
 @interface SettingHelper()
 {
@@ -35,7 +38,7 @@
     self = [super init];
     if (self)
     {
-        m_setting = [[NSUserDefaults standardUserDefaults] objectForKey:kSettingKeyAll];
+        m_setting = [[[NSUserDefaults standardUserDefaults] objectForKey:kSettingKeyAll] mutableCopy];
         if (m_setting == nil)
         {
             NSString *font_size = [NSString stringWithFormat:@"%d", en_setting_font_size_middle];
@@ -54,6 +57,23 @@
     NSString *on_off = [NSString stringWithFormat:@"%d", onOff];
     [m_setting setObject:on_off forKey:kSettingKeyPassword];
     [self Synchronize];
+}
+
+- (BOOL) checkNeedPresentPasswordView
+{
+    BOOL rt = [self CheckPasswordOn];
+    if (rt)
+    {
+        // check time
+        NSInteger time0 = [[NSDate date] timeIntervalSince1970];
+        NSInteger time0_saved = [[m_setting objectForKey:kSettingKeyPasswordLastTime] integerValue];
+        NSInteger delta = ABS(time0 - time0_saved);
+        if (delta < c_password_time_delta)
+        {
+            rt = NO;
+        }
+    }
+    return rt;
 }
 
 - (BOOL) CheckPasswordOn
@@ -83,6 +103,17 @@
         rt = [font_size intValue];
     }
     return rt;
+}
+
+- (void) SynchronizePasswordTime
+{
+    if ([self CheckPasswordOn])
+    {
+        NSInteger time0 = [[NSDate date] timeIntervalSince1970];
+        NSString *str_time0 = [NSString stringWithFormat:@"%d", time0];
+        [m_setting setObject:str_time0 forKey:kSettingKeyPasswordLastTime];
+        [self Synchronize];
+    }
 }
 
 - (void) Synchronize

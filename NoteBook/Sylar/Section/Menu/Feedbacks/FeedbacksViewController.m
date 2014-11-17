@@ -8,7 +8,7 @@
 ////////////////////////////////////////////////////////////
 #import "FeedbacksViewController.h"
 #import "CommonTools.h"
-#import "AVOHelper.h"
+//#import "AVOHelper.h"
 ////////////////////////////////////////////////////////////
 # define kFeedbackKeyboardHeight 260
 ////////////////////////////////////////////////////////////
@@ -67,20 +67,20 @@
     if (feedbacks.length < 2)
         return;
     [m_feedbacks resignFirstResponder];
-    [[AVOHelper Share] UploadFeedbacks:feedbacks Completion:^(BOOL complete) {
-        NSString *success = nil;
-        if (complete)
-        {
-            success = LocalizedString(@"FeedbacksSuccess");
-        }
-        else
-        {
-            success = LocalizedString(@"NetWorkFail");
-        }
-        [self ShowHudWithTitle:success Complete:^(BOOL complete) {
-            [self BtnBack];
-        }];
-    }];
+//    [[AVOHelper Share] UploadFeedbacks:feedbacks Completion:^(BOOL complete) {
+//        NSString *success = nil;
+//        if (complete)
+//        {
+//            success = LocalizedString(@"FeedbacksSuccess");
+//        }
+//        else
+//        {
+//            success = LocalizedString(@"NetWorkFail");
+//        }
+//        [self ShowHudWithTitle:success Complete:^(BOOL complete) {
+//            [self BtnBack];
+//        }];
+//    }];
 }
 
 - (void) SetTextview

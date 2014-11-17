@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NoteListViewController.h"
-#import "AVOHelper.h"
+//#import "AVOHelper.h"
 #import "ReminderHelper.h"
 #import "SettingHelper.h"
 //////////////////////////////////////////////////////////////////
@@ -22,8 +22,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [AVOSCloud setApplicationId:kAVOAppId clientKey:kAVOAppKey];
-    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+//    [AVOSCloud setApplicationId:kAVOAppId clientKey:kAVOAppKey];
+//    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     NoteListViewController* dd = [[NoteListViewController alloc] initWithNibName:nil bundle:nil];
@@ -33,7 +33,7 @@
     [_window addSubview:[nav view]];
     [self.window makeKeyAndVisible];
     
-    [[AVOHelper Share] RegisterIfNot];
+//    [[AVOHelper Share] RegisterIfNot];
     
     return YES;
 }
@@ -45,6 +45,7 @@
     {
         [(NoteListViewController *)top_viewcontroller EndEdit];
     }
+    [[SettingHelper Share] SynchronizePasswordTime];
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
@@ -65,8 +66,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    [[AVOHelper Share] UploadBecomeActivesIfNeed];
-    if ([[SettingHelper Share] CheckPasswordOn])
+//    [[AVOHelper Share] UploadBecomeActivesIfNeed];
+    if ([[SettingHelper Share] checkNeedPresentPasswordView])
     {
         DefaultViewController *top_view_controller = (DefaultViewController *)m_navi.topViewController;
         [top_view_controller ShowPasswordView];

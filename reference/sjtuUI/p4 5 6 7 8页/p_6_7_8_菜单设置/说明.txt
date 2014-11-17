@@ -1,0 +1,5 @@
+适用 P6 P7 P8
+
+1. 汉字字体：幼圆 27点 浑厚
+   英文字体：century schoolbook
+2. P7和P6一样的

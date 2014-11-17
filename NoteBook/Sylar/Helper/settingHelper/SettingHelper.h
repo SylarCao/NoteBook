@@ -21,10 +21,14 @@ typedef NS_ENUM(NSInteger, enSettingFontSize)
 
 - (void) SetPasswordOnOff:(BOOL)onOff;
 
+- (BOOL) checkNeedPresentPasswordView;
+
 - (BOOL) CheckPasswordOn;
 
 - (void) SetFontSize:(enSettingFontSize)fontSize;
 
 - (enSettingFontSize) GetFontSize;
+
+- (void) SynchronizePasswordTime;
 
 @end
